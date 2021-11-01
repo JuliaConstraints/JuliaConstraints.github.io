@@ -2,7 +2,7 @@
 ---
 
 <div class="home-page-logo">
-    <img width="100%" src="/assets/jc-logo_1024x1024.png">
+    <img width="30%" src="/assets/jc-logo_1024x1024.png">
 </div>
 
 ## JuliaConstraints
