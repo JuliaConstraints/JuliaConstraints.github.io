@@ -34,3 +34,10 @@ industry-standard solvers and mixed-integer solvers.
     is a framework to build CBLS solvers
 * JuliaConstraints holds repositories of CP models:
   * [ConstraintModels.jl](https://github.com/JuliaConstraints/ConstraintModels.jl)
+
+Other packages for CP in Julia include: 
+
+* [ConstraintSolver.jl](https://github.com/Wikunia/ConstraintSolver.jl/), 
+  another pure-Julia CP solvers
+* [SeaPerl.jl](https://github.com/corail-research/SeaPearl.jl), a research CP
+  solver implemented with reinforcement learning, in pure Julia
