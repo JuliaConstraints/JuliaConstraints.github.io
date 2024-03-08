@@ -42,6 +42,7 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
+        "Gedtting Started" => "getting_started.md",
         "Performance Checking" => [
             "PerfChecker.jl" => "perf_checker.md",
         ],
