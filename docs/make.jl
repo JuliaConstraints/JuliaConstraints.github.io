@@ -36,8 +36,9 @@ makedocs(;
     sitename="Julia Constraints",
     format=DocumenterVitepress.MarkdownVitepress(
         repo = "https://github.com/JuliaConstraints/JuliaConstraints.github.io",
-        devurl = "",
+        devurl = "dev",
         deploy_url = "https://juliaconstraints.github.io/",
+        description = "Resources about Constraint Programming in Julia"
     ),
     pages=[
         "Home" => "index.md",
