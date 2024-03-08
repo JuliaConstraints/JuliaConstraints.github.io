@@ -1,6 +1,6 @@
-# YourPackage.jl
+# ConstraintCommons.jl
 
-Documentation for `YourPackage.jl`.
+Documentation for `ConstraintCommons.jl`.
 
 ```@autodocs
 Modules=[ConstraintCommons]
