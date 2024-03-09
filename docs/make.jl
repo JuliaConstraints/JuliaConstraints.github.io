@@ -42,32 +42,37 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
-        "Getting Started" => "getting_started.md",
-        "Performance Checking" => [
-            "PerfChecker.jl" => "perf_checker.md",
-            "BenchmarkToolsExt" => "benchmark_ext.md",
-            "Interface" => "perf_interface.md",
+        "Constraint Programming" => [
+            "Introduction" => "cp/intro.md",
+            "Optimization(s)?" => "cp/opt.md",
         ],
         "Constraints" => [
-            "ConstraintCommons.jl" => "constraint_commons.md",
-            "ConstraintDomains.jl" => "constraint_domains.md",
-            "Constraints.jl" => "constraints.md",
-            "ConstraintModels" => "constraint_models.md",
+            "ConstraintCommons.jl" => "constraints/constraint_commons.md",
+            "ConstraintDomains.jl" => "constraints/constraint_domains.md",
+            "Constraints.jl" => "constraints/constraints.md",
+            "ConstraintModels" => "constraints/constraint_models.md",
         ],
         "Learning" => [
-            "CompositionalNetworks.jl" => "compositional_networks.md",
-            "QUBOConstraints.jl" => "qubo_constraints.md",
-            "ConstraintLearning.jl" => "constraint_learning.md",
+            "CompositionalNetworks.jl" => "learning/compositional_networks.md",
+            "QUBOConstraints.jl" => "learning/qubo_constraints.md",
+            "ConstraintLearning.jl" => "learning/constraint_learning.md",
         ],
-        "JuMPed Solvers" => [
-            "CBLS.jl" => "cbls.md",
-        ],
-        "Raw Solvers" => [
-            "LocalSearchSolvers.jl" => "local_search_solvers.md",
+        "Solvers" => [
+            "JuMPed" => [
+                "CBLS.jl" => "solvers/cbls.md",
+            ],            
+            "Others" => [
+                "LocalSearchSolvers.jl" => "solvers/local_search_solvers.md",
+            ],
         ],
         "Meta Strategist" => [
-            "MetaStrategist.jl" => "meta_strategist.md",
-        ]
+            "MetaStrategist.jl" => "meta/meta_strategist.md",
+        ],
+        "Performance Checking" => [
+            "PerfChecker.jl" => "perf/perf_checker.md",
+            "BenchmarkToolsExt" => "perf/benchmark_ext.md",
+            "Interface" => "perf/perf_interface.md",
+        ],
     ],
     warnonly = true,
 )
