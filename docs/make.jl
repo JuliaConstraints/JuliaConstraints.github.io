@@ -85,6 +85,10 @@ makedocs(;
             "BenchmarkToolsExt" => "perf/benchmark_ext.md",
             "Interface" => "perf/perf_interface.md",
         ],
+        "API" => [
+            "Public" => "public_api.md",
+            "Full" => "full_api.md",
+        ],
     ],
     warnonly = true,
 )
