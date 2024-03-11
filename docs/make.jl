@@ -43,8 +43,20 @@ makedocs(;
     pages=[
         "Home" => "index.md",
         "Constraint Programming" => [
-            "Introduction" => "cp/intro.md",
-            "Optimization(s)?" => "cp/opt.md",
+            "Part 1: Basics" => [
+                "Introduction" => "cp/intro.md",
+                "CP 101" => "cp/cp101.md",
+                "Optimization(s)?" => "cp/opt.md",
+                "Getting Started" => "cp/getting_started.md",
+                "Ecosystem" => "cp/ecosystem.md",
+            ],
+            "Part 2: Advanced" => [
+                "CP Techniques" => "cp/advanced.md",
+                "Applications" => "cp/applications.md",
+                "Models" => "cp/models.md",
+                "Tutorials&XP" => "cp/tuto_xp.md",
+                "Contributing" => "cp/contribution.md",
+            ],
         ],
         "Constraints" => [
             "ConstraintCommons.jl" => "constraints/constraint_commons.md",

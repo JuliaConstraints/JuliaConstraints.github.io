@@ -1,4 +1,4 @@
-# Getting Started
+# Welcome to Julia Constraints
 
-A soon to be starting guide to Constraint Programming in Julia.
+An introductory post/chapter that provides an overview of the JuliaConstraint organization, its mission, and what readers can expect to learn from the content. Highlight the importance of Constraint Programming (CP) and optimization in solving real-world problems.
 

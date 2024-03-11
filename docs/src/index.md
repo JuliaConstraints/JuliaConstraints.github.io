@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: Constraint Programming ?!
-      link: /constraint_programming
+      link: /cp/intro
     - theme: alt
       text: View on Github
       link: https://github.com/JuliaConstraints/JuliaConstraints.github.io      
