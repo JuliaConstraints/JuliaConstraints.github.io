@@ -1,6 +1,6 @@
 # Public API
 
 ```@autodocs; canonical=false
-Modules=[ConstraintCommons, ConstraintDomains]
+Modules=[ConstraintCommons, ConstraintDomains, Constraints]
 Private = false
 ```
