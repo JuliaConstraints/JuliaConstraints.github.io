@@ -26,3 +26,106 @@ CurrentModule = ConstraintDomains
 
 ConstraintDomains.jl embodies the versatility and power of the JuliaConstraints ecosystem, offering users a comprehensive toolkit for defining and exploring variable domains. By abstracting complex domain manipulations and providing a rich set of functionalities, ConstraintDomains.jl enhances the ease and efficiency of modeling constraint programming problems. Whether for educational purposes, research, or practical applications, this package lays the groundwork for advanced problem-solving strategies in the realm of constraint programming.
 
+## Commons
+
+```@docs; canonical=false
+AbstractDomain
+EmptyDomain
+domain
+domain_size
+get_domain
+to_domains
+```
+
+### Extension to Base module
+
+```@docs; canonical=false
+Base.in
+Base.rand
+Base.isempty
+Base.rand
+Base.string
+```
+
+### Performances
+
+## Continuous
+
+```@docs; canonical=false
+ContinuousDomain
+Intervals
+domain
+domain_size
+merge_domains
+intersect_domains
+intersect_domains!
+size
+```
+
+### Extension to Base module
+
+```@docs; canonical=false
+Base.length
+Base.rand
+Base.in
+Base.string
+```
+
+## Discrete
+
+```@docs; canonical=false
+DiscreteDomain
+SetDomain
+RangeDomain
+ArbitraryDomain
+domain
+domain_size
+add!
+merge_domains
+intersect_domains
+size
+```
+
+### Extension to Base module
+
+
+```@docs; canonical=false
+Base.delete!
+Base.length
+Base.rand
+Base.in
+Base.string
+```
+
+## General
+
+```@docs; canonical=false
+Base.eltype
+Base.convert
+```
+
+## Exploration
+
+```@docs; canonical=false
+ExploreSettings
+_explore
+explore
+```
+
+## Parameters
+
+```@docs; canonical=false
+BoolParameterDomain
+DimParameterDomain
+IdParameterDomain
+FakeAutomaton
+ConstraintCommons.accept
+fake_automaton
+LanguageParameterDomain
+OpParameterDomain
+PairVarsParameterDomain
+ValParameterDomain
+ValsParameterDomain
+Base.rand
+generate_parameters
+```
