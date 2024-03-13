@@ -62,7 +62,7 @@ makedocs(;
             "ConstraintCommons.jl" => "constraints/constraint_commons.md",
             "ConstraintDomains.jl" => "constraints/constraint_domains.md",
             "Constraints.jl" => "constraints/constraints.md",
-            "ConstraintModels" => "constraints/constraint_models.md",
+            "ConstraintModels.jl" => "constraints/constraint_models.md",
         ],
         "Learning" => [
             "CompositionalNetworks.jl" => "learning/compositional_networks.md",

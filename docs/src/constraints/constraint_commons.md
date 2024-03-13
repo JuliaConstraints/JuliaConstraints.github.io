@@ -6,7 +6,7 @@
 CurrentModule = ConstraintCommons
 ```
 
-## Key Features and Functionality
+## Key Features and Functionalities
 - **Shared Structures and Abstract Types**: ConstraintCommons.jl offers a collection of shared data structures and abstract types. This standardization is crucial for ensuring that packages such as ConstraintDomains, Constraints, ConstraintLearning, etc. can seamlessly interact and integrate, fostering a cohesive development environment.
 - **Generic Functions and Methods**: The package includes a set of generic functions and methods that are common across the JuliaConstraints ecosystem. This approach minimizes duplication and facilitates the extension of functionalities across different packages without requiring redundant code.
 - **Interface for Learning and Application Transition**: One of the pivotal roles of ConstraintCommons.jl is to provide a shared interface that bridges the gap between learning packages (e.g., CompositionalNetworks, QUBOConstraints, and ConstraintTranslator) and basic functionality packages. This interface ensures that once a learning process is complete, the resulting models or solutions can be directly utilized with the basic packages, eliminating the need for users to manage multiple package dependencies actively.
