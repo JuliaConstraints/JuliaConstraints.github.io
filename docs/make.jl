@@ -72,7 +72,7 @@ makedocs(;
         "Solvers" => [
             "JuMPed" => [
                 "CBLS.jl" => "solvers/cbls.md",
-            ],            
+            ],
             "Others" => [
                 "LocalSearchSolvers.jl" => "solvers/local_search_solvers.md",
             ],
@@ -95,5 +95,7 @@ makedocs(;
 
 deploydocs(;
     repo="https://github.com/JuliaConstraints/JuliaConstraints.github.io",
+    target = "build",
+    devbranch = "dev",
     push_preview=true,
 )
