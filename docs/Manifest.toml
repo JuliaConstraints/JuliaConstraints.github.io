@@ -259,7 +259,9 @@ version = "0.1.0"
 
 [[deps.Constraints]]
 deps = ["CompositionalNetworks", "ConstraintCommons", "ConstraintDomains", "DataFrames", "Dictionaries", "MacroTools", "PrettyTables", "TestItemRunner", "TestItems"]
-path = "/home/azzaare/.julia/dev/Constraints"
+git-tree-sha1 = "18c84f32ba500e0976e5c822eed2371c02263742"
+repo-rev = "doc"
+repo-url = "https://github.com/JuliaConstraints/Constraints.jl.git"
 uuid = "30f324ab-b02d-43f0-b619-e131c61659f7"
 version = "0.5.3"
 
