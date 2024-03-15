@@ -242,7 +242,9 @@ version = "0.1.5"
 
 [[deps.ConstraintDomains]]
 deps = ["ConstraintCommons", "Dictionaries", "Intervals", "PatternFolds", "StatsBase", "TestItemRunner", "TestItems"]
-git-tree-sha1 = "b4f92d5d8fc17a2bc034a69281a8d776852d0cf5"
+git-tree-sha1 = "0f1de2a307a3041f02bc196f7dfc29242ba8daba"
+repo-rev = "doc"
+repo-url = "https://github.com/JuliaConstraints/ConstraintDomains.jl.git"
 uuid = "5800fd60-8556-4464-8d61-84ebf7a0bedb"
 version = "0.3.8"
 
@@ -259,7 +261,7 @@ version = "0.1.0"
 
 [[deps.Constraints]]
 deps = ["CompositionalNetworks", "ConstraintCommons", "ConstraintDomains", "DataFrames", "Dictionaries", "MacroTools", "PrettyTables", "TestItemRunner", "TestItems"]
-git-tree-sha1 = "18c84f32ba500e0976e5c822eed2371c02263742"
+git-tree-sha1 = "dde8f19f52944494fabf6f2a9d4a1eb4855b291d"
 repo-rev = "doc"
 repo-url = "https://github.com/JuliaConstraints/Constraints.jl.git"
 uuid = "30f324ab-b02d-43f0-b619-e131c61659f7"
@@ -624,9 +626,9 @@ version = "0.9.18"
 
 [[deps.LLVM]]
 deps = ["CEnum", "LLVMExtra_jll", "Libdl", "Preferences", "Printf", "Requires", "Unicode"]
-git-tree-sha1 = "ddab4d40513bce53c8e3157825e245224f74fae7"
+git-tree-sha1 = "7c6650580b4c3169d9905858160db895bff6d2e2"
 uuid = "929cbde3-209d-540e-8aea-75f648917ca0"
-version = "6.6.0"
+version = "6.6.1"
 weakdeps = ["BFloat16s"]
 
     [deps.LLVM.extensions]

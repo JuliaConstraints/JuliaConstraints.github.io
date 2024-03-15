@@ -43,7 +43,7 @@ concept_vs_error
 USUAL_CONSTRAINTS
 describe
 ConstraintCommons.extract_parameters
-usual
+@usual
 constraints_parameters
 constraints_descriptions
 concept
@@ -80,7 +80,7 @@ xcsp_nvalues
 xcsp_cardinality
 ```
 
-# SECTION - Connection Constraints
+### Connection Constraints
 
 ```@docs; canonical=false
 xcsp_maximum
@@ -89,20 +89,20 @@ xcsp_element
 xcsp_channel
 ```
 
-# SECTION - Packing and Scheduling Constraints
+### Packing and Scheduling Constraints
 
 ```@docs; canonical=false
 xcsp_cumulative
 xcsp_no_overlap
 ```
 
-# SECTION - Constraints on Graphs
+### Constraints on Graphs
 
 ```@docs; canonical=false
 xcsp_circuit
 ```
 
-# SECTION - Elementary Constraints
+### Elementary Constraints
 ```@docs; canonical=false
 xcsp_instantiation
 ```
