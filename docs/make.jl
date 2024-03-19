@@ -96,6 +96,6 @@ makedocs(;
 deploydocs(;
     repo="https://github.com/JuliaConstraints/JuliaConstraints.github.io",
     target = "build",
-    devbranch = "dev",
+    devbranch = "main",
     push_preview=true,
 )
