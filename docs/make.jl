@@ -61,7 +61,17 @@ makedocs(;
         "Constraints" => [
             "ConstraintCommons.jl" => "constraints/constraint_commons.md",
             "ConstraintDomains.jl" => "constraints/constraint_domains.md",
-            "Constraints.jl" => "constraints/constraints.md",
+            "Constraints.jl" => [
+                "Basic Tools" => "constraints/constraints.md",
+                "Generic Constraints" => "constraints/generic_constraints.md",
+                "Language Constraints" => "constraints/language_constraints.md",
+                "Comparison Constraints" => "constraints/comparison_constraints.md",
+                "Counting and Summing Constraints" => "constraints/counting_summing_constraints.md",
+                "Connection Constraints" => "constraints/connection_constraints.md",
+                "Packing and Scheduling Constraints" => "constraints/packing_scheduling_constraints.md",
+                "Graph Constraints" => "constraints/graph_constraints.md",
+                "Elementary Constraints" => "constraints/elementary_constraints.md",
+            ],
             "ConstraintModels.jl" => "constraints/constraint_models.md",
         ],
         "Learning" => [

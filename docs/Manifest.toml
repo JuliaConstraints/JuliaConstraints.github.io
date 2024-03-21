@@ -240,9 +240,7 @@ version = "0.1.9"
 
 [[deps.Constraints]]
 deps = ["CompositionalNetworks", "ConstraintCommons", "ConstraintDomains", "DataFrames", "Dictionaries", "MacroTools", "PrettyTables", "TestItemRunner", "TestItems"]
-git-tree-sha1 = "329c6428695c3e3f40ddbc0a27efe50d02eacf73"
-repo-rev = "main"
-repo-url = "https://github.com/JuliaConstraints/Constraints.jl.git"
+path = "/home/azzaare/.julia/dev/Constraints"
 uuid = "30f324ab-b02d-43f0-b619-e131c61659f7"
 version = "0.5.4"
 
@@ -441,9 +439,9 @@ version = "2.23.0"
 
 [[deps.Flux]]
 deps = ["Adapt", "ChainRulesCore", "Compat", "Functors", "LinearAlgebra", "MLUtils", "MacroTools", "NNlib", "OneHotArrays", "Optimisers", "Preferences", "ProgressLogging", "Random", "Reexport", "SparseArrays", "SpecialFunctions", "Statistics", "Zygote"]
-git-tree-sha1 = "502d0232ec6430d40b6e5b57637333f32192592e"
+git-tree-sha1 = "a5475163b611812d073171583982c42ea48d22b0"
 uuid = "587475ba-b771-5e3f-ad9e-33799f191a9c"
-version = "0.14.14"
+version = "0.14.15"
 
     [deps.Flux.extensions]
     FluxAMDGPUExt = "AMDGPU"
@@ -964,7 +962,9 @@ version = "0.1.4"
 
 [[deps.QUBOConstraints]]
 deps = ["ConstraintDomains", "LinearAlgebra", "TestItemRunner", "TestItems"]
-git-tree-sha1 = "03b9d824ea2b1e471619e3edcdec8ffe38dcdc83"
+git-tree-sha1 = "a2dd12c12276412a67b30c08473eb94e4710a308"
+repo-rev = "main"
+repo-url = "https://github.com/JuliaConstraints/QUBOConstraints.jl.git"
 uuid = "110b7fcc-6942-4061-a625-86e03d1de7cf"
 version = "0.2.1"
 
