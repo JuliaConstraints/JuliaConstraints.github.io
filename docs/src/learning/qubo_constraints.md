@@ -1,7 +1,14 @@
-# QUBOConstraints.jl
+# Introduction to QUBOConstraints.jl
 
-Documentation for `QUBOConstraints.jl`.
+Introduction to `QUBOConstraints.jl`.
 
-```@autodocs
-Modules=[QUBOConstraints]
+```@meta
+CurrentModule = QUBOConstraints
+```
+
+## Basic features
+
+```@docs; canonical=false
+QUBO_base
+QUBO_linear_sum
 ```

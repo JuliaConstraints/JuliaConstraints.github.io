@@ -3,7 +3,7 @@
 ```@autodocs; canonical=false
 Modules=[
     ConstraintCommons, ConstraintDomains, Constraints,
-    CompositionalNetworks,
+    CompositionalNetworks, QUBOConstraints,
 ]
 Private = false
 ```

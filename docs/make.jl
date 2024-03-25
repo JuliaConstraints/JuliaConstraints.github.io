@@ -85,7 +85,11 @@ makedocs(;
                 "Aggregation Layer" => "learning/aggregation.md",
                 "Comparison Layer" => "learning/comparison.md",
             ],
-            "QUBOConstraints.jl" => "learning/qubo_constraints.md",
+            "QUBOConstraints.jl" => [
+                "Model as QUBO" => "learning/qubo_constraints.md",
+                "Encoding" => "learning/qubo_encoding.md",
+                "Learning" => "learning/qubo_learning.md",
+            ],
             "ConstraintLearning.jl" => "learning/constraint_learning.md",
         ],
         "Solvers" => [

@@ -3,6 +3,6 @@
 ```@autodocs
 Modules=[
     ConstraintCommons, ConstraintDomains, Constraints,
-    CompositionalNetworks,
+    CompositionalNetworks, QUBOConstraints,
 ]
 ```
