@@ -12,10 +12,10 @@ CurrentModule = ConstraintDomains
 
 - **Domain Types**: The package distinguishes between various domain types to cater to different needs:
 
-    - *ContinuousDomain*: A supertype for domains representing continuous ranges of real numbers.
-    - *DiscreteDomain*: Serves as a supertype for domains defined by discrete sets or ranges of numbers.
-    - *EmptyDomain*: Handles yet-to-be-defined domains, facilitating dynamic problem formulation.
-    - *Intervals and RangeDomain*: Represent continuous intervals and discrete ranges, respectively, providing flexible domain specification options.
+  - *ContinuousDomain*: A supertype for domains representing continuous ranges of real numbers.
+  - *DiscreteDomain*: Serves as a supertype for domains defined by discrete sets or ranges of numbers.
+  - *EmptyDomain*: Handles yet-to-be-defined domains, facilitating dynamic problem formulation.
+  - *Intervals and RangeDomain*: Represent continuous intervals and discrete ranges, respectively, providing flexible domain specification options.
 - **Dynamic Domain Manipulation**: ConstraintDomains.jl supports dynamic changes to domains, allowing for the addition (add!) and deletion (delete!) of elements, crucial for problems where domain definitions evolve based on the search process or external inputs.
 
 - **Exploration Settings and Methods**: The package offers ExploreSettings to configure the exploration of search spaces, including parameters for complete searches, maximum samplings, and solution limits. This feature is pivotal for tailoring the search process to the problem's characteristics and the computational resources available.

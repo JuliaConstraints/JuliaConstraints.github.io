@@ -59,6 +59,7 @@ makedocs(;
             ],
         ],
         "Constraints" => [
+            "Introduction" => "constraints/intro.md",
             "ConstraintCommons.jl" => "constraints/constraint_commons.md",
             "ConstraintDomains.jl" => "constraints/constraint_domains.md",
             "Constraints.jl" => [
@@ -75,11 +76,20 @@ makedocs(;
             "ConstraintModels.jl" => "constraints/constraint_models.md",
         ],
         "Learning" => [
-            "CompositionalNetworks.jl" => "learning/compositional_networks.md",
+            "Introduction" => "learning/intro.md",
+            "CompositionalNetworks.jl" => [
+                "About ICNs" => "learning/compositional_networks.md",
+                "Layers" => "learning/layers.md",
+                "Transformations Layer" => "learning/transformation.md",
+                "Arithmetic Layer" => "learning/arithmetic.md",
+                "Aggregation Layer" => "learning/aggregation.md",
+                "Comparison Layer" => "learning/comparison.md",
+            ],
             "QUBOConstraints.jl" => "learning/qubo_constraints.md",
             "ConstraintLearning.jl" => "learning/constraint_learning.md",
         ],
         "Solvers" => [
+            "Introduction" => "solvers/intro.md",
             "JuMPed" => [
                 "CBLS.jl" => "solvers/cbls.md",
             ],

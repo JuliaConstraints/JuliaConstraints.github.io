@@ -1,5 +1,8 @@
 # Full API
 
 ```@autodocs
-Modules=[ConstraintCommons, ConstraintDomains, Constraints]
+Modules=[
+    ConstraintCommons, ConstraintDomains, Constraints,
+    CompositionalNetworks,
+]
 ```

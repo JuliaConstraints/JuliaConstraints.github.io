@@ -7,6 +7,7 @@ CurrentModule = ConstraintCommons
 ```
 
 ## Key Features and Functionalities
+
 - **Shared Structures and Abstract Types**: ConstraintCommons.jl offers a collection of shared data structures and abstract types. This standardization is crucial for ensuring that packages such as ConstraintDomains, Constraints, ConstraintLearning, etc. can seamlessly interact and integrate, fostering a cohesive development environment.
 - **Generic Functions and Methods**: The package includes a set of generic functions and methods that are common across the JuliaConstraints ecosystem. This approach minimizes duplication and facilitates the extension of functionalities across different packages without requiring redundant code.
 - **Interface for Learning and Application Transition**: One of the pivotal roles of ConstraintCommons.jl is to provide a shared interface that bridges the gap between learning packages (e.g., CompositionalNetworks, QUBOConstraints, and ConstraintTranslator) and basic functionality packages. This interface ensures that once a learning process is complete, the resulting models or solutions can be directly utilized with the basic packages, eliminating the need for users to manage multiple package dependencies actively.
@@ -22,7 +23,7 @@ USUAL_CONSTRAINT_PARAMETERS
 extract_parameters
 ```
 
-#### Performances -- TODO
+### Performances -- TODO
 
 ## Languages
 
@@ -38,11 +39,11 @@ accept
 at_end
 ```
 
-#### Performances -- TODO
+### Performances -- TODO
 
 ## Extensions
 
-We extended some operations for `Nothing` and `Symbol`. 
+We extended some operations for `Nothing` and `Symbol`.
 
 ```@docs; canonical=false
 Base.:*
@@ -50,7 +51,7 @@ Base.in(::Any, ::Nothing)
 Base.isempty(::Nothing)
 ```
 
-#### Performances -- TODO
+### Performances -- TODO
 
 ## Sampling
 
@@ -60,7 +61,7 @@ During our constraint learning processes, we use sampling to efficiently make pa
 oversample
 ```
 
-#### Performances -- TODO
+### Performances -- TODO
 
 ## Extrema
 
@@ -70,14 +71,14 @@ We need to compute the difference between extrema of various kind of collections
 δ_extrema
 ```
 
-#### Performances -- TODO
+### Performances -- TODO
 
 ## Dictionaries
 
-We provide the everuseful `incsert!` function for dictionaries. 
+We provide the everuseful `incsert!` function for dictionaries.
 
 ```@docs; canonical=false
 incsert!
 ```
 
-#### Performances -- TODO
+### Performances -- TODO
