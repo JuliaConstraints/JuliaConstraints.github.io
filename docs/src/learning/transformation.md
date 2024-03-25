@@ -17,7 +17,7 @@ List the possible parameters and how it affects the transformations.
 ```@docs; canonical=false
 tr_identity
 tr_count_eq
-tr_count_right
+tr_count_eq_right
 tr_count_eq_left
 tr_count_greater
 tr_count_lesser
