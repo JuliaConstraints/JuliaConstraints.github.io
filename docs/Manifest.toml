@@ -1,6 +1,6 @@
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.10.2"
+julia_version = "1.10.0"
 manifest_format = "2.0"
 project_hash = "1b9658bdf261a7c6654c76e78c2b14b059e43c02"
 
@@ -185,13 +185,11 @@ weakdeps = ["Dates", "LinearAlgebra"]
 [[deps.CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "1.1.0+0"
+version = "1.0.5+1"
 
 [[deps.CompositionalNetworks]]
 deps = ["ConstraintCommons", "ConstraintDomains", "Dictionaries", "Distances", "JuliaFormatter", "OrderedCollections", "Random", "TestItemRunner", "TestItems", "ThreadSafeDicts", "Unrolled"]
-git-tree-sha1 = "fa90dcc50a4733e873ecb7959d9518fb7d1d9d66"
-repo-rev = "doc"
-repo-url = "https://github.com/JuliaConstraints/CompositionalNetworks.jl.git"
+path = "/root/.julia/dev/CompositionalNetworks"
 uuid = "4b67e4b5-442d-4ef5-b760-3f5df3a57537"
 version = "0.5.5"
 
@@ -855,7 +853,7 @@ version = "0.2.5"
 [[deps.OpenBLAS_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "Libdl"]
 uuid = "4536629a-c528-5b80-bd46-f80d51c5b363"
-version = "0.3.23+4"
+version = "0.3.23+2"
 
 [[deps.OpenLibm_jll]]
 deps = ["Artifacts", "Libdl"]
