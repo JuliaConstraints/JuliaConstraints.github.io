@@ -208,7 +208,7 @@ version = "0.1.2"
 
 [[deps.ConstraintCommons]]
 deps = ["Dictionaries", "TestItemRunner", "TestItems"]
-git-tree-sha1 = "10747373814d77663bbfb54490e38b774752fe72"
+git-tree-sha1 = "5ed16555ca9f2ffcf6a1b8aa211ddeca5a369d68"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/ConstraintCommons.jl.git"
 uuid = "e37357d9-0691-492f-a822-e5ea6a920954"
@@ -216,7 +216,7 @@ version = "0.1.6"
 
 [[deps.ConstraintDomains]]
 deps = ["ConstraintCommons", "Dictionaries", "Intervals", "PatternFolds", "StatsBase", "TestItemRunner", "TestItems"]
-git-tree-sha1 = "828f859be8b5e7bb4037fcd4b32803cad18b0408"
+git-tree-sha1 = "a5da3b8d52ce2ef998d52ba3cbc8882899835ba4"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/ConstraintDomains.jl.git"
 uuid = "5800fd60-8556-4464-8d61-84ebf7a0bedb"
@@ -366,9 +366,9 @@ version = "1.3.0"
 
 [[deps.DocumenterVitepress]]
 deps = ["ANSIColoredPrinters", "Base64", "DocStringExtensions", "Documenter", "IOCapture", "Markdown", "NodeJS_20_jll", "REPL"]
-git-tree-sha1 = "f44c836d345e6e7cf6a35f25990a3848d96d0a5a"
+git-tree-sha1 = "c3546cab09059a2856e5cbe579edf47f53ef6a95"
 uuid = "4710194d-e776-4893-9690-8d956a29c365"
-version = "0.0.12"
+version = "0.0.13"
 
 [[deps.Downloads]]
 deps = ["ArgTools", "FileWatching", "LibCURL", "NetworkOptions"]
