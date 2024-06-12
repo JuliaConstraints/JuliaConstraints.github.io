@@ -30,4 +30,3 @@ Options specific to this backend with their default values are defined as:
 :samples => nothing
 :gc => true
 ```
-
