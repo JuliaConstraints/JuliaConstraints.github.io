@@ -4,7 +4,7 @@ PerfChecker.jl is a package designed for package authors to easily performance t
 To achieve that, it provides the follwing features:
 
 - The main macro `@check`, which provides an easy-to-use interface over various interfaces, configurable for various backends via a dictionary.
-- A CI for reproducible performance testing.
+- (WIP) A CI for reproducible performance testing.
 - Visualization of different metrics from `@check` using Makie.jl
 
 ## Usage
