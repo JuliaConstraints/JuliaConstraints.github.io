@@ -38,7 +38,8 @@ makedocs(;
         repo = "https://github.com/JuliaConstraints/JuliaConstraints.github.io",
         devurl = "dev",
         deploy_url = "https://juliaconstraints.github.io/",
-        description = "Resources about Constraint Programming in Julia"
+        description = "Resources about Constraint Programming in Julia",
+        build_vitepress = false
     ),
     pages=[
         "Home" => "index.md",
@@ -106,8 +107,11 @@ makedocs(;
         ],
         "Performance Checking" => [
             "PerfChecker.jl" => "perf/perf_checker.md",
-            "BenchmarkToolsExt" => "perf/benchmark_ext.md",
+            "Tutorial" => "perf/tutorial.md",
             "Interface" => "perf/perf_interface.md",
+            "BenchmarkToolsExt" => "perf/benchmark_ext.md",
+            "ChairmarksExt" => "perf/chairmarks_ext.md",
+            "API" => "perf/api.md"
         ],
         "API" => [
             "Public" => "public_api.md",
