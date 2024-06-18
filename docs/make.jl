@@ -107,9 +107,11 @@ makedocs(;
         ],
         "Performance Checking" => [
             "PerfChecker.jl" => "perf/perf_checker.md",
+            "Tutorial" => "perf/tutorial.md",
             "Interface" => "perf/perf_interface.md",
             "BenchmarkToolsExt" => "perf/benchmark_ext.md",
-            "ChairmarksExt" => "perf/chairmarks_ext.md"
+            "ChairmarksExt" => "perf/chairmarks_ext.md",
+            "API" => "perf/api.md"
         ],
         "API" => [
             "Public" => "public_api.md",
