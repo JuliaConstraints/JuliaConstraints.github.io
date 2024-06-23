@@ -116,12 +116,12 @@ uuid = "6e34b625-4abd-537c-b88f-471c36dfa7a0"
 version = "1.0.8+1"
 
 [[deps.CBLS]]
-deps = ["ConstraintDomains", "Constraints", "Intervals", "JuMP", "Lazy", "LocalSearchSolvers", "MathOptInterface"]
-git-tree-sha1 = "0f816821c55d952f63b5cf15b5adb5100241eb2f"
+deps = ["ConstraintCommons", "ConstraintDomains", "Constraints", "Intervals", "JuMP", "Lazy", "LocalSearchSolvers", "MathOptInterface", "TestItems"]
+git-tree-sha1 = "6c8774a45fa69436b43e5cf98f40aee670ce93cd"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/CBLS.jl.git"
 uuid = "a3809bfe-37bb-4d48-a667-bac4c6be8d90"
-version = "0.1.13"
+version = "0.2.0"
 
 [[deps.CEnum]]
 git-tree-sha1 = "389ad5c84de1ae7cf0e28e381131c98ea87d54fc"
@@ -197,11 +197,11 @@ version = "1.1.1+0"
 
 [[deps.CompositionalNetworks]]
 deps = ["ConstraintCommons", "ConstraintDomains", "Dictionaries", "Distances", "JuliaFormatter", "OrderedCollections", "Random", "TestItemRunner", "TestItems", "ThreadSafeDicts", "Unrolled"]
-git-tree-sha1 = "c98b7eca572e54c2510c4c7f2e952096c73a563d"
+git-tree-sha1 = "e9fc45baee3af994903a656caa23878fc8e3e9cd"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/CompositionalNetworks.jl.git"
 uuid = "4b67e4b5-442d-4ef5-b760-3f5df3a57537"
-version = "0.5.6"
+version = "0.5.7"
 
 [[deps.CompositionsBase]]
 git-tree-sha1 = "802bb88cd69dfd1509f6670416bd4434015693ad"
@@ -240,11 +240,11 @@ version = "0.1.7"
 
 [[deps.ConstraintModels]]
 deps = ["CBLS", "Constraints", "Dictionaries", "JuMP", "LocalSearchSolvers", "MathOptInterface"]
-git-tree-sha1 = "d6c6e0676969bdac09468d250dd309ac545f390e"
+git-tree-sha1 = "c60bcdfa5a427e64f4c67bb2b4cc698bb57eb857"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/ConstraintModels.jl.git"
 uuid = "841a6ec5-cac3-4c42-9a0a-4b21c9553698"
-version = "0.1.9"
+version = "0.2.0"
 
 [[deps.Constraints]]
 deps = ["CompositionalNetworks", "ConstraintCommons", "ConstraintDomains", "DataFrames", "Dictionaries", "MacroTools", "PrettyTables", "TestItemRunner", "TestItems"]
@@ -623,9 +623,9 @@ version = "0.2.4"
 
 [[deps.KernelAbstractions]]
 deps = ["Adapt", "Atomix", "InteractiveUtils", "LinearAlgebra", "MacroTools", "PrecompileTools", "Requires", "SparseArrays", "StaticArrays", "UUIDs", "UnsafeAtomics", "UnsafeAtomicsLLVM"]
-git-tree-sha1 = "8e5a339882cc401688d79b811d923a38ba77d50a"
+git-tree-sha1 = "b8fcefe4418e4a7a2c3aaac883fecddd8efbe286"
 uuid = "63c18a36-062a-441e-b654-da1e3ab1ce7c"
-version = "0.9.20"
+version = "0.9.21"
 
     [deps.KernelAbstractions.extensions]
     EnzymeExt = "EnzymeCore"
@@ -710,11 +710,11 @@ uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
 [[deps.LocalSearchSolvers]]
 deps = ["CompositionalNetworks", "ConstraintDomains", "Constraints", "Dates", "Dictionaries", "Distributed", "JSON", "Lazy", "OrderedCollections", "TestItemRunner", "TestItems"]
-git-tree-sha1 = "42f4a27bb2d63ce899e10f640f7f04cb356ec68d"
+git-tree-sha1 = "d08534fd64967cfbaa13b1e48971f9bab4d3f9f7"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/LocalSearchSolvers.jl.git"
 uuid = "2b10edaa-728d-4283-ac71-07e312d6ccf3"
-version = "0.4.5"
+version = "0.4.6"
 
 [[deps.LogExpFunctions]]
 deps = ["DocStringExtensions", "IrrationalConstants", "LinearAlgebra"]
@@ -831,9 +831,9 @@ version = "7.8.3"
 
 [[deps.NNlib]]
 deps = ["Adapt", "Atomix", "ChainRulesCore", "GPUArraysCore", "KernelAbstractions", "LinearAlgebra", "Pkg", "Random", "Requires", "Statistics"]
-git-tree-sha1 = "3d4617f943afe6410206a5294a95948c8d1b35bd"
+git-tree-sha1 = "78de319bce99d1d8c1d4fe5401f7cfc2627df396"
 uuid = "872c559c-99b0-510c-b3b7-b6c96a88d5cd"
-version = "0.9.17"
+version = "0.9.18"
 
     [deps.NNlib.extensions]
     NNlibAMDGPUExt = "AMDGPU"
@@ -936,8 +936,8 @@ version = "0.2.4"
 
 [[deps.PerfChecker]]
 deps = ["CSV", "CoverageTools", "CpuId", "JSON", "Malt", "Pkg", "Profile", "TOML", "TypedTables", "UUIDs"]
-git-tree-sha1 = "58979ea0b3de20e82626de04aca6328e1a81c3fd"
-repo-rev = "docstuff"
+git-tree-sha1 = "113b402af7d1d4d1d1a4fe176f7d4881822872b1"
+repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/PerfChecker.jl.git"
 uuid = "6309bf6b-a531-4b08-891e-8ee981e5c424"
 version = "0.2.1"
