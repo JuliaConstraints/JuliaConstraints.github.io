@@ -20,7 +20,7 @@ ar_sum(x)
 Reduce `k = length(x)` vectors through sum to a single vector.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/arithmetic.jl#L1-L4)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/arithmetic.jl#L1-L4)
 
 </div>
 <br>
@@ -38,7 +38,7 @@ ar_prod(x)
 Reduce `k = length(x)` vectors through product to a single vector.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/arithmetic.jl#L7-L10)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/arithmetic.jl#L7-L10)
 
 </div>
 <br>
@@ -58,7 +58,7 @@ arithmetic_layer()
 Generate the layer of arithmetic operations of the ICN. The operations are mutually exclusive, that is only one will be selected.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/arithmetic.jl#L13-L16)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/arithmetic.jl#L13-L16)
 
 </div>
 <br>

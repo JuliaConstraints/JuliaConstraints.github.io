@@ -228,7 +228,7 @@ value ∈ x::Variable
 Check if a variable `x` is restricted by a `constraint::Int`, or if a `value` belongs to the domain of `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/variable.jl#L52-L56)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/variable.jl#L52-L56)
 
 
 
@@ -238,7 +238,7 @@ var::Int ∈ c::Constraint
 
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/constraint.jl#L43-L45)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/constraint.jl#L43-L45)
 
 
 
@@ -664,7 +664,7 @@ length(layer)
 Return the number of operations in a layer.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L17-L20)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L17-L20)
 
 
 
@@ -676,7 +676,7 @@ Base.length(icn)
 Return the total number of operations of an ICN.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/icn.jl#L37-L40)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/icn.jl#L37-L40)
 
 
 
@@ -786,7 +786,7 @@ value ∈ x::Variable
 Check if a variable `x` is restricted by a `constraint::Int`, or if a `value` belongs to the domain of `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/variable.jl#L52-L56)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/variable.jl#L52-L56)
 
 
 
@@ -796,7 +796,7 @@ var::Int ∈ c::Constraint
 
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/constraint.jl#L43-L45)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/constraint.jl#L43-L45)
 
 
 
@@ -1138,7 +1138,7 @@ length(layer)
 Return the number of operations in a layer.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L17-L20)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L17-L20)
 
 
 
@@ -1150,7 +1150,7 @@ Base.length(icn)
 Return the total number of operations of an ICN.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/icn.jl#L37-L40)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/icn.jl#L37-L40)
 
 
 
@@ -1260,7 +1260,7 @@ value ∈ x::Variable
 Check if a variable `x` is restricted by a `constraint::Int`, or if a `value` belongs to the domain of `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/variable.jl#L52-L56)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/variable.jl#L52-L56)
 
 
 
@@ -1270,7 +1270,7 @@ var::Int ∈ c::Constraint
 
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/constraint.jl#L43-L45)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/constraint.jl#L43-L45)
 
 
 

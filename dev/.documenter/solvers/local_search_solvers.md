@@ -16,7 +16,7 @@ AbstractSolver
 Abstract type to encapsulate the different solver types such as `Solver` or `_SubSolver`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L1-L4)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L1-L4)
 
 </div>
 <br>
@@ -34,7 +34,7 @@ Constraint{F <: Function}
 Structure to store an error function and the variables it constrains.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/constraint.jl#L1-L5)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/constraint.jl#L1-L5)
 
 </div>
 <br>
@@ -52,7 +52,7 @@ LeadSolver <: MetaSolver
 Solver managed remotely by a MainSolver. Can manage its own set of local sub solvers.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solvers/lead.jl#L1-L4)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solvers/lead.jl#L1-L4)
 
 </div>
 <br>
@@ -80,7 +80,7 @@ Main solver. Handle the solving of a model, and optional multithreaded and/or di
   
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solvers/main.jl#L1-L11)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solvers/main.jl#L1-L11)
 
 </div>
 <br>
@@ -93,7 +93,7 @@ Main solver. Handle the solving of a model, and optional multithreaded and/or di
 Abstract type to encapsulate all solver types that manages other solvers.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solvers/meta.jl#L1-L3)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solvers/meta.jl#L1-L3)
 
 </div>
 <br>
@@ -111,7 +111,7 @@ Objective{F <: Function}
 A structure to handle objectives in a solver. `struct Objective{F <: Function}     name::String     f::F end``
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/objective.jl#L1-L10)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/objective.jl#L1-L10)
 
 </div>
 <br>
@@ -129,7 +129,7 @@ Objective(F, o::Objective{F2}) where {F2 <: Function}
 Constructor used in specializing a solver. Should never be called externally.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/objective.jl#L16-L19)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/objective.jl#L16-L19)
 
 </div>
 <br>
@@ -178,7 +178,7 @@ set_time_limit_sec(model, 5.0)
 
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L13-L35)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L13-L35)
 
 </div>
 <br>
@@ -204,7 +204,7 @@ end
 
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/variable.jl#L1-L10)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/variable.jl#L1-L10)
 
 </div>
 <br>
@@ -242,7 +242,7 @@ end
 
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L1-L22)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L1-L22)
 
 </div>
 <br>
@@ -271,7 +271,7 @@ end
 
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L5-L17)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L5-L17)
 
 </div>
 <br>
@@ -299,7 +299,7 @@ An internal solver type called by MetaSolver when multithreading is enabled.
   
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solvers/sub.jl#L1-L11)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solvers/sub.jl#L1-L11)
 
 </div>
 <br>
@@ -315,7 +315,7 @@ empty!(s::Solver)
 
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solvers/main.jl#L49-L52)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solvers/main.jl#L49-L52)
 
 </div>
 <br>
@@ -333,7 +333,7 @@ empty!(m::Model)
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L437-L441)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L437-L441)
 
 </div>
 <br>
@@ -349,7 +349,7 @@ var::Int ∈ c::Constraint
 
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/constraint.jl#L43-L45)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/constraint.jl#L43-L45)
 
 </div>
 <br>
@@ -368,7 +368,7 @@ value ∈ x::Variable
 Check if a variable `x` is restricted by a `constraint::Int`, or if a `value` belongs to the domain of `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/variable.jl#L52-L56)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/variable.jl#L52-L56)
 
 </div>
 <br>
@@ -386,7 +386,7 @@ _add!(c::Constraint, x)
 Add the variable of indice `x` to `c`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/constraint.jl#L22-L26)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/constraint.jl#L22-L26)
 
 </div>
 <br>
@@ -404,7 +404,7 @@ _add_to_constraint!(x::Variable, id)
 Add a constraint `id` to the list of constraints of `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/variable.jl#L34-L37)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/variable.jl#L34-L37)
 
 </div>
 <br>
@@ -422,7 +422,7 @@ _check_restart(s)
 Check if a restart of `s` is necessary. If `s` has subsolvers, this check is independent for all of them.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L265-L269)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L265-L269)
 
 </div>
 <br>
@@ -444,7 +444,7 @@ Check if any subsolver of a main solver `s`, for
   
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L390-L396)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L390-L396)
 
 </div>
 <br>
@@ -470,7 +470,7 @@ Compute the objective `o`&#39;s value if `s` is satisfied and return the current
   
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L165-L174)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L165-L174)
 
 </div>
 <br>
@@ -488,7 +488,7 @@ _compute_cost!(s, ind, c)
 Compute the cost of constraint `c` with index `ind`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L121-L125)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L121-L125)
 
 </div>
 <br>
@@ -506,7 +506,7 @@ _compute_costs!(s; cons_lst::Indices{Int} = Indices{Int}())
 Compute the cost of constraints `c` in `cons_lst`. If `cons_lst` is empty, compute the cost for all the constraints in `s`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L133-L137)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L133-L137)
 
 </div>
 <br>
@@ -525,7 +525,7 @@ _compute_objective!(s, o = 1)
 Compute the objective `o`&#39;s value.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L150-L155)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L150-L155)
 
 </div>
 <br>
@@ -543,7 +543,7 @@ _cons_cost!(s::S, c, cost) where S <: Union{_State, AbstractSolver}
 Set the `cost` of constraint `c`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L117-L120)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L117-L120)
 
 </div>
 <br>
@@ -561,7 +561,7 @@ _cons_cost(s::S, c) where S <: Union{_State, AbstractSolver}
 Return the cost of constraint `c`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L99-L102)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L99-L102)
 
 </div>
 <br>
@@ -579,7 +579,7 @@ _cons_costs!(s::S, costs) where S <: Union{_State, AbstractSolver}
 Set the constraints costs.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L69-L72)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L69-L72)
 
 </div>
 <br>
@@ -597,7 +597,7 @@ _cons_costs(s::S) where S <: Union{_State, AbstractSolver}
 Access the constraints costs.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L45-L48)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L45-L48)
 
 </div>
 <br>
@@ -615,7 +615,7 @@ _constriction(x::Variable)
 Return the `cosntriction` of `x`, i.e. the number of constraints restricting `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/variable.jl#L46-L49)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/variable.jl#L46-L49)
 
 </div>
 <br>
@@ -633,7 +633,7 @@ _delete!(c::Constraint, x::Int)
 Delete `x` from `c`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/constraint.jl#L29-L33)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/constraint.jl#L29-L33)
 
 </div>
 <br>
@@ -651,7 +651,7 @@ _delete_from_constraint!(x::Variable, id)
 Delete a constraint `id` from the list of constraints of `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/variable.jl#L40-L43)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/variable.jl#L40-L43)
 
 </div>
 <br>
@@ -669,7 +669,7 @@ _draw!(s)
 Draw a random (re-)starting configuration.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L113-L116)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L113-L116)
 
 </div>
 <br>
@@ -687,7 +687,7 @@ _dynamic!(options, dynamic) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L106-L110)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L106-L110)
 
 </div>
 <br>
@@ -705,7 +705,7 @@ _dynamic(options) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L99-L103)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L99-L103)
 
 </div>
 <br>
@@ -723,7 +723,7 @@ _find_rand_argmax(d::DictionaryView)
 Compute `argmax` of `d` and select one element randomly.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/utils.jl#L7-L10)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/utils.jl#L7-L10)
 
 </div>
 <br>
@@ -741,7 +741,7 @@ _get_constraints(x::Variable)
 Access the list of `constraints` of `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/variable.jl#L28-L31)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/variable.jl#L28-L31)
 
 </div>
 <br>
@@ -759,7 +759,7 @@ _get_vars(c::Constraint)
 Returns the variables constrained by `c`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/constraint.jl#L15-L19)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/constraint.jl#L15-L19)
 
 </div>
 <br>
@@ -777,7 +777,7 @@ _inc_vars!(m::M) where M <: Union{Model, AbstractSolver}
 Increment the maximum constraint id that has been attributed to `m`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L102-L105)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L102-L105)
 
 </div>
 <br>
@@ -795,7 +795,7 @@ _inc_vars!(m::M) where M <: Union{Model, AbstractSolver}
 Increment the maximum objective id that has been attributed to `m`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L108-L111)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L108-L111)
 
 </div>
 <br>
@@ -813,7 +813,7 @@ _inc_vars!(m::M) where M <: Union{Model, AbstractSolver}
 Increment the maximum variable id that has been attributed to `m`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L96-L99)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L96-L99)
 
 </div>
 <br>
@@ -831,7 +831,7 @@ _info_path!(options, iterations) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L120-L124)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L120-L124)
 
 </div>
 <br>
@@ -849,7 +849,7 @@ _info_path(options, path)
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L113-L117)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L113-L117)
 
 </div>
 <br>
@@ -867,7 +867,7 @@ _is_empty(m::Model)
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L385-L389)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L385-L389)
 
 </div>
 <br>
@@ -885,7 +885,7 @@ _iteration!(options, iterations) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L134-L138)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L134-L138)
 
 </div>
 <br>
@@ -903,7 +903,7 @@ _iteration(options) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L127-L131)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L127-L131)
 
 </div>
 <br>
@@ -921,7 +921,7 @@ _length(c::Constraint)
 Return the number of constrained variables by `c`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/constraint.jl#L36-L40)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/constraint.jl#L36-L40)
 
 </div>
 <br>
@@ -939,7 +939,7 @@ _max_cons(m::M) where M <: Union{Model, AbstractSolver}
 Access the maximum constraint id that has been attributed to `m`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L82-L85)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L82-L85)
 
 </div>
 <br>
@@ -957,7 +957,7 @@ _max_objs(m::M) where M <: Union{Model, AbstractSolver}
 Access the maximum objective id that has been attributed to `m`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L88-L91)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L88-L91)
 
 </div>
 <br>
@@ -975,7 +975,7 @@ _max_vars(m::M) where M <: Union{Model, AbstractSolver}
 Access the maximum variable id that has been attributed to `m`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L76-L79)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L76-L79)
 
 </div>
 <br>
@@ -1001,7 +1001,7 @@ Perform an improving move in `x` neighbourhood if possible.
   
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L285-L294)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L285-L294)
 
 </div>
 <br>
@@ -1027,7 +1027,7 @@ DOCSTRING
   
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L185-L194)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L185-L194)
 
 </div>
 <br>
@@ -1045,7 +1045,7 @@ _optimizing!(s::S) where S <: Union{_State, AbstractSolver}
 Set the solver `optimizing` status to `true`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L87-L90)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L87-L90)
 
 </div>
 <br>
@@ -1063,7 +1063,7 @@ _optimizing(s::S) where S <: Union{_State, AbstractSolver}
 Check if `s` is in an optimizing state.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L63-L66)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L63-L66)
 
 </div>
 <br>
@@ -1081,7 +1081,7 @@ _print_level!(options, level) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L148-L152)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L148-L152)
 
 </div>
 <br>
@@ -1099,7 +1099,7 @@ _print_level(options) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L141-L145)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L141-L145)
 
 </div>
 <br>
@@ -1117,7 +1117,7 @@ _restart!(s, k = 10)
 Restart a solver.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L251-L255)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L251-L255)
 
 </div>
 <br>
@@ -1135,7 +1135,7 @@ _satisfying!(s::S) where S <: Union{_State, AbstractSolver}
 Set the solver `optimizing` status to `false`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L93-L96)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L93-L96)
 
 </div>
 <br>
@@ -1153,7 +1153,7 @@ _select_worse(s::S) where S <: Union{_State, AbstractSolver}
 Within the non-tabu variables, select the one with the worse error .
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L276-L279)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L276-L279)
 
 </div>
 <br>
@@ -1171,7 +1171,7 @@ _set!(s::S, x, val) where S <: Union{_State, AbstractSolver}
 Set the value of variable `x` to `val`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L135-L138)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L135-L138)
 
 </div>
 <br>
@@ -1197,7 +1197,7 @@ DOCSTRING
   
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L394-L403)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L394-L403)
 
 </div>
 <br>
@@ -1215,7 +1215,7 @@ _solutions!(options, solutions) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L162-L166)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L162-L166)
 
 </div>
 <br>
@@ -1233,7 +1233,7 @@ _solutions(options) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L155-L159)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L155-L159)
 
 </div>
 <br>
@@ -1251,7 +1251,7 @@ _specialize!(options, specialize) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L176-L180)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L176-L180)
 
 </div>
 <br>
@@ -1269,7 +1269,7 @@ _specialize(options) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L169-L173)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L169-L173)
 
 </div>
 <br>
@@ -1287,7 +1287,7 @@ _step!(s)
 Iterate a step of the solver run.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L337-L341)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L337-L341)
 
 </div>
 <br>
@@ -1305,7 +1305,7 @@ _set!(s::S, x, y) where S <: Union{_State, AbstractSolver}
 Swap the values of variables `x` and `y`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L141-L144)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L141-L144)
 
 </div>
 <br>
@@ -1323,7 +1323,7 @@ _tabu_delta!(options, time) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L218-L222)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L218-L222)
 
 </div>
 <br>
@@ -1341,7 +1341,7 @@ _tabu_delta(options) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L211-L215)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L211-L215)
 
 </div>
 <br>
@@ -1359,7 +1359,7 @@ _tabu_local!(options, time) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L204-L208)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L204-L208)
 
 </div>
 <br>
@@ -1377,7 +1377,7 @@ _tabu_local(options) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L197-L201)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L197-L201)
 
 </div>
 <br>
@@ -1395,7 +1395,7 @@ _tabu_time!(options, time) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L190-L194)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L190-L194)
 
 </div>
 <br>
@@ -1413,7 +1413,7 @@ _tabu_time(options) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L183-L187)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L183-L187)
 
 </div>
 <br>
@@ -1431,7 +1431,7 @@ _threads!(options, threads) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L232-L236)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L232-L236)
 
 </div>
 <br>
@@ -1449,7 +1449,7 @@ _threads(options) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L225-L229)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L225-L229)
 
 </div>
 <br>
@@ -1467,7 +1467,7 @@ _time_limit!(options, time::Time) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L246-L250)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L246-L250)
 
 </div>
 <br>
@@ -1485,7 +1485,7 @@ _time_limit(options) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L239-L243)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L239-L243)
 
 </div>
 <br>
@@ -1503,7 +1503,7 @@ _to_union(datatype)
 Make a minimal `Union` type from a collection of data types.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/utils.jl#L1-L4)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/utils.jl#L1-L4)
 
 </div>
 <br>
@@ -1521,7 +1521,7 @@ _value!(s::S, x, val) where S <: Union{_State, AbstractSolver}
 Set the value of variable `x` to `val`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L129-L132)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L129-L132)
 
 </div>
 <br>
@@ -1539,7 +1539,7 @@ _value(s::S, x) where S <: Union{_State, AbstractSolver}
 Return the value of variable `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L111-L114)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L111-L114)
 
 </div>
 <br>
@@ -1557,7 +1557,7 @@ _values!(s::S, values) where S <: Union{_State, AbstractSolver}
 Set the variables values.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L81-L84)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L81-L84)
 
 </div>
 <br>
@@ -1575,7 +1575,7 @@ _vars_costs(s::S) where S <: Union{_State, AbstractSolver}
 Access the variables costs.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L57-L60)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L57-L60)
 
 </div>
 <br>
@@ -1593,7 +1593,7 @@ _var_cost!(s::S, x, cost) where S <: Union{_State, AbstractSolver}
 Set the `cost` of variable `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L123-L126)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L123-L126)
 
 </div>
 <br>
@@ -1611,7 +1611,7 @@ _var_cost(s::S, x) where S <: Union{_State, AbstractSolver}
 Return the cost of variable `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L105-L108)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L105-L108)
 
 </div>
 <br>
@@ -1629,7 +1629,7 @@ _vars_costs!(s::S, costs) where S <: Union{_State, AbstractSolver}
 Set the variables costs.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L75-L78)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L75-L78)
 
 </div>
 <br>
@@ -1647,7 +1647,7 @@ _vars_costs(s::S) where S <: Union{_State, AbstractSolver}
 Access the variables costs.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/state.jl#L51-L54)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/state.jl#L51-L54)
 
 </div>
 <br>
@@ -1665,7 +1665,7 @@ _verbose(settings, str)
 Temporary logging function. #TODO: use better log instead (LoggingExtra.jl)
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/options.jl#L90-L93)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/options.jl#L90-L93)
 
 </div>
 <br>
@@ -1692,7 +1692,7 @@ add!(m::M, o) where M <: Union{Model, AbstractSolver}
 Add a variable `x`, a constraint `c`, or an objective `o` to `m`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L253-L262)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L253-L262)
 
 </div>
 <br>
@@ -1710,7 +1710,7 @@ add_value!(m::M, x, val) where M <: Union{Model, AbstractSolver}
 Add `val` to `x` domain.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L241-L244)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L241-L244)
 
 </div>
 <br>
@@ -1728,7 +1728,7 @@ add_var_to_cons!(m::M, c, x) where M <: Union{Model, AbstractSolver}
 Add `x` to the constraint `c` list of restricted variables.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L247-L250)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L247-L250)
 
 </div>
 <br>
@@ -1746,7 +1746,7 @@ constraint!(m::M, func, vars) where M <: Union{Model, AbstractSolver}
 Add a constraint with an error function `func` defined over variables `vars`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L287-L290)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L287-L290)
 
 </div>
 <br>
@@ -1764,7 +1764,7 @@ constraint(f, vars)
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/constraint.jl#L48-L52)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/constraint.jl#L48-L52)
 
 </div>
 <br>
@@ -1782,7 +1782,7 @@ constriction(m::M, x) where M <: Union{Model, AbstractSolver}
 Return the constriction of variable `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L223-L226)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L223-L226)
 
 </div>
 <br>
@@ -1800,7 +1800,7 @@ _decay_tabu!(s::S) where S <: Union{_State, AbstractSolver}
 Decay the tabu list.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/strategies/tabu.jl#L77-L80)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/strategies/tabu.jl#L77-L80)
 
 </div>
 <br>
@@ -1818,7 +1818,7 @@ _decrease_tabu!(s::S, x) where S <: Union{_State, AbstractSolver}
 Decrement the tabu value of variable `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/strategies/tabu.jl#L44-L47)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/strategies/tabu.jl#L44-L47)
 
 </div>
 <br>
@@ -1836,7 +1836,7 @@ _delete_tabu!(s::S, x) where S <: Union{_State, AbstractSolver}
 Delete the tabu entry of variable `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/strategies/tabu.jl#L50-L53)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/strategies/tabu.jl#L50-L53)
 
 </div>
 <br>
@@ -1854,7 +1854,7 @@ delete_value(m::M, x, val) where M <: Union{Model, AbstractSolver}
 Delete `val` from `x` domain.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L229-L232)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L229-L232)
 
 </div>
 <br>
@@ -1872,7 +1872,7 @@ delete_var_from_cons(m::M, c, x) where M <: Union{Model, AbstractSolver}
 Delete `x` from the constraint `c` list of restricted variables.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L235-L238)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L235-L238)
 
 </div>
 <br>
@@ -1890,7 +1890,7 @@ describe(m::M) where M <: Union{Model, AbstractSolver}
 Describe the model.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L304-L307)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L304-L307)
 
 </div>
 <br>
@@ -1908,7 +1908,7 @@ domain_size(m::Model, x) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L423-L427)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L423-L427)
 
 </div>
 <br>
@@ -1926,7 +1926,7 @@ draw(m::M, x) where M <: Union{Model, AbstractSolver}
 Draw a random value of `x` domain.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L216-L219)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L216-L219)
 
 </div>
 <br>
@@ -1944,7 +1944,7 @@ _empty_tabu!(s::S) where S <: Union{_State, AbstractSolver}
 Empty the tabu list.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/strategies/tabu.jl#L56-L59)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/strategies/tabu.jl#L56-L59)
 
 </div>
 <br>
@@ -1962,7 +1962,7 @@ get_cons_from_var(m::M, x) where M <: Union{Model, AbstractSolver}
 Access the constraints restricting variable `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L168-L171)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L168-L171)
 
 </div>
 <br>
@@ -1980,7 +1980,7 @@ get_constraint(m::M, c) where M <: Union{Model, AbstractSolver}
 Access the constraint `c`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L144-L147)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L144-L147)
 
 </div>
 <br>
@@ -1998,7 +1998,7 @@ get_constraints(m::M) where M <: Union{Model, AbstractSolver}
 Access the constraints of `m`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L120-L123)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L120-L123)
 
 </div>
 <br>
@@ -2016,7 +2016,7 @@ get_domain(m::M, x) where M <: Union{Model, AbstractSolver}
 Access the domain of variable `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L156-L159)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L156-L159)
 
 </div>
 <br>
@@ -2034,7 +2034,7 @@ get_kind(m::M) where M <: Union{Model, AbstractSolver}
 Access the kind of `m`, such as `:sudoku` or `:generic` (default).
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L132-L135)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L132-L135)
 
 </div>
 <br>
@@ -2052,7 +2052,7 @@ get_name(m::M, x) where M <: Union{Model, AbstractSolver}
 Access the name of variable `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L162-L165)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L162-L165)
 
 </div>
 <br>
@@ -2070,7 +2070,7 @@ get_objective(m::M, o) where M <: Union{Model, AbstractSolver}
 Access the objective `o`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L150-L153)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L150-L153)
 
 </div>
 <br>
@@ -2088,7 +2088,7 @@ get_objectives(m::M) where M <: Union{Model, AbstractSolver}
 Access the objectives of `m`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L126-L129)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L126-L129)
 
 </div>
 <br>
@@ -2106,7 +2106,7 @@ get_time_stamp(m::M) where M <: Union{Model, AbstractSolver}
 Access the time (since epoch) when the model was created. This time stamp is for internal performance measurement.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L180-L183)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L180-L183)
 
 </div>
 <br>
@@ -2124,7 +2124,7 @@ get_variable(m::M, x) where M <: Union{Model, AbstractSolver}
 Access the variable `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L138-L141)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L138-L141)
 
 </div>
 <br>
@@ -2142,7 +2142,7 @@ get_variables(m::M) where M <: Union{Model, AbstractSolver}
 Access the variables of `m`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L114-L117)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L114-L117)
 
 </div>
 <br>
@@ -2160,7 +2160,7 @@ get_vars_from_cons(m::M, c) where M <: Union{Model, AbstractSolver}
 Access the variables restricted by constraint `c`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L174-L177)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L174-L177)
 
 </div>
 <br>
@@ -2178,7 +2178,7 @@ _insert_tabu!(s::S, x, tabu_time) where S <: Union{_State, AbstractSolver}
 Insert the bariable `x` as tabu for `tabu_time`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/strategies/tabu.jl#L68-L71)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/strategies/tabu.jl#L68-L71)
 
 </div>
 <br>
@@ -2196,7 +2196,7 @@ is_sat(m::M) where M <: Union{Model, AbstractSolver}
 Return `true` if `m` is a satisfaction model.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L336-L339)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L336-L339)
 
 </div>
 <br>
@@ -2214,7 +2214,7 @@ is_specialized(m::M) where M <: Union{Model, AbstractSolver}
 Return `true` if the model is already specialized.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L342-L345)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L342-L345)
 
 </div>
 <br>
@@ -2232,7 +2232,7 @@ length_cons(m::M, c) where M <: Union{Model, AbstractSolver}
 Return the length of constraint `c`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L192-L195)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L192-L195)
 
 </div>
 <br>
@@ -2250,7 +2250,7 @@ length_cons(m::M) where M <: Union{Model, AbstractSolver}
 Return the number of constraints in `m`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L210-L213)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L210-L213)
 
 </div>
 <br>
@@ -2268,7 +2268,7 @@ length_objs(m::M) where M <: Union{Model, AbstractSolver}
 Return the number of objectives in `m`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L198-L201)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L198-L201)
 
 </div>
 <br>
@@ -2286,7 +2286,7 @@ _length_tabu!(s::S) where S <: Union{_State, AbstractSolver}
 Return the length of the tabu list.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/strategies/tabu.jl#L62-L65)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/strategies/tabu.jl#L62-L65)
 
 </div>
 <br>
@@ -2304,7 +2304,7 @@ length_var(m::M, x) where M <: Union{Model, AbstractSolver}
 Return the domain length of variable `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L186-L189)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L186-L189)
 
 </div>
 <br>
@@ -2322,7 +2322,7 @@ length_vars(m::M) where M <: Union{Model, AbstractSolver}
 Return the number of variables in `m`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L204-L207)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L204-L207)
 
 </div>
 <br>
@@ -2340,7 +2340,7 @@ max_domains_size(m::Model, vars) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L430-L434)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L430-L434)
 
 </div>
 <br>
@@ -2366,7 +2366,7 @@ Construct a _Model, empty by default. It is recommended to add the constraints, 
   
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L50-L57)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L50-L57)
 
 </div>
 <br>
@@ -2384,7 +2384,7 @@ dist_extrema(values::T...) where {T <: Number}
 Computes the distance between extrema in an ordered set.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/objectives/extrema.jl#L1-L4)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/objectives/extrema.jl#L1-L4)
 
 </div>
 <br>
@@ -2402,7 +2402,7 @@ o_mincut(graph, values; interdiction = 0)
 Compute the capacity of a cut (determined by the state of the solver) with a possible `interdiction` on the highest capacited links.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/objectives/cut.jl#L1-L4)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/objectives/cut.jl#L1-L4)
 
 </div>
 <br>
@@ -2420,7 +2420,7 @@ objective!(m::M, func) where M <: Union{Model, AbstractSolver}
 Add an objective evaluated by `func`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L296-L299)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L296-L299)
 
 </div>
 <br>
@@ -2438,7 +2438,7 @@ objective(func, name)
 Construct an objective with a function `func` that should be applied to a collection of variables.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/objective.jl#L24-L27)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/objective.jl#L24-L27)
 
 </div>
 <br>
@@ -2456,7 +2456,7 @@ post_process(s::MainSolver)
 Launch a series of tasks to round-up a solving run, for instance, export a run&#39;s info.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L450-L453)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L450-L453)
 
 </div>
 <br>
@@ -2474,7 +2474,7 @@ remote_dispatch!(solver)
 Starts the `LeadSolver`s attached to the `MainSolver`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L425-L428)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L425-L428)
 
 </div>
 <br>
@@ -2492,7 +2492,7 @@ remote_stop!!(solver)
 Fetch the pool of solutions from `LeadSolvers` and merge it into the `MainSolver`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L444-L447)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L444-L447)
 
 </div>
 <br>
@@ -2510,7 +2510,7 @@ solution(s)
 Return the only/best known solution of a satisfaction/optimization model.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L470-L473)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L470-L473)
 
 </div>
 <br>
@@ -2528,7 +2528,7 @@ solve_for_loop!(solver, stop, sat, iter)
 First loop in the solving process that starts `LeadSolver`s from the `MainSolver`, and `_SubSolver`s from each `MetaSolver`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L431-L434)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L431-L434)
 
 </div>
 <br>
@@ -2546,7 +2546,7 @@ solve_while_loop!(s, )
 Search the space of configurations.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L405-L408)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L405-L408)
 
 </div>
 <br>
@@ -2564,7 +2564,7 @@ specialize!(solver)
 Replace the model of `solver` by one with specialized types (variables, constraints, objectives).
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L107-L110)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L107-L110)
 
 </div>
 <br>
@@ -2582,7 +2582,7 @@ specialize(m::M) where M <: Union{Model, AbstractSolver}
 Specialize the structure of a model to avoid dynamic type attribution at runtime.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L350-L353)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L350-L353)
 
 </div>
 <br>
@@ -2600,7 +2600,7 @@ status(solver)
 Return the status of a MainSolver.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solvers/main.jl#L60-L63)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solvers/main.jl#L60-L63)
 
 </div>
 <br>
@@ -2618,7 +2618,7 @@ stop_while_loop()
 Check the stop conditions of the `solve!` while inner loop.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/solver.jl#L399-L402)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/solver.jl#L399-L402)
 
 </div>
 <br>
@@ -2636,7 +2636,7 @@ _tabu(s::S) where S <: Union{_State, AbstractSolver}
 Access the list of tabu variables.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/strategies/tabu.jl#L32-L35)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/strategies/tabu.jl#L32-L35)
 
 </div>
 <br>
@@ -2654,7 +2654,7 @@ _tabu(s::S, x) where S <: Union{_State, AbstractSolver}
 Return the tabu value of variable `x`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/strategies/tabu.jl#L38-L41)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/strategies/tabu.jl#L38-L41)
 
 </div>
 <br>
@@ -2672,7 +2672,7 @@ variable!(m::M, d) where M <: Union{Model, AbstractSolver}
 Add a variable with domain `d` to `m`.
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/model.jl#L278-L281)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/model.jl#L278-L281)
 
 </div>
 <br>
@@ -2698,7 +2698,7 @@ x2 = variable([-89,56,28], "x2", domain = :indices)
 
 
 
-[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.5/src/variable.jl#L60-L70)
+[source](https://github.com/JuliaConstraints/LocalSearchSolvers.jl/blob/v0.4.6/src/variable.jl#L60-L70)
 
 </div>
 <br>

@@ -20,7 +20,7 @@ Layer
 A structure to store a `LittleDict` of operations that can be selected during the learning phase of an ICN. If the layer is exclusive, only one operation can be selected at a time.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L1-L4)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L1-L4)
 
 </div>
 <br>
@@ -38,7 +38,7 @@ functions(layer)
 Access the operations of a layer. The container is ordered.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L11-L14)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L11-L14)
 
 </div>
 <br>
@@ -56,7 +56,7 @@ length(layer)
 Return the number of operations in a layer.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L17-L20)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L17-L20)
 
 </div>
 <br>
@@ -74,7 +74,7 @@ exclu(layer)
 Return `true` if the layer has mutually exclusive operations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L23-L26)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L23-L26)
 
 </div>
 <br>
@@ -92,7 +92,7 @@ symbol(layer, i)
 Return the i-th symbols of the operations in a given layer.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L29-L32)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L29-L32)
 
 </div>
 <br>
@@ -110,7 +110,7 @@ nbits_exclu(layer)
 Convert the length of an exclusive layer into a number of bits.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L35-L38)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L35-L38)
 
 </div>
 <br>
@@ -128,7 +128,7 @@ show_layer(layer)
 Return a string that contains the elements in a layer.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L41-L44)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L41-L44)
 
 </div>
 <br>
@@ -146,7 +146,7 @@ selected_size(layer, layer_weights)
 Return the number of operations selected by `layer_weights` in `layer`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L47-L50)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L47-L50)
 
 </div>
 <br>
@@ -166,7 +166,7 @@ is_viable(icn, w)
 Assert if a pair of layer/icn and weights compose a viable pattern. If no weights are given with an icn, it will check the current internal value.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L53-L58)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L53-L58)
 
 </div>
 <br>
@@ -185,7 +185,7 @@ generate_exclusive_operation(max_op_number)
 Generates the operations (weights) of a layer with inclusive/exclusive operations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L61-L65)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L61-L65)
 
 </div>
 <br>
@@ -200,10 +200,10 @@ generate_exclusive_operation(max_op_number)
 ```
 
 
-Generates the operations (weigths) of a layer with exclusive operations.
+Generates the operations (weights) of a layer with exclusive operations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L75-L78)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L75-L78)
 
 </div>
 <br>

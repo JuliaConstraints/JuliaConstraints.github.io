@@ -29,7 +29,7 @@ SudokuInstance(P::Pair{Tuple{Int, Int}, T}...) # again, default to 9×9 sudoku, 
 Constructor functions for the `SudokuInstance` `struct`.
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/sudoku.jl#L124-L140)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/sudoku.jl#L124-L140)
 
 </div>
 <br>
@@ -47,7 +47,7 @@ SudokuInstance(X::Dictionary)
 Construct a `SudokuInstance` with the values `X` of a solver as input.
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/sudoku.jl#L167-L171)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/sudoku.jl#L167-L171)
 
 </div>
 <br>
@@ -66,7 +66,7 @@ display(S::SudokuInstance) # default to stdout
 Displays an $n\times n$ SudokuInstance.
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/sudoku.jl#L314-L320)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/sudoku.jl#L314-L320)
 
 </div>
 <br>
@@ -84,7 +84,7 @@ Base.display(X, Val(:sudoku))
 Extends `Base.display` to a sudoku configuration.
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/sudoku.jl#L350-L354)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/sudoku.jl#L350-L354)
 
 </div>
 <br>
@@ -102,7 +102,7 @@ Base.display(S::SudokuInstance)
 Extends `Base.display` to `SudokuInstance`.
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/sudoku.jl#L336-L340)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/sudoku.jl#L336-L340)
 
 </div>
 <br>
@@ -120,7 +120,7 @@ Base.display(X::Dictionary)
 Extends `Base.display` to a sudoku configuration.
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/sudoku.jl#L343-L347)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/sudoku.jl#L343-L347)
 
 </div>
 <br>
@@ -138,7 +138,7 @@ Base.size(S::SudokuInstance)
 Extends `Base.size` for `SudokuInstance`.
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/sudoku.jl#L183-L187)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/sudoku.jl#L183-L187)
 
 </div>
 <br>
@@ -156,7 +156,7 @@ _format_line(r, M)
 Format line of a sudoku grid.
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/sudoku.jl#L251-L255)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/sudoku.jl#L251-L255)
 
 </div>
 <br>
@@ -174,7 +174,7 @@ _format_line_segment(r, col_pos, M)
 Format line segment of a sudoku grid.
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/sudoku.jl#L230-L234)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/sudoku.jl#L230-L234)
 
 </div>
 <br>
@@ -192,7 +192,7 @@ _format_val(a)
 Format an integer `a` into a string for SudokuInstance.
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/sudoku.jl#L223-L227)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/sudoku.jl#L223-L227)
 
 </div>
 <br>
@@ -210,7 +210,7 @@ _get_sep_line(s, pos_row, M)
 Return a line separator.
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/sudoku.jl#L268-L272)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/sudoku.jl#L268-L272)
 
 </div>
 <br>
@@ -236,7 +236,7 @@ Even the structure to model problems with continuous domains is available, the d
 In a chemical reaction, chemical equilibrium is the state in which both the reactants and products are present in concentrations which have no further tendency to change with time, so that there is no observable change in the properties of the system. This state results when the forward reaction proceeds at the same rate as the reverse reaction. The reaction rates of the forward and backward reactions are generally not zero, but they are equal. Thus, there are no net changes in the concentrations of the reactants and products. Such a state is known as dynamic equilibrium.
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/chemical_equilibrium.jl#L30-L40)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/chemical_equilibrium.jl#L30-L40)
 
 </div>
 <br>
@@ -254,7 +254,7 @@ golomb(n, L=n²)
 Model the Golomb problem of `n` marks on the ruler `0:L`. The `modeler` argument accepts :raw, and :JuMP (default), which refer respectively to the solver internal model, the MathOptInterface model, and the JuMP model.
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/golomb.jl#L53-L57)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/golomb.jl#L53-L57)
 
 </div>
 <br>
@@ -272,7 +272,7 @@ magic_square(n; modeler = :JuMP)
 Create a model for the magic square problem of order `n`. The `modeler` argument accepts :JuMP (default), which refer to the solver the JuMP model.
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/magic_square.jl#L19-L23)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/magic_square.jl#L19-L23)
 
 </div>
 <br>
@@ -302,7 +302,7 @@ Compute the minimum cut of a graph.
   
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/cut.jl#L47-L58)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/cut.jl#L47-L58)
 
 </div>
 <br>
@@ -320,7 +320,7 @@ n_queens(n; modeler = :JuMP)
 Create a model for the n-queens problem with `n` queens. The `modeler` argument accepts :JuMP (default), which refer to the JuMP model.
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/n_queens.jl#L16-L20)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/n_queens.jl#L16-L20)
 
 </div>
 <br>
@@ -350,7 +350,7 @@ Modelize an instance of the Quadractic Assignment Problem with
 There are a set of `n` facilities and a set of `n` locations. For each pair of locations, a distance is specified and for each pair of facilities a `weight` or flow is specified (e.g., the amount of supplies transported between the two facilities). The problem is to assign all facilities to different locations with the goal of minimizing the sum of the `distances` multiplied by the corresponding flows.
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/assignment.jl#L14-L25)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/assignment.jl#L14-L25)
 
 </div>
 <br>
@@ -374,7 +374,7 @@ The model seems to have a flaw. Needs to be investigated.
 :::
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/scheduling.jl#L46-L55)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/scheduling.jl#L46-L55)
 
 </div>
 <br>
@@ -419,7 +419,7 @@ display(solution, Val(:sudoku))
 
 
 
-[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.1.9/src/sudoku.jl#L92-L121)
+[source](https://github.com/JuliaConstraints/ConstraintModels.jl/blob/v0.2.0/src/sudoku.jl#L92-L121)
 
 </div>
 <br>

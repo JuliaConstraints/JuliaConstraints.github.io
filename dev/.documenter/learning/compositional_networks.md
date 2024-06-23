@@ -20,7 +20,7 @@ map_tr!(f, x, X, param)
 Return an anonymous function that applies `f` to all elements of `x` and store the result in `X`, with a parameter `param` (which is set to `nothing` for function with no parameter).
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/utils.jl#L1-L4)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/utils.jl#L1-L4)
 
 </div>
 <br>
@@ -38,7 +38,7 @@ lazy(funcs::Function...)
 Generate methods extended to a vector instead of one of its components. A function `f` should have the following signature: `f(i::Int, x::V)`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/utils.jl#L22-L25)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/utils.jl#L22-L25)
 
 </div>
 <br>
@@ -56,7 +56,7 @@ lazy_param(funcs::Function...)
 Generate methods extended to a vector instead of one of its components. A function `f` should have the following signature: `f(i::Int, x::V; param)`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/utils.jl#L36-L39)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/utils.jl#L39-L42)
 
 </div>
 <br>
@@ -74,7 +74,7 @@ as_bitvector(n::Int, max_n::Int = n)
 Convert an Int to a BitVector of minimal size (relatively to `max_n`).
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/utils.jl#L48-L51)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/utils.jl#L56-L59)
 
 </div>
 <br>
@@ -92,7 +92,7 @@ as_int(v::AbstractVector)
 Convert a `BitVector` into an `Int`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/utils.jl#L65-L68)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/utils.jl#L73-L76)
 
 </div>
 <br>
@@ -110,7 +110,7 @@ reduce_symbols(symbols, sep)
 Produce a formatted string that separates the symbols by `sep`. Used internally for `show_composition`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/utils.jl#L77-L80)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/utils.jl#L85-L88)
 
 </div>
 <br>
@@ -136,7 +136,7 @@ hamming(x, X)
 Compute the hamming distance of `x` over a collection of solutions `X`, i.e. the minimal number of variables to switch in `x`to reach a solution.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/metrics.jl#L1-L4)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/metrics.jl#L1-L4)
 
 </div>
 <br>
@@ -152,7 +152,7 @@ minkowski(x, X, p)
 
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/metrics.jl#L7-L9)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/metrics.jl#L7-L9)
 
 </div>
 <br>
@@ -168,7 +168,7 @@ manhattan(x, X)
 
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/metrics.jl#L12-L14)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/metrics.jl#L12-L14)
 
 </div>
 <br>

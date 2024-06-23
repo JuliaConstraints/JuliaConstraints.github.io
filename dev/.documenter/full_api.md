@@ -2755,7 +2755,7 @@ struct Composition{F<:Function}
 Store the all the information of a composition learned by an ICN.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/composition.jl#L1-L5)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/composition.jl#L1-L5)
 
 </div>
 <br>
@@ -2773,7 +2773,7 @@ Composition(f::F, symbols) where {F<:Function}
 Construct a `Composition`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/composition.jl#L12-L16)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/composition.jl#L12-L16)
 
 </div>
 <br>
@@ -2805,7 +2805,7 @@ Construct an Interpretable Compositional Network, with the following arguments:
   
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/icn.jl#L1-L11)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/icn.jl#L1-L11)
 
 </div>
 <br>
@@ -2823,7 +2823,7 @@ Layer
 A structure to store a `LittleDict` of operations that can be selected during the learning phase of an ICN. If the layer is exclusive, only one operation can be selected at a time.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L1-L4)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L1-L4)
 
 </div>
 <br>
@@ -2841,7 +2841,7 @@ length(layer)
 Return the number of operations in a layer.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L17-L20)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L17-L20)
 
 </div>
 <br>
@@ -2859,7 +2859,7 @@ Base.length(icn)
 Return the total number of operations of an ICN.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/icn.jl#L37-L40)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/icn.jl#L37-L40)
 
 </div>
 <br>
@@ -2877,7 +2877,7 @@ _compose(icn)
 Internal function called by `compose` and `show_composition`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/icn.jl#L112-L115)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/icn.jl#L112-L115)
 
 </div>
 <br>
@@ -2895,7 +2895,7 @@ ag_count_positive(x)
 Count the number of strictly positive elements of `x`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/aggregation.jl#L7-L10)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/aggregation.jl#L7-L10)
 
 </div>
 <br>
@@ -2913,7 +2913,7 @@ ag_sum(x)
 Aggregate through `+` a vector into a single scalar.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/aggregation.jl#L1-L4)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/aggregation.jl#L1-L4)
 
 </div>
 <br>
@@ -2931,7 +2931,7 @@ aggregation_layer()
 Generate the layer of aggregations of the ICN. The operations are mutually exclusive, that is only one will be selected.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/aggregation.jl#L13-L16)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/aggregation.jl#L13-L16)
 
 </div>
 <br>
@@ -2949,7 +2949,7 @@ ar_prod(x)
 Reduce `k = length(x)` vectors through product to a single vector.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/arithmetic.jl#L7-L10)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/arithmetic.jl#L7-L10)
 
 </div>
 <br>
@@ -2967,7 +2967,7 @@ ar_sum(x)
 Reduce `k = length(x)` vectors through sum to a single vector.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/arithmetic.jl#L1-L4)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/arithmetic.jl#L1-L4)
 
 </div>
 <br>
@@ -2985,7 +2985,7 @@ arithmetic_layer()
 Generate the layer of arithmetic operations of the ICN. The operations are mutually exclusive, that is only one will be selected.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/arithmetic.jl#L13-L16)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/arithmetic.jl#L13-L16)
 
 </div>
 <br>
@@ -3003,7 +3003,7 @@ as_bitvector(n::Int, max_n::Int = n)
 Convert an Int to a BitVector of minimal size (relatively to `max_n`).
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/utils.jl#L48-L51)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/utils.jl#L56-L59)
 
 </div>
 <br>
@@ -3021,43 +3021,43 @@ as_int(v::AbstractVector)
 Convert a `BitVector` into an `Int`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/utils.jl#L65-L68)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/utils.jl#L73-L76)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CompositionalNetworks.co_abs_diff_val_param-Tuple{Any}' href='#CompositionalNetworks.co_abs_diff_val_param-Tuple{Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.co_abs_diff_val_param</u></b> &mdash; <i>Method</i>.
+<a id='CompositionalNetworks.co_abs_diff_var_val-Tuple{Any}' href='#CompositionalNetworks.co_abs_diff_var_val-Tuple{Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.co_abs_diff_var_val</u></b> &mdash; <i>Method</i>.
 
 
 
 
 ```julia
-co_abs_diff_val_param(x; param)
+co_abs_diff_var_val(x; val)
 ```
 
 
-Return the absolute difference between `x` and `param`.
+Return the absolute difference between `x` and `val`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/comparison.jl#L7-L10)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/comparison.jl#L7-L10)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CompositionalNetworks.co_abs_diff_val_vars-Tuple{Any}' href='#CompositionalNetworks.co_abs_diff_val_vars-Tuple{Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.co_abs_diff_val_vars</u></b> &mdash; <i>Method</i>.
+<a id='CompositionalNetworks.co_abs_diff_var_vars-Tuple{Any}' href='#CompositionalNetworks.co_abs_diff_var_vars-Tuple{Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.co_abs_diff_var_vars</u></b> &mdash; <i>Method</i>.
 
 
 
 
 ```julia
-co_abs_diff_val_vars(x; nvars)
+co_abs_diff_var_vars(x; nvars)
 ```
 
 
 Return the absolute difference between `x` and the number of variables `nvars`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/comparison.jl#L41-L44)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/comparison.jl#L41-L44)
 
 </div>
 <br>
@@ -3075,25 +3075,25 @@ co_euclidean(x; dom_size)
 Compute an euclidean norm with domain size `dom_size` of a scalar.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/comparison.jl#L33-L36)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/comparison.jl#L33-L36)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CompositionalNetworks.co_euclidean_param-Tuple{Any}' href='#CompositionalNetworks.co_euclidean_param-Tuple{Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.co_euclidean_param</u></b> &mdash; <i>Method</i>.
+<a id='CompositionalNetworks.co_euclidean_val-Tuple{Any}' href='#CompositionalNetworks.co_euclidean_val-Tuple{Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.co_euclidean_val</u></b> &mdash; <i>Method</i>.
 
 
 
 
 ```julia
-co_euclidean_param(x; param, dom_size)
+co_euclidean_val(x; val, dom_size)
 ```
 
 
-Compute an euclidean norm with domain size `dom_size`, weighted by `param`, of a scalar.
+Compute an euclidean norm with domain size `dom_size`, weighted by `val`, of a scalar.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/comparison.jl#L25-L28)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/comparison.jl#L25-L28)
 
 </div>
 <br>
@@ -3111,79 +3111,79 @@ co_identity(x)
 Identity function. Already defined in Julia as `identity`, specialized for scalars in the `comparison` layer.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/comparison.jl#L1-L4)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/comparison.jl#L1-L4)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CompositionalNetworks.co_param_minus_val-Tuple{Any}' href='#CompositionalNetworks.co_param_minus_val-Tuple{Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.co_param_minus_val</u></b> &mdash; <i>Method</i>.
+<a id='CompositionalNetworks.co_val_minus_var-Tuple{Any}' href='#CompositionalNetworks.co_val_minus_var-Tuple{Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.co_val_minus_var</u></b> &mdash; <i>Method</i>.
 
 
 
 
 ```julia
-co_param_minus_val(x; param)
+co_val_minus_var(x; val)
 ```
 
 
-Return the difference `param - x` if positive, `0.0` otherwise.
+Return the difference `val - x` if positive, `0.0` otherwise.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/comparison.jl#L19-L22)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/comparison.jl#L19-L22)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CompositionalNetworks.co_val_minus_param-Tuple{Any}' href='#CompositionalNetworks.co_val_minus_param-Tuple{Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.co_val_minus_param</u></b> &mdash; <i>Method</i>.
+<a id='CompositionalNetworks.co_var_minus_val-Tuple{Any}' href='#CompositionalNetworks.co_var_minus_val-Tuple{Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.co_var_minus_val</u></b> &mdash; <i>Method</i>.
 
 
 
 
 ```julia
-co_val_minus_param(x; param)
+co_var_minus_val(x; val)
 ```
 
 
-Return the difference `x - param` if positive, `0.0` otherwise.
+Return the difference `x - val` if positive, `0.0` otherwise.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/comparison.jl#L13-L16)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/comparison.jl#L13-L16)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CompositionalNetworks.co_val_minus_vars-Tuple{Any}' href='#CompositionalNetworks.co_val_minus_vars-Tuple{Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.co_val_minus_vars</u></b> &mdash; <i>Method</i>.
+<a id='CompositionalNetworks.co_var_minus_vars-Tuple{Any}' href='#CompositionalNetworks.co_var_minus_vars-Tuple{Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.co_var_minus_vars</u></b> &mdash; <i>Method</i>.
 
 
 
 
 ```julia
-co_val_minus_vars(x; nvars)
+co_var_minus_vars(x; nvars)
 ```
 
 
 Return the difference `x - nvars` if positive, `0.0` otherwise, where `nvars` denotes the numbers of variables.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/comparison.jl#L47-L50)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/comparison.jl#L47-L50)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CompositionalNetworks.co_vars_minus_val-Tuple{Any}' href='#CompositionalNetworks.co_vars_minus_val-Tuple{Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.co_vars_minus_val</u></b> &mdash; <i>Method</i>.
+<a id='CompositionalNetworks.co_vars_minus_var-Tuple{Any}' href='#CompositionalNetworks.co_vars_minus_var-Tuple{Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.co_vars_minus_var</u></b> &mdash; <i>Method</i>.
 
 
 
 
 ```julia
-co_vars_minus_val(x; nvars)
+co_vars_minus_var(x; nvars)
 ```
 
 
 Return the difference `nvars - x` if positive, `0.0` otherwise, where `nvars` denotes the numbers of variables.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/comparison.jl#L54-L57)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/comparison.jl#L53-L56)
 
 </div>
 <br>
@@ -3201,7 +3201,7 @@ code(c::Composition, lang=:maths; name="composition")
 Access the code of a composition `c` in a given language `lang`. The name of the generated method is optional.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/composition.jl#L22-L26)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/composition.jl#L22-L26)
 
 </div>
 <br>
@@ -3219,7 +3219,7 @@ comparison_layer(param = false)
 Generate the layer of transformations functions of the ICN. Iff `param` value is set, also includes all the parametric comparison with that value. The operations are mutually exclusive, that is only one will be selected.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/comparison.jl#L85-L88)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/comparison.jl#L83-L86)
 
 </div>
 <br>
@@ -3237,7 +3237,7 @@ compose(icn, weights=nothing)
 Return a function composed by some of the operations of a given ICN. Can be applied to any vector of variables. If `weights` are given, will assign to `icn`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/composition.jl#L45-L48)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/composition.jl#L45-L48)
 
 </div>
 <br>
@@ -3281,7 +3281,7 @@ Explore, learn and compose a function and write it to a file.
   
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/learn.jl#L77-L95)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/learn.jl#L77-L95)
 
 </div>
 <br>
@@ -3299,7 +3299,7 @@ composition(c::Composition)
 Access the actual method of an ICN composition `c`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/composition.jl#L31-L35)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/composition.jl#L31-L35)
 
 </div>
 <br>
@@ -3317,7 +3317,7 @@ composition_to_file!(c::Composition, path, name, language=:Julia)
 Write the composition code in a given `language` into a file at `path`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/composition.jl#L97-L101)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/composition.jl#L97-L101)
 
 </div>
 <br>
@@ -3335,7 +3335,7 @@ exclu(layer)
 Return `true` if the layer has mutually exclusive operations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L23-L26)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L23-L26)
 
 </div>
 <br>
@@ -3373,7 +3373,7 @@ Explore a search space, learn a composition from an ICN, and compose an error fu
   
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/learn.jl#L35-L50)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/learn.jl#L35-L50)
 
 </div>
 <br>
@@ -3391,7 +3391,7 @@ functions(layer)
 Access the operations of a layer. The container is ordered.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L11-L14)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L11-L14)
 
 </div>
 <br>
@@ -3409,7 +3409,7 @@ generate(c::Composition, name, lang)
 Generates the code of `c` in a specific language `lang`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/composition.jl#L55-L59)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/composition.jl#L55-L59)
 
 </div>
 <br>
@@ -3424,10 +3424,10 @@ generate_exclusive_operation(max_op_number)
 ```
 
 
-Generates the operations (weigths) of a layer with exclusive operations.
+Generates the operations (weights) of a layer with exclusive operations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L75-L78)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L75-L78)
 
 </div>
 <br>
@@ -3446,7 +3446,7 @@ generate_exclusive_operation(max_op_number)
 Generates the operations (weights) of a layer with inclusive/exclusive operations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L61-L65)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L61-L65)
 
 </div>
 <br>
@@ -3465,7 +3465,7 @@ generate_weights(icn)
 Generate the weights of a collection of layers or of an ICN.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L84-L88)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L84-L88)
 
 </div>
 <br>
@@ -3483,7 +3483,7 @@ hamming(x, X)
 Compute the hamming distance of `x` over a collection of solutions `X`, i.e. the minimal number of variables to switch in `x`to reach a solution.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/metrics.jl#L1-L4)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/metrics.jl#L1-L4)
 
 </div>
 <br>
@@ -3503,7 +3503,7 @@ is_viable(icn, w)
 Assert if a pair of layer/icn and weights compose a viable pattern. If no weights are given with an icn, it will check the current internal value.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L53-L58)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L53-L58)
 
 </div>
 <br>
@@ -3521,7 +3521,7 @@ layers(icn)
 Return the ordered layers of an ICN.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/icn.jl#L31-L34)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/icn.jl#L31-L34)
 
 </div>
 <br>
@@ -3539,7 +3539,7 @@ lazy(funcs::Function...)
 Generate methods extended to a vector instead of one of its components. A function `f` should have the following signature: `f(i::Int, x::V)`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/utils.jl#L22-L25)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/utils.jl#L22-L25)
 
 </div>
 <br>
@@ -3557,7 +3557,7 @@ lazy_param(funcs::Function...)
 Generate methods extended to a vector instead of one of its components. A function `f` should have the following signature: `f(i::Int, x::V; param)`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/utils.jl#L36-L39)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/utils.jl#L39-L42)
 
 </div>
 <br>
@@ -3578,7 +3578,7 @@ learn_compose(;
 Create an ICN, optimize it, and return its composition.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/learn.jl#L7-L13)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/learn.jl#L7-L13)
 
 </div>
 <br>
@@ -3645,7 +3645,7 @@ count_eq_param_result = val_transforms[:count_eq_param](data, param)
 
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L216-L262)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L216-L262)
 
 </div>
 <br>
@@ -3661,12 +3661,12 @@ manhattan(x, X)
 
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/metrics.jl#L12-L14)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/metrics.jl#L12-L14)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CompositionalNetworks.map_tr!-NTuple{4, Any}' href='#CompositionalNetworks.map_tr!-NTuple{4, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.map_tr!</u></b> &mdash; <i>Method</i>.
+<a id='CompositionalNetworks.map_tr!-Tuple{Any, Any, Any}' href='#CompositionalNetworks.map_tr!-Tuple{Any, Any, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.map_tr!</u></b> &mdash; <i>Method</i>.
 
 
 
@@ -3679,7 +3679,7 @@ map_tr!(f, x, X, param)
 Return an anonymous function that applies `f` to all elements of `x` and store the result in `X`, with a parameter `param` (which is set to `nothing` for function with no parameter).
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/utils.jl#L1-L4)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/utils.jl#L1-L4)
 
 </div>
 <br>
@@ -3695,7 +3695,7 @@ minkowski(x, X, p)
 
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/metrics.jl#L7-L9)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/metrics.jl#L7-L9)
 
 </div>
 <br>
@@ -3713,7 +3713,7 @@ nbits(icn)
 Return the expected number of bits of a viable weight of an ICN.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/icn.jl#L43-L46)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/icn.jl#L43-L46)
 
 </div>
 <br>
@@ -3731,7 +3731,7 @@ nbits_exclu(layer)
 Convert the length of an exclusive layer into a number of bits.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L35-L38)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L35-L38)
 
 </div>
 <br>
@@ -3749,7 +3749,7 @@ reduce_symbols(symbols, sep)
 Produce a formatted string that separates the symbols by `sep`. Used internally for `show_composition`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/utils.jl#L77-L80)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/utils.jl#L85-L88)
 
 </div>
 <br>
@@ -3767,7 +3767,7 @@ regularization(icn)
 Return the regularization value of an ICN weights, which is proportional to the normalized number of operations selected in the icn layers.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/icn.jl#L89-L92)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/icn.jl#L89-L92)
 
 </div>
 <br>
@@ -3785,7 +3785,7 @@ selected_size(layer, layer_weights)
 Return the number of operations selected by `layer_weights` in `layer`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L47-L50)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L47-L50)
 
 </div>
 <br>
@@ -3803,7 +3803,7 @@ show_layer(layer)
 Return a string that contains the elements in a layer.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L41-L44)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L41-L44)
 
 </div>
 <br>
@@ -3821,7 +3821,7 @@ show_layers(icn)
 Return a formatted string with each layers in the icn.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/icn.jl#L81-L84)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/icn.jl#L81-L84)
 
 </div>
 <br>
@@ -3839,7 +3839,7 @@ symbol(layer, i)
 Return the i-th symbols of the operations in a given layer.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layer.jl#L29-L32)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layer.jl#L29-L32)
 
 </div>
 <br>
@@ -3857,67 +3857,67 @@ symbols(c::Composition)
 Output the composition as a layered collection of `Symbol`s.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/composition.jl#L38-L42)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/composition.jl#L38-L42)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CompositionalNetworks.tr_contiguous_vals_minus-Tuple{Any, Any}' href='#CompositionalNetworks.tr_contiguous_vals_minus-Tuple{Any, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.tr_contiguous_vals_minus</u></b> &mdash; <i>Method</i>.
+<a id='CompositionalNetworks.tr_contiguous_vars_minus-Tuple{Any, Any}' href='#CompositionalNetworks.tr_contiguous_vars_minus-Tuple{Any, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.tr_contiguous_vars_minus</u></b> &mdash; <i>Method</i>.
 
 
 
 
 ```julia
-tr_contiguous_vals_minus(i, x)
-tr_contiguous_vals_minus(x)
-tr_contiguous_vals_minus(x, X::AbstractVector)
+tr_contiguous_vars_minus(i, x)
+tr_contiguous_vars_minus(x)
+tr_contiguous_vars_minus(x, X::AbstractVector)
 ```
 
 
 Return the difference `x[i] - x[i + 1]` if positive, `0.0` otherwise. Extended method to vector with sig `(x)` are generated. When `X` is provided, the result is computed without allocations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L190-L197)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L190-L197)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CompositionalNetworks.tr_contiguous_vals_minus_rev-Tuple{Any, Any}' href='#CompositionalNetworks.tr_contiguous_vals_minus_rev-Tuple{Any, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.tr_contiguous_vals_minus_rev</u></b> &mdash; <i>Method</i>.
+<a id='CompositionalNetworks.tr_contiguous_vars_minus_rev-Tuple{Any, Any}' href='#CompositionalNetworks.tr_contiguous_vars_minus_rev-Tuple{Any, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.tr_contiguous_vars_minus_rev</u></b> &mdash; <i>Method</i>.
 
 
 
 
 ```julia
-tr_contiguous_vals_minus_rev(i, x)
-tr_contiguous_vals_minus_rev(x)
-tr_contiguous_vals_minus_rev(x, X::AbstractVector)
+tr_contiguous_vars_minus_rev(i, x)
+tr_contiguous_vars_minus_rev(x)
+tr_contiguous_vars_minus_rev(x, X::AbstractVector)
 ```
 
 
 Return the difference `x[i + 1] - x[i]` if positive, `0.0` otherwise. Extended method to vector with sig `(x)` are generated. When `X` is provided, the result is computed without allocations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L201-L208)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L201-L208)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CompositionalNetworks.tr_count_bounding_param-Tuple{Any, Any}' href='#CompositionalNetworks.tr_count_bounding_param-Tuple{Any, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.tr_count_bounding_param</u></b> &mdash; <i>Method</i>.
+<a id='CompositionalNetworks.tr_count_bounding_val-Tuple{Any, Any}' href='#CompositionalNetworks.tr_count_bounding_val-Tuple{Any, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.tr_count_bounding_val</u></b> &mdash; <i>Method</i>.
 
 
 
 
 ```julia
-tr_count_bounding_param(i, x; param)
-tr_count_bounding_param(x; param)
-tr_count_bounding_param(x, X::AbstractVector; param)
+tr_count_bounding_val(i, x; val)
+tr_count_bounding_val(x; val)
+tr_count_bounding_val(x, X::AbstractVector; val)
 ```
 
 
-Count the number of elements bounded (not strictly) by `x[i]` and `x[i] + param`. An extended method to vector with sig `(x, param)` is generated. When `X` is provided, the result is computed without allocations.
+Count the number of elements bounded (not strictly) by `x[i]` and `x[i] + val`. An extended method to vector with sig `(x, val)` is generated. When `X` is provided, the result is computed without allocations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L151-L158)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L151-L158)
 
 </div>
 <br>
@@ -3937,7 +3937,7 @@ tr_count_eq(x, X::AbstractVector)
 Count the number of elements equal to `x[i]`. Extended method to vector with sig `(x)` are generated. When `X` is provided, the result is computed without allocations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L16-L23)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L16-L23)
 
 </div>
 <br>
@@ -3957,27 +3957,7 @@ tr_count_eq_left(x, X::AbstractVector)
 Count the number of elements to the left of and equal to `x[i]`. Extended method to vector with sig `(x)` are generated. When `X` is provided, the result is computed without allocations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L36-L43)
-
-</div>
-<br>
-<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CompositionalNetworks.tr_count_eq_param-Tuple{Any, Any}' href='#CompositionalNetworks.tr_count_eq_param-Tuple{Any, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.tr_count_eq_param</u></b> &mdash; <i>Method</i>.
-
-
-
-
-```julia
-tr_count_eq_param(i, x; param)
-tr_count_eq_param(x; param)
-tr_count_eq_param(x, X::AbstractVector; param)
-```
-
-
-Count the number of elements equal to `x[i] + param`. Extended method to vector with sig `(x, param)` are generated. When `X` is provided, the result is computed without allocations.
-
-
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L116-L123)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L36-L43)
 
 </div>
 <br>
@@ -3997,7 +3977,27 @@ tr_count_eq_right(x, X::AbstractVector)
 Count the number of elements to the right of and equal to `x[i]`. Extended method to vector with sig `(x)` are generated. When `X` is provided, the result is computed without allocations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L26-L33)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L26-L33)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CompositionalNetworks.tr_count_eq_val-Tuple{Any, Any}' href='#CompositionalNetworks.tr_count_eq_val-Tuple{Any, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.tr_count_eq_val</u></b> &mdash; <i>Method</i>.
+
+
+
+
+```julia
+tr_count_eq_val(i, x; val)
+tr_count_eq_val(x; val)
+tr_count_eq_val(x, X::AbstractVector; val)
+```
+
+
+Count the number of elements equal to `x[i] + val`. Extended method to vector with sig `(x, val)` are generated. When `X` is provided, the result is computed without allocations.
+
+
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L116-L123)
 
 </div>
 <br>
@@ -4017,27 +4017,7 @@ tr_count_g_left(x, X::AbstractVector)
 Count the number of elements to the left of and greater than `x[i]`. Extended method to vector with sig `(x)` are generated. When `X` is provided, the result is computed without allocations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L71-L78)
-
-</div>
-<br>
-<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CompositionalNetworks.tr_count_g_param-Tuple{Any, Any}' href='#CompositionalNetworks.tr_count_g_param-Tuple{Any, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.tr_count_g_param</u></b> &mdash; <i>Method</i>.
-
-
-
-
-```julia
-tr_count_g_param(i, x; param)
-tr_count_g_param(x; param)
-tr_count_g_param(x, X::AbstractVector; param)
-```
-
-
-Count the number of elements greater than `x[i] + param`. Extended method to vector with sig `(x, param)` are generated. When `X` is provided, the result is computed without allocations.
-
-
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L136-L143)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L71-L78)
 
 </div>
 <br>
@@ -4057,7 +4037,27 @@ tr_count_g_right(x, X::AbstractVector)
 Count the number of elements to the right of and greater than `x[i]`. Extended method to vector with sig `(x)` are generated.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L91-L97)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L91-L97)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CompositionalNetworks.tr_count_g_val-Tuple{Any, Any}' href='#CompositionalNetworks.tr_count_g_val-Tuple{Any, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.tr_count_g_val</u></b> &mdash; <i>Method</i>.
+
+
+
+
+```julia
+tr_count_g_val(i, x; val)
+tr_count_g_val(x; val)
+tr_count_g_val(x, X::AbstractVector; val)
+```
+
+
+Count the number of elements greater than `x[i] + val`. Extended method to vector with sig `(x, val)` are generated. When `X` is provided, the result is computed without allocations.
+
+
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L136-L143)
 
 </div>
 <br>
@@ -4077,7 +4077,7 @@ tr_count_greater(x, X::AbstractVector)
 Count the number of elements greater than `x[i]`. Extended method to vector with sig `(x)` are generated. When `X` is provided, the result is computed without allocations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L51-L58)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L51-L58)
 
 </div>
 <br>
@@ -4097,27 +4097,7 @@ tr_count_l_left(x, X::AbstractVector)
 Count the number of elements to the left of and lesser than `x[i]`. Extended method to vector with sig `(x)` are generated. When `X` is provided, the result is computed without allocations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L81-L88)
-
-</div>
-<br>
-<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CompositionalNetworks.tr_count_l_param-Tuple{Any, Any}' href='#CompositionalNetworks.tr_count_l_param-Tuple{Any, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.tr_count_l_param</u></b> &mdash; <i>Method</i>.
-
-
-
-
-```julia
-tr_count_l_param(i, x; param)
-tr_count_l_param(x; param)
-tr_count_l_param(x, X::AbstractVector; param)
-```
-
-
-Count the number of elements lesser than `x[i] + param`. Extended method to vector with sig `(x, param)` are generated. When `X` is provided, the result is computed without allocations.
-
-
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L126-L133)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L81-L88)
 
 </div>
 <br>
@@ -4137,7 +4117,27 @@ tr_count_l_right(x, X::AbstractVector)
 Count the number of elements to the right of and lesser than `x[i]`. Extended method to vector with sig `(x)` are generated. When `X` is provided, the result is computed without allocations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L100-L107)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L100-L107)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CompositionalNetworks.tr_count_l_val-Tuple{Any, Any}' href='#CompositionalNetworks.tr_count_l_val-Tuple{Any, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.tr_count_l_val</u></b> &mdash; <i>Method</i>.
+
+
+
+
+```julia
+tr_count_l_val(i, x; val)
+tr_count_l_val(x; val)
+tr_count_l_val(x, X::AbstractVector; val)
+```
+
+
+Count the number of elements lesser than `x[i] + val`. Extended method to vector with sig `(x, val)` are generated. When `X` is provided, the result is computed without allocations.
+
+
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L126-L133)
 
 </div>
 <br>
@@ -4157,7 +4157,7 @@ tr_count_lesser(x, X::AbstractVector)
 Count the number of elements lesser than `x[i]`. Extended method to vector with sig `(x)` are generated. When `X` is provided, the result is computed without allocations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L61-L68)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L61-L68)
 
 </div>
 <br>
@@ -4177,7 +4177,7 @@ tr_identity(x, X::AbstractVector)
 Identity function. Already defined in Julia as `identity`, specialized for vectors. When `X` is provided, the result is computed without allocations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L3-L10)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L3-L10)
 
 </div>
 <br>
@@ -4195,47 +4195,47 @@ tr_in(tr, X, x, param)
 Application of an operation from the transformation layer. Used to generate more efficient code for all compositions.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/utils.jl#L86-L90)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/utils.jl#L94-L98)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CompositionalNetworks.tr_param_minus_val-Tuple{Any, Any}' href='#CompositionalNetworks.tr_param_minus_val-Tuple{Any, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.tr_param_minus_val</u></b> &mdash; <i>Method</i>.
+<a id='CompositionalNetworks.tr_val_minus_var-Tuple{Any, Any}' href='#CompositionalNetworks.tr_val_minus_var-Tuple{Any, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.tr_val_minus_var</u></b> &mdash; <i>Method</i>.
 
 
 
 
 ```julia
-tr_param_minus_val(i, x; param)
-tr_param_minus_val(x; param)
-tr_param_minus_val(x, X::AbstractVector; param)
+tr_val_minus_var(i, x; val)
+tr_val_minus_var(x; val)
+tr_val_minus_var(x, X::AbstractVector; val)
 ```
 
 
-Return the difference `param - x[i]` if positive, `0.0` otherwise.  Extended method to vector with sig `(x, param)` are generated. When `X` is provided, the result is computed without allocations.
+Return the difference `val - x[i]` if positive, `0.0` otherwise.  Extended method to vector with sig `(x, val)` are generated. When `X` is provided, the result is computed without allocations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L176-L183)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L176-L183)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CompositionalNetworks.tr_val_minus_param-Tuple{Any, Any}' href='#CompositionalNetworks.tr_val_minus_param-Tuple{Any, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.tr_val_minus_param</u></b> &mdash; <i>Method</i>.
+<a id='CompositionalNetworks.tr_var_minus_val-Tuple{Any, Any}' href='#CompositionalNetworks.tr_var_minus_val-Tuple{Any, Any}'>#</a>&nbsp;<b><u>CompositionalNetworks.tr_var_minus_val</u></b> &mdash; <i>Method</i>.
 
 
 
 
 ```julia
-tr_val_minus_param(i, x; param)
-tr_val_minus_param(x; param)
-tr_val_minus_param(x, X::AbstractVector; param)
+tr_var_minus_val(i, x; val)
+tr_var_minus_val(x; val)
+tr_var_minus_val(x, X::AbstractVector; val)
 ```
 
 
-Return the difference `x[i] - param` if positive, `0.0` otherwise.  Extended method to vector with sig `(x, param)` are generated. When `X` is provided, the result is computed without allocations.
+Return the difference `x[i] - val` if positive, `0.0` otherwise.  Extended method to vector with sig `(x, val)` are generated. When `X` is provided, the result is computed without allocations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L166-L173)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L166-L173)
 
 </div>
 <br>
@@ -4246,14 +4246,14 @@ Return the difference `x[i] - param` if positive, `0.0` otherwise.  Extended met
 
 
 ```julia
-transformation_layer(param = false)
+transformation_layer(param = Vector{Symbol}())
 ```
 
 
-Generate the layer of transformations functions of the ICN. Iff `param` value is true, also includes all the parametric transformations.
+Generate the layer of transformations functions of the ICN. Iff `param` value is non empty, also includes all the related parametric transformations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L298-L301)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L298-L301)
 
 </div>
 <br>
@@ -4271,7 +4271,7 @@ weights!(icn, weights)
 Set the weights of an ICN with a `BitVector`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/icn.jl#L71-L74)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/icn.jl#L71-L74)
 
 </div>
 <br>
@@ -4289,7 +4289,7 @@ weights(icn)
 Access the current set of weights of an ICN.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/icn.jl#L49-L52)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/icn.jl#L49-L52)
 
 </div>
 <br>
@@ -4307,7 +4307,7 @@ weights_bias(x)
 A metric that bias `x` towards operations with a lower bit. Do not affect the main metric.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/metrics.jl#L17-L20)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/metrics.jl#L17-L20)
 
 </div>
 <br>

@@ -16,7 +16,7 @@ Global constraint ensuring that all the values of a given configuration are uniq
 
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L139-L145)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/all_different.jl#L31-L37)
 
 </div>
 <br>
@@ -34,43 +34,97 @@ Global constraint ensuring that all the values of `X` are all equal.
 
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L170-L176)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/all_equal.jl#L41-L47)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CBLS.AllEqualParam' href='#CBLS.AllEqualParam'>#</a>&nbsp;<b><u>CBLS.AllEqualParam</u></b> &mdash; <i>Type</i>.
+<a id='CBLS.AtLeast' href='#CBLS.AtLeast'>#</a>&nbsp;<b><u>CBLS.AtLeast</u></b> &mdash; <i>Type</i>.
 
 
 
 
-Global constraint ensuring that all the values of `X` are all equal to a given parameter `param`.
+Constraint ensuring that the number of occurrences of the values in `vals` in `x` is at least `val`.
 
 ```julia
-@constraint(model, X in AllEqualParam(param))
+@constraint(model, X in AtLeast(val, vals))
 ```
 
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L338-L344)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/count.jl#L77-L83)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CBLS.AlwaysTrue' href='#CBLS.AlwaysTrue'>#</a>&nbsp;<b><u>CBLS.AlwaysTrue</u></b> &mdash; <i>Type</i>.
+<a id='CBLS.AtMost' href='#CBLS.AtMost'>#</a>&nbsp;<b><u>CBLS.AtMost</u></b> &mdash; <i>Type</i>.
 
 
 
 
-Always return `true`. Mainly used for testing purpose.
+Constraint ensuring that the number of occurrences of the values in `vals` in `x` is at most `val`.
 
 ```julia
-@constraint(model, X in AlwaysTrue())
+@constraint(model, X in AtMost(val, vals))
 ```
 
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L231-L237)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/count.jl#L102-L108)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CBLS.Conflicts' href='#CBLS.Conflicts'>#</a>&nbsp;<b><u>CBLS.Conflicts</u></b> &mdash; <i>Type</i>.
+
+
+
+
+Global constraint ensuring that the tuple `x` does not match any configuration listed within the conflict set `pair_vars`. This constraint, originating from the extension model, stipulates that `x` must avoid all configurations defined as conflicts: `x ∉ pair_vars`. It is useful for specifying tuples that are explicitly forbidden and should be excluded from the solution space.
+
+```julia
+@constraint(model, X in Conflicts(; pair_vars))
+```
+
+
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/extension.jl#L159-L165)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CBLS.Count' href='#CBLS.Count'>#</a>&nbsp;<b><u>CBLS.Count</u></b> &mdash; <i>Type</i>.
+
+
+
+
+Global constraint ensuring that the number of occurrences of `val` in `X` is equal to `count`.
+
+```julia
+@constraint(model, X in Count(count, val, vals))
+```
+
+
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/count.jl#L50-L56)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CBLS.Cumulative' href='#CBLS.Cumulative'>#</a>&nbsp;<b><u>CBLS.Cumulative</u></b> &mdash; <i>Type</i>.
+
+
+
+
+Global constraint ensuring that the cumulative sum of the heights of the tasks is less than or equal to `val`.
+
+```julia
+@constraint(model, X in Cumulative(; pair_vars, op, val))
+```
+
+
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/cumulative.jl#L45-L51)
 
 </div>
 <br>
@@ -86,7 +140,7 @@ DiscreteSet(values)
 
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/MOI_wrapper.jl#L98-L100)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/MOI_wrapper.jl#L98-L100)
 
 </div>
 <br>
@@ -96,33 +150,28 @@ DiscreteSet(values)
 
 
 
-Local constraint ensuring that, given a vector `X` of size 4, `|X[1] - X[2]| ≠ |X[3] - X[4]|)`.
-
-```julia
-@constraint(model, X in DistDifferent())
-```
+A constraint ensuring that the distances between marks on the ruler are unique. Specifically, it checks that the distance between `x[1]` and `x[2]`, and the distance between `x[3]` and `x[4]`, are different. This constraint is fundamental in ensuring the validity of a Golomb ruler, where no two pairs of marks should have the same distance between them.
 
 
-
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L293-L299)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/intention.jl#L35-L37)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CBLS.Eq' href='#CBLS.Eq'>#</a>&nbsp;<b><u>CBLS.Eq</u></b> &mdash; <i>Type</i>.
+<a id='CBLS.Element' href='#CBLS.Element'>#</a>&nbsp;<b><u>CBLS.Element</u></b> &mdash; <i>Type</i>.
 
 
 
 
-Equality between two variables.
+Global constraint ensuring that the value of `X` at index `id` is equal to `val`.
 
 ```julia
-@constraint(model, X in Eq())
+@constraint(model, X in Element(; id = nothing, op = ==, val = 0))
 ```
 
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L201-L207)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/element.jl#L40-L46)
 
 </div>
 <br>
@@ -145,25 +194,71 @@ The solver will compute a straightforward error function based on the `concept`.
 
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L58-L66)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints.jl#L59-L67)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CBLS.LessThanParam' href='#CBLS.LessThanParam'>#</a>&nbsp;<b><u>CBLS.LessThanParam</u></b> &mdash; <i>Type</i>.
+<a id='CBLS.Exactly' href='#CBLS.Exactly'>#</a>&nbsp;<b><u>CBLS.Exactly</u></b> &mdash; <i>Type</i>.
 
 
 
 
-Constraint ensuring that the value of `x` is less than a given parameter `param`.
+Constraint ensuring that the number of occurrences of the values in `vals` in `x` is exactly `val`.
 
 ```julia
-@constraint(model, x in LessThanParam(param))
+@constraint(model, X in Exactly(val, vals))
 ```
 
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L432-L438)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/count.jl#L127-L133)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CBLS.Extension' href='#CBLS.Extension'>#</a>&nbsp;<b><u>CBLS.Extension</u></b> &mdash; <i>Type</i>.
+
+
+
+
+Global constraint enforcing that the tuple `x` matches a configuration within the supports set `pair_vars[1]` or does not match any configuration within the conflicts set `pair_vars[2]`. It embodies the logic: `x ∈ pair_vars[1] || x ∉ pair_vars[2]`, providing a comprehensive way to define valid (supported) and invalid (conflicted) tuples for constraint satisfaction problems. This constraint is versatile, allowing for the explicit delineation of both acceptable and unacceptable configurations.
+
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/extension.jl#L41-L43)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CBLS.Instantiation' href='#CBLS.Instantiation'>#</a>&nbsp;<b><u>CBLS.Instantiation</u></b> &mdash; <i>Type</i>.
+
+
+
+
+The instantiation constraint is a global constraint used in constraint programming that ensures that a list of variables takes on a specific set of values in a specific order.
+
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/instantiation.jl#L37-L39)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CBLS.MDDConstraint' href='#CBLS.MDDConstraint'>#</a>&nbsp;<b><u>CBLS.MDDConstraint</u></b> &mdash; <i>Type</i>.
+
+
+
+
+Multi-valued Decision Diagram (MDD) constraint.
+
+The MDD constraint is a constraint that can be used to model a wide range of problems. It is a directed graph where each node is labeled with a value and each edge is labeled with a value. The constraint is satisfied if there is a path from the first node to the last node such that the sequence of edge labels is a valid sequence of the value labels.
+
+```julia
+@constraint(model, X in MDDConstraint(; language))
+```
+
+
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/mdd.jl#L38-L46)
 
 </div>
 <br>
@@ -181,7 +276,7 @@ MOIAllDifferent <: MOI.AbstractVectorSet
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L119-L123)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/all_different.jl#L1-L5)
 
 </div>
 <br>
@@ -199,51 +294,43 @@ MOIAllEqual <: MOI.AbstractVectorSet
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L149-L153)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/all_equal.jl#L1-L5)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CBLS.MOIAllEqualParam' href='#CBLS.MOIAllEqualParam'>#</a>&nbsp;<b><u>CBLS.MOIAllEqualParam</u></b> &mdash; <i>Type</i>.
+<a id='CBLS.MOIConflicts' href='#CBLS.MOIConflicts'>#</a>&nbsp;<b><u>CBLS.MOIConflicts</u></b> &mdash; <i>Type</i>.
 
 
 
 
 ```julia
-MOIAllEqualParam{T <: Number} <: MOI.AbstractVectorSet
-```
-
-
-DOCSTRING
-
-**Arguments:**
-- `param::T`: DESCRIPTION
-  
-- `dimension::Int`: DESCRIPTION
-  
-- `MOIAllEqualParam(param, dim = 0) = begin       #= none:5 =#       new{typeof(param)}(param, dim)   end`: DESCRIPTION
-  
-
-
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L303-L315)
-
-</div>
-<br>
-<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CBLS.MOIAlwaysTrue' href='#CBLS.MOIAlwaysTrue'>#</a>&nbsp;<b><u>CBLS.MOIAlwaysTrue</u></b> &mdash; <i>Type</i>.
-
-
-
-
-```julia
-MOIAlwaysTrue <: MOI.AbstractVectorSet
+MOIConflicts{T <: Number, V <: Vector{Vector{T}}} <: MOI.AbstractVectorSet
 ```
 
 
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L211-L215)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/extension.jl#L121-L125)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CBLS.MOICumulative' href='#CBLS.MOICumulative'>#</a>&nbsp;<b><u>CBLS.MOICumulative</u></b> &mdash; <i>Type</i>.
+
+
+
+
+```julia
+MOICumulative{F <: Function, T1 <: Number, T2 <: Number} <: MOI.AbstractVectorSet
+```
+
+
+DOCSTRING
+
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/cumulative.jl#L1-L5)
 
 </div>
 <br>
@@ -261,25 +348,25 @@ MOIDistDifferent <: MOI.AbstractVectorSet
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L273-L277)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/intention.jl#L3-L7)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CBLS.MOIEq' href='#CBLS.MOIEq'>#</a>&nbsp;<b><u>CBLS.MOIEq</u></b> &mdash; <i>Type</i>.
+<a id='CBLS.MOIElement' href='#CBLS.MOIElement'>#</a>&nbsp;<b><u>CBLS.MOIElement</u></b> &mdash; <i>Type</i>.
 
 
 
 
 ```julia
-MOIEq <: MOI.AbstractVectorSet
+MOIElement{I <: Integer, F <: Function, T <: Union{Nothing, Number}} <: MOI.AbstractVectorSet
 ```
 
 
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L180-L184)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/element.jl#L1-L5)
 
 </div>
 <br>
@@ -305,59 +392,133 @@ DOCSTRING
   
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L1-L13)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints.jl#L1-L13)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CBLS.MOILessThanParam' href='#CBLS.MOILessThanParam'>#</a>&nbsp;<b><u>CBLS.MOILessThanParam</u></b> &mdash; <i>Type</i>.
+<a id='CBLS.MOIExtension' href='#CBLS.MOIExtension'>#</a>&nbsp;<b><u>CBLS.MOIExtension</u></b> &mdash; <i>Type</i>.
 
 
 
 
 ```julia
-MOILessThanParam{T <: Number} <: MOI.AbstractVectorSet
+MOIExtension{T <: Number, V <: Union{Vector{Vector{T}}, Tuple{Vector{T}, Vector{T}}}} <: MOI.AbstractVectorSet
+
+DOCSTRING
 ```
 
 
-DOCSTRING
 
-**Arguments:**
-- `param::T`: DESCRIPTION
-  
-- `dimension::Int`: DESCRIPTION
-  
-- `MOILessThanParam(param, dim = 0) = begin       #= none:5 =#       new{typeof(param)}(param, dim)   end`: DESCRIPTION
-  
-
-
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L397-L409)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/extension.jl#L1-L5)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CBLS.MOIMinusEqualParam' href='#CBLS.MOIMinusEqualParam'>#</a>&nbsp;<b><u>CBLS.MOIMinusEqualParam</u></b> &mdash; <i>Type</i>.
+<a id='CBLS.MOIInstantiation' href='#CBLS.MOIInstantiation'>#</a>&nbsp;<b><u>CBLS.MOIInstantiation</u></b> &mdash; <i>Type</i>.
 
 
 
 
 ```julia
-MOIMinusEqualParam{T <: Number} <: MOI.AbstractVectorSet
+MOIInstantiation{T <: Number, V <: Vector{T}} <: MOI.AbstractVectorSet
 ```
 
 
 DOCSTRING
 
-**Arguments:**
-- `param::T`: DESCRIPTION
-  
-- `dimension::Int`: DESCRIPTION
-  
-- `MOIMinusEqualParam(param, dim = 0) = begin       #= none:5 =#       new{typeof(param)}(param, dim)   end`: DESCRIPTION
-  
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/instantiation.jl#L1-L5)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CBLS.MOIMaximum' href='#CBLS.MOIMaximum'>#</a>&nbsp;<b><u>CBLS.MOIMaximum</u></b> &mdash; <i>Type</i>.
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L444-L456)
+
+
+```julia
+MOIMaximum {F <: Function, T <: Number} <: MOI.AbstractVectorSet
+```
+
+
+DOCSTRING
+
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/maximum.jl#L1-L5)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CBLS.MOIMinimum' href='#CBLS.MOIMinimum'>#</a>&nbsp;<b><u>CBLS.MOIMinimum</u></b> &mdash; <i>Type</i>.
+
+
+
+
+```julia
+MOIMinimum {F <: Function, T <: Number} <: MOI.AbstractVectorSet
+```
+
+
+DOCSTRING
+
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/minimum.jl#L1-L5)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CBLS.MOIMultivaluedDecisionDiagram' href='#CBLS.MOIMultivaluedDecisionDiagram'>#</a>&nbsp;<b><u>CBLS.MOIMultivaluedDecisionDiagram</u></b> &mdash; <i>Type</i>.
+
+
+
+
+```julia
+MOIMultivaluedDecisionDiagram{L <: ConstraintCommons.AbstractMultivaluedDecisionDiagram} <: AbstractVectorSet
+```
+
+
+DOCSTRING
+
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/mdd.jl#L1-L5)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CBLS.MOINValues' href='#CBLS.MOINValues'>#</a>&nbsp;<b><u>CBLS.MOINValues</u></b> &mdash; <i>Type</i>.
+
+
+
+
+```julia
+MOINValues{F <: Function, T1 <: Number, T2 <: Number, V <: Vector{T2}} <: MOI.AbstractVectorSet
+```
+
+
+DOCSTRING
+
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/n_values.jl#L1-L5)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CBLS.MOINoOverlap' href='#CBLS.MOINoOverlap'>#</a>&nbsp;<b><u>CBLS.MOINoOverlap</u></b> &mdash; <i>Type</i>.
+
+
+
+
+```julia
+MOINoOverlap{I <: Integer, T <: Number, V <: Vector{T}} <: MOI.AbstractVectorSet
+```
+
+
+DOCSTRING
+
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/no_overlap.jl#L1-L5)
 
 </div>
 <br>
@@ -368,14 +529,14 @@ DOCSTRING
 
 
 ```julia
-MOIOrdered <: MOI.AbstractVectorSet
+MOIOrdered{F <: Function, T <: Number, V <: Vector{T}} <: MOI.AbstractVectorSet
 ```
 
 
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L241-L245)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/ordered.jl#L1-L5)
 
 </div>
 <br>
@@ -401,69 +562,128 @@ DOCSTRING
   
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L74-L86)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints.jl#L75-L87)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CBLS.MOISequentialTasks' href='#CBLS.MOISequentialTasks'>#</a>&nbsp;<b><u>CBLS.MOISequentialTasks</u></b> &mdash; <i>Type</i>.
+<a id='CBLS.MOIRegular' href='#CBLS.MOIRegular'>#</a>&nbsp;<b><u>CBLS.MOIRegular</u></b> &mdash; <i>Type</i>.
 
 
 
 
 ```julia
-MOISequentialTasks <: MOI.AbstractVectorSet
+MOIRegular{L <: ConstraintCommons.AbstractAutomaton} <: AbstractVectorSet
 ```
 
 
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L492-L496)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/regular.jl#L1-L5)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CBLS.MOISumEqualParam' href='#CBLS.MOISumEqualParam'>#</a>&nbsp;<b><u>CBLS.MOISumEqualParam</u></b> &mdash; <i>Type</i>.
+<a id='CBLS.MOISum' href='#CBLS.MOISum'>#</a>&nbsp;<b><u>CBLS.MOISum</u></b> &mdash; <i>Type</i>.
 
 
 
 
 ```julia
-MOISumEqualParam{T <: Number} <: MOI.AbstractVectorSet
+MOISum{F <: Function, T1 <: Number, T2 <: Number, V <: Number} <: MOI.AbstractVectorSet
 ```
 
 
 DOCSTRING
 
-**Arguments:**
-- `param::T`: DESCRIPTION
-  
-- `dimension::Int`: DESCRIPTION
-  
-- `MOISumEqualParam(param, dim = 0) = begin       #= none:5 =#       new{typeof(param)}(param, dim)   end`: DESCRIPTION
-  
 
-
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L350-L362)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/sum.jl#L1-L5)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CBLS.MinusEqualParam' href='#CBLS.MinusEqualParam'>#</a>&nbsp;<b><u>CBLS.MinusEqualParam</u></b> &mdash; <i>Type</i>.
+<a id='CBLS.MOISupports' href='#CBLS.MOISupports'>#</a>&nbsp;<b><u>CBLS.MOISupports</u></b> &mdash; <i>Type</i>.
 
 
 
-
-Constraint ensuring that the value of `x` is less than a given parameter `param`.
 
 ```julia
-@constraint(model, x in MinusEqualParam(param))
+MOISupports{T <: Number, V <: Vector{Vector{T}}} <: MOI.AbstractVectorSet
+```
+
+
+DOCSTRING
+
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/extension.jl#L64-L68)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CBLS.Maximum' href='#CBLS.Maximum'>#</a>&nbsp;<b><u>CBLS.Maximum</u></b> &mdash; <i>Type</i>.
+
+
+
+
+Global constraint ensuring that the maximum value in the tuple `x` satisfies the condition `op(x) val`. This constraint is useful for specifying that the maximum value in the tuple must satisfy a certain condition.
+
+```julia
+@constraint(model, X in Maximum(; op = ==, val))
 ```
 
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L479-L485)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/maximum.jl#L37-L43)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CBLS.Minimum' href='#CBLS.Minimum'>#</a>&nbsp;<b><u>CBLS.Minimum</u></b> &mdash; <i>Type</i>.
+
+
+
+
+Global constraint ensuring that the minimum value in the tuple `x` satisfies the condition `op(x) val`. This constraint is useful for specifying that the minimum value in the tuple must satisfy a certain condition.
+
+```julia
+@constraint(model, X in Minimum(; op = ==, val))
+```
+
+
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/minimum.jl#L37-L43)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CBLS.NValues' href='#CBLS.NValues'>#</a>&nbsp;<b><u>CBLS.NValues</u></b> &mdash; <i>Type</i>.
+
+
+
+
+Global constraint ensuring that the number of distinct values in `X` satisfies the given condition.
+
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/n_values.jl#L43-L45)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CBLS.NoOverlap' href='#CBLS.NoOverlap'>#</a>&nbsp;<b><u>CBLS.NoOverlap</u></b> &mdash; <i>Type</i>.
+
+
+
+
+Global constraint ensuring that the tuple `x` does not overlap with any configuration listed within the pair set `pair_vars`. This constraint, originating from the extension model, stipulates that `x` must avoid all configurations defined as pairs: `x ∩ pair_vars = ∅`. It is useful for specifying tuples that are explicitly forbidden and should be excluded from the solution space.
+
+```julia
+@constraint(model, X in NoOverlap(; bool = true, dim = 1, pair_vars = nothing))
+```
+
+
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/no_overlap.jl#L48-L54)
 
 </div>
 <br>
@@ -481,7 +701,7 @@ Optimizer(model = Model(); options = Options())
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/MOI_wrapper.jl#L35-L39)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/MOI_wrapper.jl#L35-L39)
 
 </div>
 <br>
@@ -507,7 +727,7 @@ DOCSTRING
   
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/MOI_wrapper.jl#L19-L28)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/MOI_wrapper.jl#L19-L28)
 
 </div>
 <br>
@@ -517,15 +737,10 @@ DOCSTRING
 
 
 
-Global constraint ensuring that all the values of `x` are ordered.
-
-```julia
-@constraint(model, X in Ordered())
-```
+Global constraint ensuring that the variables are ordered according to `op`.
 
 
-
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L262-L268)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/ordered.jl#L45-L47)
 
 </div>
 <br>
@@ -548,7 +763,25 @@ Assuming `X` is a (collection of) variables, `concept` a boolean function over `
 
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L105-L113)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints.jl#L107-L115)
+
+</div>
+<br>
+<div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
+<a id='CBLS.Regular' href='#CBLS.Regular'>#</a>&nbsp;<b><u>CBLS.Regular</u></b> &mdash; <i>Type</i>.
+
+
+
+
+Ensures that a sequence `x` (interpreted as a word) is accepted by the regular language represented by a given automaton. This constraint verifies the compliance of `x` with the language rules encoded within the `automaton` parameter, which must be an instance of `<:AbstractAutomaton`.
+
+```julia
+@constraint(model, X in RegularConstraint(; language))
+```
+
+
+
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/regular.jl#L35-L41)
 
 </div>
 <br>
@@ -584,43 +817,38 @@ Given a `model`, and some (collection of) variables `X` to optimize. an objectiv
 
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/objectives.jl#L9-L28)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/objectives.jl#L9-L28)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CBLS.SequentialTasks' href='#CBLS.SequentialTasks'>#</a>&nbsp;<b><u>CBLS.SequentialTasks</u></b> &mdash; <i>Type</i>.
+<a id='CBLS.Sum' href='#CBLS.Sum'>#</a>&nbsp;<b><u>CBLS.Sum</u></b> &mdash; <i>Type</i>.
 
 
 
 
-Local constraint ensuring that, given a vector `X` of size 4, `|X[1] - X[2]| ≠ |X[3] - X[4]|)`.
-
-```julia
-@constraint(model, X in SequentialTasks())
-```
+Global constraint ensuring that the sum of the variables in `x` satisfies a given condition.
 
 
-
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L512-L518)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/sum.jl#L46-L48)
 
 </div>
 <br>
 <div style='border-width:1px; border-style:solid; border-color:black; padding: 1em; border-radius: 25px;'>
-<a id='CBLS.SumEqualParam' href='#CBLS.SumEqualParam'>#</a>&nbsp;<b><u>CBLS.SumEqualParam</u></b> &mdash; <i>Type</i>.
+<a id='CBLS.Supports' href='#CBLS.Supports'>#</a>&nbsp;<b><u>CBLS.Supports</u></b> &mdash; <i>Type</i>.
 
 
 
 
-Global constraint ensuring that the sum of the values of `X` is equal to a given parameter `param`.
+Global constraint ensuring that the tuple `x` matches a configuration listed within the support set `pair_vars`. This constraint is derived from the extension model, specifying that `x` must be one of the explicitly defined supported configurations: `x ∈ pair_vars`. It is utilized to directly declare the tuples that are valid and should be included in the solution space.
 
 ```julia
-@constraint(model, X in SumEqualParam(param))
+@constraint(model, X in Supports(; pair_vars))
 ```
 
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L385-L391)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints/extension.jl#L101-L107)
 
 </div>
 <br>
@@ -638,7 +866,7 @@ Base.copy(set::MOIError) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L51-L55)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints.jl#L52-L56)
 
 </div>
 <br>
@@ -656,7 +884,7 @@ Base.copy(set::DiscreteSet) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/MOI_wrapper.jl#L107-L111)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/MOI_wrapper.jl#L107-L111)
 
 </div>
 <br>
@@ -682,7 +910,7 @@ DOCSTRING
   
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/MOI_wrapper.jl#L1-L10)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/MOI_wrapper.jl#L1-L10)
 
 </div>
 <br>
@@ -708,7 +936,7 @@ DOCSTRING
   
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L36-L45)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints.jl#L36-L45)
 
 </div>
 <br>
@@ -734,7 +962,7 @@ DOCSTRING
   
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/variables.jl#L34-L43)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/variables.jl#L37-L46)
 
 </div>
 <br>
@@ -752,7 +980,7 @@ MOI.add_variable(model::Optimizer) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/variables.jl#L2-L6)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/variables.jl#L2-L6)
 
 </div>
 <br>
@@ -770,7 +998,7 @@ MOI.empty!(opt) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/MOI_wrapper.jl#L114-L118)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/MOI_wrapper.jl#L114-L118)
 
 </div>
 <br>
@@ -788,7 +1016,7 @@ MOI.get(::Optimizer, ::MOI.SolverName) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/MOI_wrapper.jl#L59-L63)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/MOI_wrapper.jl#L59-L63)
 
 </div>
 <br>
@@ -806,7 +1034,7 @@ MOI.is_empty(model::Optimizer) = begin
 DOCSTRING
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/MOI_wrapper.jl#L78-L82)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/MOI_wrapper.jl#L78-L82)
 
 </div>
 <br>
@@ -822,7 +1050,7 @@ MOI.optimize!(model::Optimizer)
 
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/MOI_wrapper.jl#L93-L95)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/MOI_wrapper.jl#L93-L95)
 
 </div>
 <br>
@@ -848,7 +1076,7 @@ DOCSTRING
   
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/MOI_wrapper.jl#L66-L75)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/MOI_wrapper.jl#L66-L75)
 
 </div>
 <br>
@@ -866,7 +1094,7 @@ MOI.set(model::Optimizer, p::MOI.RawOptimizerAttribute, value)
 Set a RawOptimizerAttribute to `value`
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/attributes.jl#L19-L22)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/attributes.jl#L19-L22)
 
 </div>
 <br>
@@ -884,7 +1112,7 @@ MOI.set(model::Optimizer, ::MOI.TimeLimitSec, value::Union{Nothing,Float64})
 Set the time limit
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/attributes.jl#L7-L10)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/attributes.jl#L7-L10)
 
 </div>
 <br>
@@ -910,7 +1138,7 @@ DOCSTRING
   
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/constraints.jl#L21-L30)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/constraints.jl#L21-L30)
 
 </div>
 <br>
@@ -923,7 +1151,7 @@ DOCSTRING
 Copy constructor for the optimizer
 
 
-[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.1.13/src/MOI_wrapper.jl#L85-L87)
+[source](https://github.com/JuliaConstraints/CBLS.jl/blob/v0.2.0/src/MOI_wrapper.jl#L85-L87)
 
 </div>
 <br>

@@ -873,7 +873,7 @@ Composition(f::F, symbols) where {F<:Function}
 Construct a `Composition`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/composition.jl#L12-L16)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/composition.jl#L12-L16)
 
 </div>
 <br>
@@ -891,7 +891,7 @@ struct Composition{F<:Function}
 Store the all the information of a composition learned by an ICN.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/composition.jl#L1-L5)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/composition.jl#L1-L5)
 
 </div>
 <br>
@@ -923,7 +923,7 @@ Construct an Interpretable Compositional Network, with the following arguments:
   
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/icn.jl#L1-L11)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/icn.jl#L1-L11)
 
 </div>
 <br>
@@ -941,7 +941,7 @@ aggregation_layer()
 Generate the layer of aggregations of the ICN. The operations are mutually exclusive, that is only one will be selected.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/aggregation.jl#L13-L16)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/aggregation.jl#L13-L16)
 
 </div>
 <br>
@@ -959,7 +959,7 @@ arithmetic_layer()
 Generate the layer of arithmetic operations of the ICN. The operations are mutually exclusive, that is only one will be selected.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/arithmetic.jl#L13-L16)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/arithmetic.jl#L13-L16)
 
 </div>
 <br>
@@ -977,7 +977,7 @@ code(c::Composition, lang=:maths; name="composition")
 Access the code of a composition `c` in a given language `lang`. The name of the generated method is optional.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/composition.jl#L22-L26)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/composition.jl#L22-L26)
 
 </div>
 <br>
@@ -995,7 +995,7 @@ comparison_layer(param = false)
 Generate the layer of transformations functions of the ICN. Iff `param` value is set, also includes all the parametric comparison with that value. The operations are mutually exclusive, that is only one will be selected.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/comparison.jl#L85-L88)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/comparison.jl#L83-L86)
 
 </div>
 <br>
@@ -1013,7 +1013,7 @@ compose(icn, weights=nothing)
 Return a function composed by some of the operations of a given ICN. Can be applied to any vector of variables. If `weights` are given, will assign to `icn`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/composition.jl#L45-L48)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/composition.jl#L45-L48)
 
 </div>
 <br>
@@ -1057,7 +1057,7 @@ Explore, learn and compose a function and write it to a file.
   
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/learn.jl#L77-L95)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/learn.jl#L77-L95)
 
 </div>
 <br>
@@ -1075,7 +1075,7 @@ composition(c::Composition)
 Access the actual method of an ICN composition `c`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/composition.jl#L31-L35)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/composition.jl#L31-L35)
 
 </div>
 <br>
@@ -1093,7 +1093,7 @@ composition_to_file!(c::Composition, path, name, language=:Julia)
 Write the composition code in a given `language` into a file at `path`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/composition.jl#L97-L101)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/composition.jl#L97-L101)
 
 </div>
 <br>
@@ -1131,7 +1131,7 @@ Explore a search space, learn a composition from an ICN, and compose an error fu
   
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/learn.jl#L35-L50)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/learn.jl#L35-L50)
 
 </div>
 <br>
@@ -1149,7 +1149,7 @@ hamming(x, X)
 Compute the hamming distance of `x` over a collection of solutions `X`, i.e. the minimal number of variables to switch in `x`to reach a solution.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/metrics.jl#L1-L4)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/metrics.jl#L1-L4)
 
 </div>
 <br>
@@ -1167,7 +1167,7 @@ lazy(funcs::Function...)
 Generate methods extended to a vector instead of one of its components. A function `f` should have the following signature: `f(i::Int, x::V)`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/utils.jl#L22-L25)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/utils.jl#L22-L25)
 
 </div>
 <br>
@@ -1185,7 +1185,7 @@ lazy_param(funcs::Function...)
 Generate methods extended to a vector instead of one of its components. A function `f` should have the following signature: `f(i::Int, x::V; param)`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/utils.jl#L36-L39)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/utils.jl#L39-L42)
 
 </div>
 <br>
@@ -1206,7 +1206,7 @@ learn_compose(;
 Create an ICN, optimize it, and return its composition.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/learn.jl#L7-L13)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/learn.jl#L7-L13)
 
 </div>
 <br>
@@ -1222,7 +1222,7 @@ manhattan(x, X)
 
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/metrics.jl#L12-L14)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/metrics.jl#L12-L14)
 
 </div>
 <br>
@@ -1238,7 +1238,7 @@ minkowski(x, X, p)
 
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/metrics.jl#L7-L9)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/metrics.jl#L7-L9)
 
 </div>
 <br>
@@ -1256,7 +1256,7 @@ nbits(icn)
 Return the expected number of bits of a viable weight of an ICN.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/icn.jl#L43-L46)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/icn.jl#L43-L46)
 
 </div>
 <br>
@@ -1274,7 +1274,7 @@ regularization(icn)
 Return the regularization value of an ICN weights, which is proportional to the normalized number of operations selected in the icn layers.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/icn.jl#L89-L92)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/icn.jl#L89-L92)
 
 </div>
 <br>
@@ -1292,7 +1292,7 @@ show_layers(icn)
 Return a formatted string with each layers in the icn.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/icn.jl#L81-L84)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/icn.jl#L81-L84)
 
 </div>
 <br>
@@ -1310,7 +1310,7 @@ symbols(c::Composition)
 Output the composition as a layered collection of `Symbol`s.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/composition.jl#L38-L42)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/composition.jl#L38-L42)
 
 </div>
 <br>
@@ -1321,14 +1321,14 @@ Output the composition as a layered collection of `Symbol`s.
 
 
 ```julia
-transformation_layer(param = false)
+transformation_layer(param = Vector{Symbol}())
 ```
 
 
-Generate the layer of transformations functions of the ICN. Iff `param` value is true, also includes all the parametric transformations.
+Generate the layer of transformations functions of the ICN. Iff `param` value is non empty, also includes all the related parametric transformations.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/layers/transformation.jl#L298-L301)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/layers/transformation.jl#L298-L301)
 
 </div>
 <br>
@@ -1346,7 +1346,7 @@ weights!(icn, weights)
 Set the weights of an ICN with a `BitVector`.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/icn.jl#L71-L74)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/icn.jl#L71-L74)
 
 </div>
 <br>
@@ -1364,7 +1364,7 @@ weights(icn)
 Access the current set of weights of an ICN.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/icn.jl#L49-L52)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/icn.jl#L49-L52)
 
 </div>
 <br>
@@ -1382,7 +1382,7 @@ weights_bias(x)
 A metric that bias `x` towards operations with a lower bit. Do not affect the main metric.
 
 
-[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.6/src/metrics.jl#L17-L20)
+[source](https://github.com/JuliaConstraints/CompositionalNetworks.jl/blob/v0.5.7/src/metrics.jl#L17-L20)
 
 </div>
 <br>
