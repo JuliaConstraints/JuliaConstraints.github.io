@@ -39,7 +39,7 @@ makedocs(;
         devurl="dev",
         deploy_url="https://juliaconstraints.github.io/",
         description="Resources about Constraint Programming in Julia",
-        build_vitepress=false
+        # build_vitepress=false
     ),
     pages=[
         "Home" => "index.md",
