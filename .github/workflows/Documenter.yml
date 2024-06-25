@@ -48,8 +48,9 @@ jobs:
       - name: Install documentation dependencies
         run: julia --project=docs -e 'using Pkg; Pkg.instantiate(); Pkg.update(); Pkg.precompile(); Pkg.status()'
         # run: julia --project=docs -e 'using Pkg; pkg"dev ."; Pkg.instantiate(); Pkg.precompile(); Pkg.status()'
-      - name: Install npm
+      - name: Instantiate NPM
         run: cd docs/; npm i; cd ..
+      #- name: Creating new mds from src
       - name: Build and deploy docs
         uses: julia-actions/julia-docdeploy@v1
         with:
