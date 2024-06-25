@@ -1,4 +1,0 @@
-
-# Solvers
-
-About solvers.
