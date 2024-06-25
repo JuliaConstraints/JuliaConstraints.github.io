@@ -51,7 +51,7 @@ jobs:
       #   run: cd docs/; npm i; cd ..
       #- name: Creating new mds from src
       - name: Build and deploy docs
-        uses: Azzaare/julia-docdeploy@v1
+        uses: Azzaare/julia-docdeploy#master
         # with:
         #   install-package: false
         env:
