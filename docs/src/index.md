@@ -16,7 +16,7 @@ hero:
       link: /cp/intro
     - theme: alt
       text: View on Github
-      link: https://github.com/JuliaConstraints/JuliaConstraints.github.io      
+      link: https://github.com/JuliaConstraints/JuliaConstraints.github.io
 
 features:
   - icon: <img width="64" height="64" src="JuMP-logo-dark.png" alt="JuMP.jl"/>
@@ -34,7 +34,7 @@ features:
 ---
 ```
 
-
+```@raw html
 <p style="margin-bottom:2cm"></p>
 
 <div class="vp-doc" style="width:80%; margin:auto">
@@ -63,3 +63,4 @@ features:
 <p>At Julia Constraints, our mission is to democratize Constraint Programming by providing robust, user-friendly tools that simplify the modeling process, enhance efficiency, and empower users to solve complex problems with ease.</p>
 
 </div>
+```
