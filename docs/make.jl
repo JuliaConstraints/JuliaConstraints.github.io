@@ -31,15 +31,15 @@ makedocs(;
         LocalSearchSolvers, CBLS,
         MetaStrategist,
     ],
-    authors="Jean-François BAFFIER",
+    authors="Julia Constraints et al.",
     repo="https://github.com/JuliaConstraints/JuliaConstraints.github.io",
     sitename="Julia Constraints",
     format=DocumenterVitepress.MarkdownVitepress(
-        repo = "https://github.com/JuliaConstraints/JuliaConstraints.github.io",
-        devurl = "dev",
-        deploy_url = "https://juliaconstraints.github.io/",
-        description = "Resources about Constraint Programming in Julia",
-        build_vitepress = false
+        repo="https://github.com/JuliaConstraints/JuliaConstraints.github.io",
+        devurl="dev",
+        deploy_url="https://juliaconstraints.github.io/",
+        description="Resources about Constraint Programming in Julia",
+        build_vitepress=false
     ),
     pages=[
         "Home" => "index.md",
@@ -118,12 +118,13 @@ makedocs(;
             "Full" => "full_api.md",
         ],
     ],
-    warnonly = true,
+    warnonly=true,
 )
 
 deploydocs(;
     repo="https://github.com/JuliaConstraints/JuliaConstraints.github.io",
-    target = "build",
-    devbranch = "main",
+    target="build",
+    branch="gh-pages",
+    devbranch="main",
     push_preview=true,
 )
