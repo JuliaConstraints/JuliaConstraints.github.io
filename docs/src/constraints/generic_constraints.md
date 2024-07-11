@@ -53,12 +53,16 @@ Higher level modeling language such as `JuMP` should provide an `Intension` inte
 ::: code-group
 
 ```julia [JC-API]
+using Constraints
+
 concept(:dist_different, x)
 concept(:dist_different)(x)
 ```
 
 ```julia [XCSP]
 # Defines the DistDifferent constraint
+using Constraints
+
 c = x -> xcsp_intension(
     list = x,
     predicate = y -> abs(y[1] - y[2]) ≠ abs(y[3] - y[4])
@@ -69,7 +73,509 @@ c([1, 2, 3, 4]) # false
 ```
 
 ```julia [JuMP]
+using CBLS, JuMP
+
+model = Model(CBLS.Optimizer)
+@variable(model, 0 <= X[1:4] <= 10, Int)
+@constraint(model, X in DistDifferent())
+optimize!(model)
+
+@info value.(X)
+
+# Note that this example gives a solution for the constraint within the interval 0:10
+```
+
+```julia [MOI]
 # TODO: How to handle intention in JuMP/MOI
+```
+
+:::
+
+::: code-group
+
+```julia [JC-API]
+using Constraints
+
+concept(:all_equal, [1,1,1,2]) #false
+concept(:all_equal, [1,1,1,1]) #true
+```
+
+```julia [XCSP]
+using Constraints
+
+c = x -> Constraints.xcsp_all_equal(
+    list = x
+)
+
+@info c([1, 1, 1, 1]) # false
+@info c([1, 2, 3, 4]) # true
+```
+
+```julia [JuMP]
+using JuMP, CBLS
+
+model = Model(CBLS.Optimizer)
+@variable(model, 0≤X[1:4]≤4, Int)
+@constraint(model, X in AllEqual())
+JuMP.optimize!(model)
+@info "All Equal" value.(X)
+
+# Note that this example gives a solution for the all_equal constraint.
+```
+
+```julia [MOI]
+# TODO: How to handle intention in JuMP/MOI
+```
+
+:::
+
+::: code-group
+
+```julia [JC-API]
+using Constraints
+
+concept(:minimum, [1,1,1,2], val = 1, op = ==) # true
+concept(:minimum, [1,2,4,4], val = 2, op = ==) # false
+```
+
+```julia [XCSP]
+using Constraints
+
+c = x -> Constraints.xcsp_minimum(
+    list = x,
+    condition = (==, 1)
+)
+
+@info c([1, 1, 4, 1])
+@info c([0, 2, 3, 8])
+```
+
+```julia [JuMP]
+using CBLS, JuMP
+
+model = Model(CBLS.Optimizer)
+@variable(model, 1≤X[1:5]≤5, Int)
+@constraint(model, X in Minimum(; op = ==, val = 3))
+JuMP.optimize!(model)
+@info "Minimum" value.(X)
+
+# Note that this example gives a solution for the minimum constraint.
+```
+
+```julia [MOI]
+# TODO: How to handle intention in JuMP/MOI
+```
+
+:::
+
+::: code-group
+
+```julia [JC-API]
+using Constraints
+
+concept(:maximum, [1,1,1,2], val = 2, op = ==) # true
+concept(:maximum, [1,2,4,4], val = 2, op = ==) # false
+```
+
+```julia [XCSP]
+using Constraints
+
+c = x -> Constraints.xcsp_maximum(
+    list = x,
+		condition = (==, 4)
+)
+
+@info c([1, 1, 4, 1]) # true
+@info c([1, 2, 3, 8]) # false
+```
+
+```julia [JuMP]
+using CBLS, JuMP
+
+model = Model(CBLS.Optimizer)
+@variable(model, 1≤X[1:5]≤5, Int)
+@constraint(model, X in Maximum(; op = ==, val = 5))
+optimize!(model)
+@info "Maximum" value.(X)
+```
+
+```julia [MOI]
+# TODO: How to handle intention in JuMP/MOI
+```
+
+:::
+
+::: code-group
+
+```julia [JC-API]
+using Constraints
+
+concept(:all_different, [1,1,1,2]) # false
+concept(:all_different, [1,9,3,2]) # true
+```
+
+```julia [XCSP]
+using Constraints
+
+c = x -> Constraints.xcsp_all_different(
+    list = x
+)
+@info c([1, 2, 3, 3]) # false
+@info c([1, 2, 3, 4]) # true
+```
+
+```julia [JuMP]
+using CBLS, JuMP
+
+model = Model(CBLS.Optimizer)
+@variable(model, 1≤X[1:4]≤4, Int)
+@variable(model, 0≤Y[1:4]≤2, Int)
+@constraint(model, X in AllDifferent())
+@constraint(model, Y in AllDifferent(; vals = [0]))
+JuMP.optimize!(model)
+@info "All Different" value.(X) value.(Y)
+
+# Note that this example gives a solution for the all_different constraint.
+```
+
+```julia [MOI]
+# TODO: How to handle intention in JuMP/MOI
+```
+
+:::
+
+::: code-group
+
+```julia [JC-API]
+using Constraints
+
+concept(:count, [1,1,1,2], vals = [1, 1, 1, 2], op = ==, val = 4) # true
+concept(:count, [1,1,1,2], vals = [1, 1, 1, 2], op = ==, val = 5) # false
+concept(:count, [2, 1, 4, 3]; vals=[1, 2, 3, 4], op=≥, val=2) # true
+concept(:at_least, [1,1,1,2], vals = [1, 1, 1, 2], val = 4) # true
+concept(:at_least, [1,1,1,2], vals = [1, 2], val = 4) # true
+concept(:at_least, [1,1,1,2], vals = [1, 3], val = 4) # false
+concept(:at_most, [1,1,1,2], vals = [1, 1, 1, 2], val = 4) # true
+concept(:at_most, [1,1,1,2], vals = [2, 5, 3], val = 2) #true
+concept(:at_most, [1,1,1,2], vals = [1, 1, 1, 3], val = 3) # true
+concept(:exactly, [1,1,1,2], vals = [1, 3, 4, 2], val = 4) # true
+concept(:exactly, [1,1,1,2], vals = [1, 1, 2, 3], val = 4) # true
+concept(:exactly, [1,1,1,2], vals = [1, 1, 1, 3], val = 4) # false
+```
+
+```julia [XCSP]
+using Constraints
+
+c_count = x -> Constraints.xcsp_count(
+    list = x,
+		condition = (≥, 4),
+		values = [1, 2, 3]
+)
+	
+@info c_count([1, 1, 1, 1, 5]) # true
+@info c_count([0, 2, 3, 8]) # false
+```
+
+```julia [JuMP]
+using CBLS, JuMP
+
+model = Model(CBLS.Optimizer)
+@variable(model, 1≤X[1:4]≤4, Int)
+@variable(model, 1≤X_at_least[1:4]≤4, Int)
+@variable(model, 1≤X_at_most[1:4]≤4, Int)
+@variable(model, 1≤X_exactly[1:4]≤4, Int)
+@constraint(model, X in Count(vals = [1, 2, 3, 4], op = ≥, val = 2))
+@constraint(model, X_at_least in AtLeast(vals = [1, 2, 3, 4], val = 2))
+@constraint(model, X_at_most in AtMost(vals = [1, 2], val = 1))
+@constraint(model, X_exactly in Exactly(vals = [1, 2], val = 2))
+JuMP.optimize!(model)
+@info "Count" value.(X) value.(X_at_least) value.(X_at_most) value.(X_exactly)
+```
+
+```julia [MOI]
+# TODO: How to handle intention in JuMP/MOI
+```
+
+:::
+
+::: code-group
+
+```julia [JC-API]
+using Constraints
+
+
+```
+
+```julia [XCSP]
+using Constraints
+
+
+```
+
+```julia [JuMP]
+using CBLS, JuMP
+
+
+```
+
+```julia [MOI]
+# TODO: How to handle intention in JuMP/MOI
+```
+
+:::
+
+::: code-group
+
+```julia [JC-API]
+using Constraints
+
+
+```
+
+```julia [XCSP]
+using Constraints
+
+
+```
+
+```julia [JuMP]
+using CBLS, JuMP
+
+
+```
+
+```julia [MOI]
+# TODO: How to handle intention in JuMP/MOI
+```
+
+:::
+
+::: code-group
+
+```julia [JC-API]
+using Constraints
+
+
+```
+
+```julia [XCSP]
+using Constraints
+
+
+```
+
+```julia [JuMP]
+using CBLS, JuMP
+
+
+```
+
+```julia [MOI]
+# TODO: How to handle intention in JuMP/MOI
+```
+
+:::
+
+::: code-group
+
+```julia [JC-API]
+using Constraints
+
+
+```
+
+```julia [XCSP]
+using Constraints
+
+
+```
+
+```julia [JuMP]
+using CBLS, JuMP
+
+
+```
+
+```julia [MOI]
+# TODO: How to handle intention in JuMP/MOI
+```
+
+:::
+
+::: code-group
+
+```julia [JC-API]
+using Constraints
+
+
+```
+
+```julia [XCSP]
+using Constraints
+
+
+```
+
+```julia [JuMP]
+using CBLS, JuMP
+
+
+```
+
+```julia [MOI]
+# TODO: How to handle intention in JuMP/MOI
+```
+
+:::
+
+::: code-group
+
+```julia [JC-API]
+using Constraints
+
+
+```
+
+```julia [XCSP]
+using Constraints
+
+
+```
+
+```julia [JuMP]
+using CBLS, JuMP
+
+
+```
+
+```julia [MOI]
+# TODO: How to handle intention in JuMP/MOI
+```
+
+:::
+
+::: code-group
+
+```julia [JC-API]
+using Constraints
+
+
+```
+
+```julia [XCSP]
+using Constraints
+
+
+```
+
+```julia [JuMP]
+using CBLS, JuMP
+
+
+```
+
+```julia [MOI]
+# TODO: How to handle intention in JuMP/MOI
+```
+
+:::
+
+::: code-group
+
+```julia [JC-API]
+using Constraints
+
+
+```
+
+```julia [XCSP]
+using Constraints
+
+
+```
+
+```julia [JuMP]
+using CBLS, JuMP
+
+
+```
+
+```julia [MOI]
+# TODO: How to handle intention in JuMP/MOI
+```
+
+:::
+
+::: code-group
+
+```julia [JC-API]
+using Constraints
+
+
+```
+
+```julia [XCSP]
+using Constraints
+
+
+```
+
+```julia [JuMP]
+using CBLS, JuMP
+
+
+```
+
+```julia [MOI]
+# TODO: How to handle intention in JuMP/MOI
+```
+
+:::
+
+::: code-group
+
+```julia [JC-API]
+using Constraints
+
+
+```
+
+```julia [XCSP]
+using Constraints
+
+
+```
+
+```julia [JuMP]
+using CBLS, JuMP
+
+
+```
+
+```julia [MOI]
+# TODO: How to handle intention in JuMP/MOI
+```
+
+:::
+
+::: code-group
+
+```julia [JC-API]
+using Constraints
+
+
+```
+
+```julia [XCSP]
+using Constraints
+
+
+```
+
+```julia [JuMP]
+using CBLS, JuMP
+
+
 ```
 
 ```julia [MOI]
