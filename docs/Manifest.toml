@@ -25,6 +25,27 @@ git-tree-sha1 = "2d9c9a55f9c93e8887ad391fbae72f8ef55e1177"
 uuid = "1520ce14-60c1-5f80-bbc7-55ef81b5835c"
 version = "0.4.5"
 
+[[deps.Accessors]]
+deps = ["CompositionsBase", "ConstructionBase", "Dates", "InverseFunctions", "LinearAlgebra", "MacroTools", "Markdown", "Test"]
+git-tree-sha1 = "c0d491ef0b135fd7d63cbc6404286bc633329425"
+uuid = "7d9f7c33-5ae7-4f3b-8dc6-eff91059b697"
+version = "0.1.36"
+
+    [deps.Accessors.extensions]
+    AccessorsAxisKeysExt = "AxisKeys"
+    AccessorsIntervalSetsExt = "IntervalSets"
+    AccessorsStaticArraysExt = "StaticArrays"
+    AccessorsStructArraysExt = "StructArrays"
+    AccessorsUnitfulExt = "Unitful"
+
+    [deps.Accessors.weakdeps]
+    AxisKeys = "94b1ba4f-4ee9-5380-92f1-94cde586c3c5"
+    IntervalSets = "8197267c-284f-5f27-9208-e0e47529a953"
+    Requires = "ae029012-a4dd-5104-9daa-d747884805df"
+    StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
+    StructArrays = "09ab397b-f2b6-538f-b94a-2f83cf4a842a"
+    Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
+
 [[deps.Adapt]]
 deps = ["LinearAlgebra", "Requires"]
 git-tree-sha1 = "6a55b747d1812e699320963ffde36f1ebdda4099"
@@ -46,9 +67,9 @@ version = "1.1.1"
 
 [[deps.ArrayInterface]]
 deps = ["Adapt", "LinearAlgebra", "SparseArrays", "SuiteSparse"]
-git-tree-sha1 = "ed2ec3c9b483842ae59cd273834e5b46206d6dda"
+git-tree-sha1 = "5c9b74c973181571deb6442d41e5c902e6b9f38e"
 uuid = "4fba245c-0d91-5ea0-9b3e-6abc04ee57a9"
-version = "7.11.0"
+version = "7.12.0"
 
     [deps.ArrayInterface.extensions]
     ArrayInterfaceBandedMatricesExt = "BandedMatrices"
@@ -82,17 +103,18 @@ uuid = "a9b6321e-bd34-4604-b9c9-b65b8de01458"
 version = "0.1.0"
 
 [[deps.BangBang]]
-deps = ["Compat", "ConstructionBase", "InitialValues", "LinearAlgebra", "Requires", "Setfield", "Tables"]
-git-tree-sha1 = "7aa7ad1682f3d5754e3491bb59b8103cae28e3a3"
+deps = ["Accessors", "Compat", "ConstructionBase", "InitialValues", "LinearAlgebra", "Requires"]
+git-tree-sha1 = "08e5fc6620a8d83534bf6149795054f1b1e8370a"
 uuid = "198e06fe-97b7-11e9-32a5-e1d131e6ad66"
-version = "0.3.40"
-weakdeps = ["ChainRulesCore", "DataFrames", "StaticArrays", "StructArrays", "TypedTables"]
+version = "0.4.2"
+weakdeps = ["ChainRulesCore", "DataFrames", "StaticArrays", "StructArrays", "Tables", "TypedTables"]
 
     [deps.BangBang.extensions]
     BangBangChainRulesCoreExt = "ChainRulesCore"
     BangBangDataFramesExt = "DataFrames"
     BangBangStaticArraysExt = "StaticArrays"
     BangBangStructArraysExt = "StructArrays"
+    BangBangTablesExt = "Tables"
     BangBangTypedTablesExt = "TypedTables"
 
 [[deps.Base64]]
@@ -116,12 +138,12 @@ uuid = "6e34b625-4abd-537c-b88f-471c36dfa7a0"
 version = "1.0.8+1"
 
 [[deps.CBLS]]
-deps = ["ConstraintCommons", "ConstraintDomains", "Constraints", "Intervals", "JuMP", "Lazy", "LocalSearchSolvers", "MathOptInterface", "TestItems"]
-git-tree-sha1 = "6c8774a45fa69436b43e5cf98f40aee670ce93cd"
+deps = ["ConstraintCommons", "ConstraintDomains", "Constraints", "Intervals", "JuMP", "Lazy", "LocalSearchSolvers", "MathOptInterface", "Pkg", "TestItems"]
+git-tree-sha1 = "220f471fbf45e3cea67ba338d7ed4911a885bdf9"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/CBLS.jl.git"
 uuid = "a3809bfe-37bb-4d48-a667-bac4c6be8d90"
-version = "0.2.0"
+version = "0.2.2"
 
 [[deps.CEnum]]
 git-tree-sha1 = "389ad5c84de1ae7cf0e28e381131c98ea87d54fc"
@@ -158,15 +180,15 @@ weakdeps = ["SparseArrays"]
 
 [[deps.CodecBzip2]]
 deps = ["Bzip2_jll", "Libdl", "TranscodingStreams"]
-git-tree-sha1 = "9b1ca1aa6ce3f71b3d1840c538a8210a043625eb"
+git-tree-sha1 = "f8889d1770addf59d0a015c49a473fa2bdb9f809"
 uuid = "523fee87-0ab8-5b00-afb7-3ecf72e48cfd"
-version = "0.8.2"
+version = "0.8.3"
 
 [[deps.CodecZlib]]
 deps = ["TranscodingStreams", "Zlib_jll"]
-git-tree-sha1 = "59939d8a997469ee05c4b4944560a820f9ba0d73"
+git-tree-sha1 = "b8fe8546d52ca154ac556809e10c75e6e7430ac8"
 uuid = "944b1d66-785c-5afd-91f1-9de20f533193"
-version = "0.7.4"
+version = "0.7.5"
 
 [[deps.CommonMark]]
 deps = ["Crayons", "JSON", "PrecompileTools", "URIs"]
@@ -196,47 +218,45 @@ uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
 version = "1.1.1+0"
 
 [[deps.CompositionalNetworks]]
-deps = ["ConstraintCommons", "ConstraintDomains", "Dictionaries", "Distances", "JuliaFormatter", "OrderedCollections", "Random", "TestItemRunner", "TestItems", "ThreadSafeDicts", "Unrolled"]
-git-tree-sha1 = "e9fc45baee3af994903a656caa23878fc8e3e9cd"
+deps = ["ConstraintCommons", "ConstraintDomains", "Dictionaries", "Distances", "JuliaFormatter", "OrderedCollections", "Random", "TestItems", "ThreadSafeDicts", "Unrolled"]
+git-tree-sha1 = "4dba3d14cf3706fa371e8ce2545e74f95afb4262"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/CompositionalNetworks.jl.git"
 uuid = "4b67e4b5-442d-4ef5-b760-3f5df3a57537"
-version = "0.5.7"
+version = "0.5.8"
 
 [[deps.CompositionsBase]]
 git-tree-sha1 = "802bb88cd69dfd1509f6670416bd4434015693ad"
 uuid = "a33af91c-f02d-484b-be07-31d278c5ca2b"
 version = "0.1.2"
+weakdeps = ["InverseFunctions"]
 
     [deps.CompositionsBase.extensions]
     CompositionsBaseInverseFunctionsExt = "InverseFunctions"
 
-    [deps.CompositionsBase.weakdeps]
-    InverseFunctions = "3587e190-3f89-42d0-90ee-14403ec27112"
-
 [[deps.ConstraintCommons]]
-deps = ["Dictionaries", "TestItemRunner", "TestItems"]
-git-tree-sha1 = "4698469c1292bea5573dc294a180c364d6ebfa81"
+deps = ["Dictionaries", "TestItems"]
+git-tree-sha1 = "0315696eba806ffadc01fbca79cf198dcd2f2655"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/ConstraintCommons.jl.git"
 uuid = "e37357d9-0691-492f-a822-e5ea6a920954"
-version = "0.2.1"
+version = "0.2.2"
 
 [[deps.ConstraintDomains]]
-deps = ["ConstraintCommons", "Dictionaries", "Intervals", "PatternFolds", "StatsBase", "TestItemRunner", "TestItems"]
-git-tree-sha1 = "50801b71002e4b8c7d943980a8b3008dcbc2aa33"
+deps = ["ConstraintCommons", "Dictionaries", "Intervals", "PatternFolds", "StatsBase", "TestItems"]
+git-tree-sha1 = "9d56c60c941375702545d21a05381d2f5e872ea0"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/ConstraintDomains.jl.git"
 uuid = "5800fd60-8556-4464-8d61-84ebf7a0bedb"
-version = "0.3.10"
+version = "0.3.12"
 
 [[deps.ConstraintLearning]]
-deps = ["CompositionalNetworks", "ConstraintDomains", "Constraints", "DataFrames", "Dictionaries", "Evolutionary", "Flux", "LocalSearchSolvers", "Memoization", "PrettyTables", "QUBOConstraints", "TestItemRunner", "TestItems", "ThreadPools"]
-git-tree-sha1 = "4f829267a64c1b9ca2fedf3f441f1d9bede76dca"
+deps = ["CompositionalNetworks", "ConstraintDomains", "Constraints", "DataFrames", "Dictionaries", "Evolutionary", "Flux", "LocalSearchSolvers", "Memoization", "PrettyTables", "QUBOConstraints", "TestItems", "ThreadPools"]
+git-tree-sha1 = "07c3d1e5311290bfc1fd26014f2af62c7bf80358"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/ConstraintLearning.jl.git"
 uuid = "4bd09668-9077-4be7-adc9-6307a490e6df"
-version = "0.1.7"
+version = "0.1.8"
 
 [[deps.ConstraintModels]]
 deps = ["CBLS", "Constraints", "Dictionaries", "JuMP", "LocalSearchSolvers", "MathOptInterface"]
@@ -247,12 +267,12 @@ uuid = "841a6ec5-cac3-4c42-9a0a-4b21c9553698"
 version = "0.2.0"
 
 [[deps.Constraints]]
-deps = ["CompositionalNetworks", "ConstraintCommons", "ConstraintDomains", "DataFrames", "Dictionaries", "MacroTools", "PrettyTables", "TestItemRunner", "TestItems"]
-git-tree-sha1 = "79ffeaaf1446afacb3477daeec49e09cf523965e"
+deps = ["CompositionalNetworks", "ConstraintCommons", "ConstraintDomains", "DataFrames", "Dictionaries", "MacroTools", "PrettyTables", "TestItems"]
+git-tree-sha1 = "d5fda759d93d83104ed395c2495be03b71c0c53b"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/Constraints.jl.git"
 uuid = "30f324ab-b02d-43f0-b619-e131c61659f7"
-version = "0.5.5"
+version = "0.5.6"
 
 [[deps.ConstructionBase]]
 deps = ["LinearAlgebra"]
@@ -275,9 +295,9 @@ uuid = "6add18c4-b38d-439d-96f6-d6bc489c04c5"
 version = "0.1.3"
 
 [[deps.CoverageTools]]
-git-tree-sha1 = "1c57cae86de23999b63a1e2c4cd226bdaf6e7c10"
+git-tree-sha1 = "72ded72062bedff105dc69dfc0cb07d2197c1669"
 uuid = "c36e975a-824b-4404-a568-ef97ca766997"
-version = "1.3.1"
+version = "1.3.2"
 
 [[deps.CpuId]]
 deps = ["Markdown"]
@@ -368,9 +388,9 @@ version = "0.9.3"
 
 [[deps.Documenter]]
 deps = ["ANSIColoredPrinters", "AbstractTrees", "Base64", "CodecZlib", "Dates", "DocStringExtensions", "Downloads", "Git", "IOCapture", "InteractiveUtils", "JSON", "LibGit2", "Logging", "Markdown", "MarkdownAST", "Pkg", "PrecompileTools", "REPL", "RegistryInstances", "SHA", "TOML", "Test", "Unicode"]
-git-tree-sha1 = "5461b2a67beb9089980e2f8f25145186b6d34f91"
+git-tree-sha1 = "76deb8c15f37a3853f13ea2226b8f2577652de05"
 uuid = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
-version = "1.4.1"
+version = "1.5.0"
 
 [[deps.DocumenterVitepress]]
 deps = ["ANSIColoredPrinters", "Base64", "DocStringExtensions", "Documenter", "IOCapture", "Markdown", "NodeJS_20_jll", "REPL"]
@@ -408,9 +428,9 @@ version = "0.1.10"
 
 [[deps.FLoops]]
 deps = ["BangBang", "Compat", "FLoopsBase", "InitialValues", "JuliaVariables", "MLStyle", "Serialization", "Setfield", "Transducers"]
-git-tree-sha1 = "ffb97765602e3cbe59a0589d237bf07f245a8576"
+git-tree-sha1 = "0a2e5873e9a5f54abb06418d57a8df689336a660"
 uuid = "cc61a311-1640-44b5-9fba-1b764f453329"
-version = "0.2.1"
+version = "0.2.2"
 
 [[deps.FLoopsBase]]
 deps = ["ContextVariablesX"]
@@ -499,9 +519,9 @@ uuid = "9fa8497b-333b-5362-9e8d-4d0656e87820"
 
 [[deps.GPUArrays]]
 deps = ["Adapt", "GPUArraysCore", "LLVM", "LinearAlgebra", "Printf", "Random", "Reexport", "Serialization", "Statistics"]
-git-tree-sha1 = "c154546e322a9c73364e8a60430b0f79b812d320"
+git-tree-sha1 = "04661708f5301394a1f1be86a07a89e835900db6"
 uuid = "0c68f7d7-f131-5f86-a1c3-88cf8149b2d7"
-version = "10.2.0"
+version = "10.2.3"
 
 [[deps.GPUArraysCore]]
 deps = ["Adapt"]
@@ -549,16 +569,17 @@ uuid = "22cec73e-a1b8-11e9-2c92-598750a2cf9c"
 version = "0.3.1"
 
 [[deps.InlineStrings]]
-deps = ["Parsers"]
-git-tree-sha1 = "86356004f30f8e737eff143d57d41bd580e437aa"
+git-tree-sha1 = "45521d31238e87ee9f9732561bfee12d4eebd52d"
 uuid = "842dd82b-1e85-43dc-bf29-5d0ee9dffc48"
-version = "1.4.1"
+version = "1.4.2"
 
     [deps.InlineStrings.extensions]
     ArrowTypesExt = "ArrowTypes"
+    ParsersExt = "Parsers"
 
     [deps.InlineStrings.weakdeps]
     ArrowTypes = "31f734f8-188a-4ce0-8406-c8a06bd891cd"
+    Parsers = "69de0a69-1ddd-5017-9359-2bf0b02dc9f0"
 
 [[deps.InteractiveUtils]]
 deps = ["Markdown"]
@@ -569,6 +590,16 @@ deps = ["Dates", "Printf", "RecipesBase", "Serialization", "TimeZones"]
 git-tree-sha1 = "ac0aaa807ed5eaf13f67afe188ebc07e828ff640"
 uuid = "d8418881-c3e1-53bb-8760-2df7ec849ed5"
 version = "1.10.0"
+
+[[deps.InverseFunctions]]
+deps = ["Test"]
+git-tree-sha1 = "18c59411ece4838b18cd7f537e56cf5e41ce5bfd"
+uuid = "3587e190-3f89-42d0-90ee-14403ec27112"
+version = "0.1.15"
+weakdeps = ["Dates"]
+
+    [deps.InverseFunctions.extensions]
+    DatesExt = "Dates"
 
 [[deps.InvertedIndices]]
 git-tree-sha1 = "0dc7b50b8d436461be01300fd8cd45aa0274b038"
@@ -611,9 +642,9 @@ version = "1.22.2"
 
 [[deps.JuliaFormatter]]
 deps = ["CSTParser", "CommonMark", "DataStructures", "Glob", "Pkg", "PrecompileTools", "Tokenize"]
-git-tree-sha1 = "1c4880cb70a5c6c87ea36deccc3d7f9e7969c18c"
+git-tree-sha1 = "b101a476705594c2a8ba106d731497058874bcf4"
 uuid = "98e50ef6-434e-11e9-1051-2b60c6c9e899"
-version = "1.0.56"
+version = "1.0.57"
 
 [[deps.JuliaVariables]]
 deps = ["MLStyle", "NameResolution"]
@@ -623,9 +654,9 @@ version = "0.2.4"
 
 [[deps.KernelAbstractions]]
 deps = ["Adapt", "Atomix", "InteractiveUtils", "LinearAlgebra", "MacroTools", "PrecompileTools", "Requires", "SparseArrays", "StaticArrays", "UUIDs", "UnsafeAtomics", "UnsafeAtomicsLLVM"]
-git-tree-sha1 = "b8fcefe4418e4a7a2c3aaac883fecddd8efbe286"
+git-tree-sha1 = "d0448cebd5919e06ca5edc7a264631790de810ec"
 uuid = "63c18a36-062a-441e-b654-da1e3ab1ce7c"
-version = "0.9.21"
+version = "0.9.22"
 
     [deps.KernelAbstractions.extensions]
     EnzymeExt = "EnzymeCore"
@@ -635,9 +666,9 @@ version = "0.9.21"
 
 [[deps.LLVM]]
 deps = ["CEnum", "LLVMExtra_jll", "Libdl", "Preferences", "Printf", "Requires", "Unicode"]
-git-tree-sha1 = "389aea28d882a40b5e1747069af71bdbd47a1cae"
+git-tree-sha1 = "020abd49586480c1be84f57da0017b5d3db73f7c"
 uuid = "929cbde3-209d-540e-8aea-75f648917ca0"
-version = "7.2.1"
+version = "8.0.0"
 
     [deps.LLVM.extensions]
     BFloat16sExt = "BFloat16s"
@@ -647,9 +678,9 @@ version = "7.2.1"
 
 [[deps.LLVMExtra_jll]]
 deps = ["Artifacts", "JLLWrappers", "LazyArtifacts", "Libdl", "TOML"]
-git-tree-sha1 = "88b916503aac4fb7f701bb625cd84ca5dd1677bc"
+git-tree-sha1 = "c2636c264861edc6d305e6b4d528f09566d24c5e"
 uuid = "dad2f222-ce93-54a1-a47d-0025e8a3acab"
-version = "0.0.29+0"
+version = "0.0.30+0"
 
 [[deps.LaTeXStrings]]
 git-tree-sha1 = "50901ebc375ed41dbf8058da26f9de442febbbec"
@@ -709,12 +740,12 @@ deps = ["Libdl", "OpenBLAS_jll", "libblastrampoline_jll"]
 uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
 [[deps.LocalSearchSolvers]]
-deps = ["CompositionalNetworks", "ConstraintDomains", "Constraints", "Dates", "Dictionaries", "Distributed", "JSON", "Lazy", "OrderedCollections", "TestItemRunner", "TestItems"]
-git-tree-sha1 = "d08534fd64967cfbaa13b1e48971f9bab4d3f9f7"
+deps = ["CompositionalNetworks", "ConstraintDomains", "Constraints", "Dates", "Dictionaries", "Distributed", "JSON", "Lazy", "OrderedCollections", "TestItems"]
+git-tree-sha1 = "a98dc4b95d2e6dc6ef984f35579493531a3f46a1"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/LocalSearchSolvers.jl.git"
 uuid = "2b10edaa-728d-4283-ac71-07e312d6ccf3"
-version = "0.4.6"
+version = "0.4.7"
 
 [[deps.LogExpFunctions]]
 deps = ["DocStringExtensions", "IrrationalConstants", "LinearAlgebra"]
@@ -770,9 +801,9 @@ version = "0.1.2"
 
 [[deps.MathOptInterface]]
 deps = ["BenchmarkTools", "CodecBzip2", "CodecZlib", "DataStructures", "ForwardDiff", "JSON", "LinearAlgebra", "MutableArithmetics", "NaNMath", "OrderedCollections", "PrecompileTools", "Printf", "SparseArrays", "SpecialFunctions", "Test", "Unicode"]
-git-tree-sha1 = "fffbbdbc10ba66885b7b4c06f4bd2c0efc5813d6"
+git-tree-sha1 = "91b08d27a27d83cf1e63e50837403e7f53a0fd74"
 uuid = "b8f27783-ece8-5eb3-8dc8-9495eed66fee"
-version = "1.30.0"
+version = "1.31.0"
 
 [[deps.MbedTLS_jll]]
 deps = ["Artifacts", "Libdl"]
@@ -793,10 +824,10 @@ uuid = "989f9ba8-86ac-4138-b458-047055bae907"
 version = "0.1.0"
 
 [[deps.MicroCollections]]
-deps = ["BangBang", "InitialValues", "Setfield"]
-git-tree-sha1 = "629afd7d10dbc6935ec59b32daeb33bc4460a42e"
+deps = ["Accessors", "BangBang", "InitialValues"]
+git-tree-sha1 = "44d32db644e84c75dab479f1bc15ee76a1a3618f"
 uuid = "128add7d-3638-4c79-886c-908ea0c25c34"
-version = "0.1.4"
+version = "0.2.0"
 
 [[deps.Missings]]
 deps = ["DataAPI"]
@@ -831,20 +862,22 @@ version = "7.8.3"
 
 [[deps.NNlib]]
 deps = ["Adapt", "Atomix", "ChainRulesCore", "GPUArraysCore", "KernelAbstractions", "LinearAlgebra", "Pkg", "Random", "Requires", "Statistics"]
-git-tree-sha1 = "78de319bce99d1d8c1d4fe5401f7cfc2627df396"
+git-tree-sha1 = "333cd68c28bb57ac23c50acd1036ecd7dd78bf57"
 uuid = "872c559c-99b0-510c-b3b7-b6c96a88d5cd"
-version = "0.9.18"
+version = "0.9.20"
 
     [deps.NNlib.extensions]
     NNlibAMDGPUExt = "AMDGPU"
     NNlibCUDACUDNNExt = ["CUDA", "cuDNN"]
     NNlibCUDAExt = "CUDA"
     NNlibEnzymeCoreExt = "EnzymeCore"
+    NNlibFFTWExt = "FFTW"
 
     [deps.NNlib.weakdeps]
     AMDGPU = "21141c5a-9bdb-4563-92ae-f87d6854732e"
     CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
     EnzymeCore = "f151be2c-9106-41f4-ab19-57ee4f262869"
+    FFTW = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"
     cuDNN = "02a925ec-e4fe-4b08-9a7e-0d78e3d38ccd"
 
 [[deps.NaNMath]]
@@ -870,9 +903,9 @@ uuid = "c7aee132-11e1-519c-8219-0a43005e73c2"
 version = "20.12.2+0"
 
 [[deps.OffsetArrays]]
-git-tree-sha1 = "e64b4f5ea6b7389f6f046d13d4896a8f9c1ba71e"
+git-tree-sha1 = "1a27764e945a152f7ca7efa04de513d473e9542e"
 uuid = "6fe1bfb0-de20-5000-8ca7-80f57d26f881"
-version = "1.14.0"
+version = "1.14.1"
 weakdeps = ["Adapt"]
 
     [deps.OffsetArrays.extensions]
@@ -930,9 +963,9 @@ version = "2.8.1"
 
 [[deps.PatternFolds]]
 deps = ["Intervals", "Lazy", "Random", "Reexport", "TestItemRunner", "TestItems"]
-git-tree-sha1 = "bc4178fb807b50315845de116760981a2e756ff4"
+git-tree-sha1 = "21fb4c221aca131474a886a015a3cd5b1a42b6d2"
 uuid = "c18a7f1d-76ad-4ce4-950d-5419b888513b"
-version = "0.2.4"
+version = "0.2.5"
 
 [[deps.PerfChecker]]
 deps = ["CSV", "CoverageTools", "CpuId", "JSON", "Malt", "Pkg", "Profile", "TOML", "TypedTables", "UUIDs"]
@@ -1001,12 +1034,12 @@ uuid = "33c8b6b6-d38a-422a-b730-caa89a2f386c"
 version = "0.1.4"
 
 [[deps.QUBOConstraints]]
-deps = ["ConstraintDomains", "LinearAlgebra", "TestItemRunner", "TestItems"]
-git-tree-sha1 = "a2dd12c12276412a67b30c08473eb94e4710a308"
+deps = ["ConstraintDomains", "LinearAlgebra", "TestItems"]
+git-tree-sha1 = "462f61bf33fa206c9e23edeba53a0f28d7c4b12f"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/QUBOConstraints.jl.git"
 uuid = "110b7fcc-6942-4061-a625-86e03d1de7cf"
-version = "0.2.1"
+version = "0.2.2"
 
 [[deps.REPL]]
 deps = ["InteractiveUtils", "Markdown", "Sockets", "Unicode"]
@@ -1063,9 +1096,9 @@ version = "1.2.1"
 
 [[deps.SentinelArrays]]
 deps = ["Dates", "Random"]
-git-tree-sha1 = "90b4f68892337554d31cdcdbe19e48989f26c7e6"
+git-tree-sha1 = "ff11acffdb082493657550959d4feb4b6149e73a"
 uuid = "91c51154-3ec4-41a3-a24f-3f23e20d615c"
-version = "1.4.3"
+version = "1.4.5"
 
 [[deps.Serialization]]
 uuid = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
@@ -1137,9 +1170,9 @@ version = "0.1.1"
 
 [[deps.StaticArrays]]
 deps = ["LinearAlgebra", "PrecompileTools", "Random", "StaticArraysCore"]
-git-tree-sha1 = "6e00379a24597be4ae1ee6b2d882e15392040132"
+git-tree-sha1 = "eeafab08ae20c62c44c8399ccb9354a04b80db50"
 uuid = "90137ffa-7385-5640-81b9-e52037218182"
-version = "1.9.5"
+version = "1.9.7"
 weakdeps = ["ChainRulesCore", "Statistics"]
 
     [deps.StaticArrays.extensions]
@@ -1214,10 +1247,10 @@ uuid = "3783bdb8-4a98-5b6b-af9a-565f29a5fe9c"
 version = "1.0.1"
 
 [[deps.Tables]]
-deps = ["DataAPI", "DataValueInterfaces", "IteratorInterfaceExtensions", "LinearAlgebra", "OrderedCollections", "TableTraits"]
-git-tree-sha1 = "cb76cf677714c095e535e3501ac7954732aeea2d"
+deps = ["DataAPI", "DataValueInterfaces", "IteratorInterfaceExtensions", "OrderedCollections", "TableTraits"]
+git-tree-sha1 = "598cd7c1f68d1e205689b1c2fe65a9f85846f297"
 uuid = "bd369af6-aec1-5ad0-b16a-f7cc5008161c"
-version = "1.11.1"
+version = "1.12.0"
 
 [[deps.Tar]]
 deps = ["ArgTools", "SHA"]
@@ -1230,14 +1263,14 @@ uuid = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [[deps.TestItemRunner]]
 deps = ["Pkg", "TOML", "Test", "TestItems", "UUIDs"]
-git-tree-sha1 = "cb2b53fd36a8fe20c0b9f55da6244eb4818779f5"
+git-tree-sha1 = "324bf1e3f761965b34723ec445f1eb2840ad3b69"
 uuid = "f8b46487-2199-4994-9208-9a1283c18c0a"
-version = "0.2.3"
+version = "1.0.4"
 
 [[deps.TestItems]]
-git-tree-sha1 = "8621ba2637b49748e2dc43ba3d84340be2938022"
+git-tree-sha1 = "42fd9023fef18b9b78c8343a4e2f3813ffbcefcb"
 uuid = "1c621080-faea-4a02-84b6-bbd5e436b8fe"
-version = "0.1.1"
+version = "1.0.0"
 
 [[deps.ThreadPools]]
 deps = ["Printf", "RecipesBase", "Statistics"]
@@ -1266,19 +1299,19 @@ uuid = "0796e94c-ce3b-5d07-9a54-7f471281c624"
 version = "0.5.29"
 
 [[deps.TranscodingStreams]]
-git-tree-sha1 = "d73336d81cafdc277ff45558bb7eaa2b04a8e472"
+git-tree-sha1 = "60df3f8126263c0d6b357b9a1017bb94f53e3582"
 uuid = "3bb67fe8-82b1-5028-8e26-92a6c54297fa"
-version = "0.10.10"
+version = "0.11.0"
 weakdeps = ["Random", "Test"]
 
     [deps.TranscodingStreams.extensions]
     TestExt = ["Test", "Random"]
 
 [[deps.Transducers]]
-deps = ["Adapt", "ArgCheck", "BangBang", "Baselet", "CompositionsBase", "ConstructionBase", "DefineSingletons", "Distributed", "InitialValues", "Logging", "Markdown", "MicroCollections", "Requires", "Setfield", "SplittablesBase", "Tables"]
-git-tree-sha1 = "3064e780dbb8a9296ebb3af8f440f787bb5332af"
+deps = ["Accessors", "Adapt", "ArgCheck", "BangBang", "Baselet", "CompositionsBase", "ConstructionBase", "DefineSingletons", "Distributed", "InitialValues", "Logging", "Markdown", "MicroCollections", "Requires", "SplittablesBase", "Tables"]
+git-tree-sha1 = "5215a069867476fc8e3469602006b9670e68da23"
 uuid = "28d57a85-8fef-5791-bfe6-a80928e7c999"
-version = "0.4.80"
+version = "0.4.82"
 
     [deps.Transducers.extensions]
     TransducersBlockArraysExt = "BlockArrays"
@@ -1330,9 +1363,9 @@ version = "0.2.1"
 
 [[deps.UnsafeAtomicsLLVM]]
 deps = ["LLVM", "UnsafeAtomics"]
-git-tree-sha1 = "d9f5962fecd5ccece07db1ff006fb0b5271bdfdd"
+git-tree-sha1 = "bf2c553f25e954a9b38c9c0593a59bb13113f9e5"
 uuid = "d80eeb9a-aca5-4d75-85e5-170c8b632249"
-version = "0.1.4"
+version = "0.1.5"
 
 [[deps.WeakRefStrings]]
 deps = ["DataAPI", "InlineStrings", "Parsers"]
