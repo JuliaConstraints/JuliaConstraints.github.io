@@ -19,10 +19,12 @@ extract_parameters
 
 ### Performances
 
+```@raw html
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/bench_evolution_parameters.png?raw=true" alt="Bench Evolution Parameters" style="width:48%;"/>
   <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/chair_evolution_parameters.png?raw=true" alt="Chair Evolution Parameters" style="width:48%;"/>
 </div>
+```
 
 ## Languages
 
@@ -40,6 +42,7 @@ at_end
 
 ### Performances
 
+```@raw html
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
   <div style="flex: 1 1 48%; margin: 1%;">
     <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/bench_evolution_automata.png?raw=true" alt="Bench Evolution Automata" style="width:100%;"/>
@@ -54,6 +57,7 @@ at_end
     <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/chair_evolution_diagrams.png?raw=true" alt="Chair Evolution Diagrams" style="width:100%;"/>
   </div>
 </div>
+```
 
 ## Extensions
 
@@ -67,6 +71,7 @@ Base.isempty(::Nothing)
 
 ### Performances
 
+```@raw html
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
   <div style="flex: 1 1 48%; margin: 1%;">
     <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/bench_evolution_nothing.png?raw=true" alt="Bench Evolution Nothing" style="width:100%;"/>
@@ -81,6 +86,7 @@ Base.isempty(::Nothing)
     <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/chair_evolution_symbols.png?raw=true" alt="Chair Evolution Symbols" style="width:100%;"/>
   </div>
 </div>
+```
 
 ## Sampling
 
@@ -92,10 +98,12 @@ oversample
 
 ### Performances
 
+```@raw html
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/bench_evolution_samplings.png?raw=true" alt="Bench Evolution" style="width:48%;"/>
   <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/chair_evolution_samplings.png?raw=true" alt="Chair Evolution" style="width:48%;"/>
 </div>
+```
 
 ## Extrema
 
@@ -105,11 +113,12 @@ We need to compute the difference between extrema of various kind of collections
 δ_extrema
 ```
 
-
+```@raw html
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/bench_evolution_extrema.png?raw=true" alt="Bench Evolution" style="width:48%;"/>
   <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/chair_evolution_extrema.png?raw=true" alt="Chair Evolution" style="width:48%;"/>
 </div>
+```
 
 ### Performances
 
@@ -123,8 +132,9 @@ incsert!
 
 ### Performances
 
-
+```@raw html
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/bench_evolution_dictionaries.png?raw=true" alt="Bench Evolution" style="width:48%;"/>
   <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/chair_evolution_dictionaries.png?raw=true" alt="Chair Evolution" style="width:48%;"/>
 </div>
+```
