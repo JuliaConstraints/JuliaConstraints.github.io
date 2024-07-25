@@ -59,12 +59,11 @@ makedocs(;
                 "Contributing" => "cp/contribution.md",
             ],
         ],
-        "Constraints" => [
+        "Modeling Toolkit" => [
             "Introduction" => "constraints/intro.md",
-            "ConstraintCommons.jl" => "constraints/constraint_commons.md",
-            "ConstraintDomains.jl" => "constraints/constraint_domains.md",
-            "Constraints.jl" => [
-                "Basic Tools" => "constraints/constraints.md",
+            "Variables and Domains" => "constraints/constraint_domains.md",
+            "Constraints" => [
+                "Basics" => "constraints/constraints.md",
                 "Generic Constraints" => "constraints/generic_constraints.md",
                 "Language Constraints" => "constraints/language_constraints.md",
                 "Comparison Constraints" => "constraints/comparison_constraints.md",
@@ -74,7 +73,10 @@ makedocs(;
                 "Graph Constraints" => "constraints/graph_constraints.md",
                 "Elementary Constraints" => "constraints/elementary_constraints.md",
             ],
-            "ConstraintModels.jl" => "constraints/constraint_models.md",
+            "Model Catalog" => "constraints/constraint_models.md",
+            "Internals" => [
+                "ConstraintCommons.jl" => "constraints/constraint_commons.md",
+            ],
         ],
         "Learning" => [
             "Introduction" => "learning/intro.md",

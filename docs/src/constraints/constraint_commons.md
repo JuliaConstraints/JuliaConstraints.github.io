@@ -10,7 +10,7 @@ CurrentModule = ConstraintCommons
 
 ## Parameters
 
-This section of the package list or extract parameters based on the *XCSP3-core* specifications. Note that, for the foreseeable future, the default constraints specification will follow the XCSP3 format.
+This section of the package list or extract parameters based on the *XCSP3-core* specifications. Note that, for the foreseeable future, the default constraints specification will follow these specifications.
 
 ```@docs; canonical=false
 USUAL_CONSTRAINT_PARAMETERS
@@ -35,7 +35,6 @@ AbstractMultivaluedDecisionDiagram
 MDD
 AbstractAutomaton
 Automaton
-Automaton(a::MDD)
 accept
 at_end
 ```
@@ -64,9 +63,9 @@ at_end
 We extended some operations for `Nothing` and `Symbol`.
 
 ```@docs; canonical=false
-Base.:*
-Base.in(::Any, ::Nothing)
-Base.isempty(::Nothing)
+symcon
+consin
+consisempty
 ```
 
 ### Performances

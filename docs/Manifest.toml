@@ -27,9 +27,9 @@ version = "0.4.5"
 
 [[deps.Accessors]]
 deps = ["CompositionsBase", "ConstructionBase", "Dates", "InverseFunctions", "LinearAlgebra", "MacroTools", "Markdown", "Test"]
-git-tree-sha1 = "c0d491ef0b135fd7d63cbc6404286bc633329425"
+git-tree-sha1 = "f61b15be1d76846c0ce31d3fcfac5380ae53db6a"
 uuid = "7d9f7c33-5ae7-4f3b-8dc6-eff91059b697"
-version = "0.1.36"
+version = "0.1.37"
 
     [deps.Accessors.extensions]
     AccessorsAxisKeysExt = "AxisKeys"
@@ -236,7 +236,7 @@ weakdeps = ["InverseFunctions"]
 
 [[deps.ConstraintCommons]]
 deps = ["Dictionaries", "TestItems"]
-git-tree-sha1 = "0315696eba806ffadc01fbca79cf198dcd2f2655"
+git-tree-sha1 = "ca8e5cfedb33fc75c5ba0a52d3e222d3d3c2b9e9"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/ConstraintCommons.jl.git"
 uuid = "e37357d9-0691-492f-a822-e5ea6a920954"
@@ -260,11 +260,11 @@ version = "0.1.8"
 
 [[deps.ConstraintModels]]
 deps = ["CBLS", "Constraints", "Dictionaries", "JuMP", "LocalSearchSolvers", "MathOptInterface"]
-git-tree-sha1 = "c60bcdfa5a427e64f4c67bb2b4cc698bb57eb857"
+git-tree-sha1 = "266f336395341b5f532d56e075011a0700740f7a"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/ConstraintModels.jl.git"
 uuid = "841a6ec5-cac3-4c42-9a0a-4b21c9553698"
-version = "0.2.0"
+version = "0.3.0"
 
 [[deps.Constraints]]
 deps = ["CompositionalNetworks", "ConstraintCommons", "ConstraintDomains", "DataFrames", "Dictionaries", "MacroTools", "PrettyTables", "TestItems"]
@@ -276,9 +276,9 @@ version = "0.5.6"
 
 [[deps.ConstructionBase]]
 deps = ["LinearAlgebra"]
-git-tree-sha1 = "260fd2400ed2dab602a7c15cf10c1933c59930a2"
+git-tree-sha1 = "d8a9c0b6ac2d9081bf76324b39c78ca3ce4f0c98"
 uuid = "187b0558-2788-49d3-abe0-74a17ed4e7c9"
-version = "1.5.5"
+version = "1.5.6"
 
     [deps.ConstructionBase.extensions]
     ConstructionBaseIntervalSetsExt = "IntervalSets"
@@ -519,9 +519,9 @@ uuid = "9fa8497b-333b-5362-9e8d-4d0656e87820"
 
 [[deps.GPUArrays]]
 deps = ["Adapt", "GPUArraysCore", "LLVM", "LinearAlgebra", "Printf", "Random", "Reexport", "Serialization", "Statistics"]
-git-tree-sha1 = "04661708f5301394a1f1be86a07a89e835900db6"
+git-tree-sha1 = "a74c3f1cf56a3dfcdef0605f8cdb7015926aae30"
 uuid = "0c68f7d7-f131-5f86-a1c3-88cf8149b2d7"
-version = "10.2.3"
+version = "10.3.0"
 
 [[deps.GPUArraysCore]]
 deps = ["Adapt"]
@@ -642,9 +642,9 @@ version = "1.22.2"
 
 [[deps.JuliaFormatter]]
 deps = ["CSTParser", "CommonMark", "DataStructures", "Glob", "Pkg", "PrecompileTools", "Tokenize"]
-git-tree-sha1 = "b101a476705594c2a8ba106d731497058874bcf4"
+git-tree-sha1 = "0b50446cd3e52a51a7d48b52d49ec1a875aaf6e8"
 uuid = "98e50ef6-434e-11e9-1051-2b60c6c9e899"
-version = "1.0.57"
+version = "1.0.58"
 
 [[deps.JuliaVariables]]
 deps = ["MLStyle", "NameResolution"]
@@ -840,9 +840,9 @@ uuid = "a63ad114-7e13-5084-954f-fe012c677804"
 
 [[deps.Mocking]]
 deps = ["Compat", "ExprTools"]
-git-tree-sha1 = "bf17d9cb4f0d2882351dfad030598f64286e5936"
+git-tree-sha1 = "c74e5e7c5f83ccb0bca0377d316d966d296106d4"
 uuid = "78c3b35d-d492-501b-9361-3d52fe80e533"
-version = "0.7.8"
+version = "0.7.9"
 
 [[deps.MozillaCACerts_jll]]
 uuid = "14a3606d-f60d-562e-9121-12d972cd8159"
@@ -862,9 +862,9 @@ version = "7.8.3"
 
 [[deps.NNlib]]
 deps = ["Adapt", "Atomix", "ChainRulesCore", "GPUArraysCore", "KernelAbstractions", "LinearAlgebra", "Pkg", "Random", "Requires", "Statistics"]
-git-tree-sha1 = "333cd68c28bb57ac23c50acd1036ecd7dd78bf57"
+git-tree-sha1 = "190dcada8cf9520198058c4544862b1f88c6c577"
 uuid = "872c559c-99b0-510c-b3b7-b6c96a88d5cd"
-version = "0.9.20"
+version = "0.9.21"
 
     [deps.NNlib.extensions]
     NNlibAMDGPUExt = "AMDGPU"
@@ -1299,9 +1299,9 @@ uuid = "0796e94c-ce3b-5d07-9a54-7f471281c624"
 version = "0.5.29"
 
 [[deps.TranscodingStreams]]
-git-tree-sha1 = "60df3f8126263c0d6b357b9a1017bb94f53e3582"
+git-tree-sha1 = "96612ac5365777520c3c5396314c8cf7408f436a"
 uuid = "3bb67fe8-82b1-5028-8e26-92a6c54297fa"
-version = "0.11.0"
+version = "0.11.1"
 weakdeps = ["Random", "Test"]
 
     [deps.TranscodingStreams.extensions]
