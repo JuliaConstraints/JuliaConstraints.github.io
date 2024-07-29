@@ -12,8 +12,8 @@ hero:
     alt: JuliaConstraints
   actions:
     - theme: brand
-      text: Constraint Programming ?!
-      link: /cp/intro
+      text: Model, Learn, and Solve!
+      link: /constraints/intro
     - theme: alt
       text: View on Github
       link: https://github.com/JuliaConstraints/JuliaConstraints.github.io

@@ -61,7 +61,7 @@ makedocs(;
         ],
         "Modeling Toolkit" => [
             "Introduction" => "constraints/intro.md",
-            "Variables and Domains" => "constraints/constraint_domains.md",
+            "Variables and Domains" => "constraints/variables_and_domains.md",
             "Constraints" => [
                 "Basics" => "constraints/constraints.md",
                 "Generic Constraints" => "constraints/generic_constraints.md",
@@ -76,6 +76,7 @@ makedocs(;
             "Model Catalog" => "constraints/constraint_models.md",
             "Internals" => [
                 "ConstraintCommons.jl" => "constraints/constraint_commons.md",
+                "ConstraintDomains.jl" => "constraints/constraint_domains.md",
             ],
         ],
         "Learning" => [

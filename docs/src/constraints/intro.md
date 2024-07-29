@@ -2,6 +2,8 @@
 
 Constraint programming (CP) is a high-level paradigm for solving combinatorial problems, and Julia Constraints provides an efficient and flexible framework for developing constraint-based models.
 
+All along this documentation, we will present code example base on the syntaxes of *Julia Constraints* internals (`JC-API`), of *Julia for Mathematical Programming* (`JuMP` ), of *MathOptInterface* (`MOI`), and, when relevant, of other standards such as `XCSP`.
+
 ## Terminology
 
 !!! warning
@@ -9,7 +11,7 @@ Constraint programming (CP) is a high-level paradigm for solving combinatorial p
     - **Constraint:** A general mathematical predicate involving variables.
     - **Constraint Instantiation:** The application of a constraint to specific variables.
     - **Configuration:** A specific assignment of values to the variables.
-    - **Constraint Satisfaction/Violation:** Whether a configuration meets or fails to meet a constraint.
+    - **Constraint Satisfaction/Violation:** Whether a configuration meets or fails a constraint.
 
 ### Constraint
 
@@ -27,7 +29,7 @@ Constraint programming (CP) is a high-level paradigm for solving combinatorial p
 
 **Definition:** A configuration, also known as an assignment, is a specific set of values assigned to the variables in their respective domains. It represents a possible state of the variables.
 
-**Example:** For variables ``x`` and ``y`` with domains ``[0, 5]``, a configuration could be ``x = 3`` and ``y = 2``.
+**Example:** For variables ``x`` and ``y`` with domains ``[0, 10]``, a configuration could be ``x = 3`` and ``y = 2``.
 
 ### Constraint Satisfaction or Violation by a Configuration
 
@@ -39,11 +41,11 @@ Constraint programming (CP) is a high-level paradigm for solving combinatorial p
 
 In CP, variables are defined through their domain. `ConstraintDomains.jl` supports various types of domains such as discrete ones (sets, range, etc.), or continuous intervals, and custom domains.
 
-## `Constraints.jl`: A versatile API
+## A versatile constraints' API
 
-It implements a wide range of generic and core constraints, ensuring compatibility with XCSP3-core standards and providing a user-friendly interface. It includes features extracted from the learning blocks of Julia Constraints to leverage most of each constraint characteristics.
+`Constraints.jl` implements a wide range of generic and core constraints, ensuring compatibility with XCSP3-core standards and providing a user-friendly interface. It includes features extracted from the learning blocks of Julia Constraints to leverage most of each constraint characteristics.
 
-## Models Through `ConstraintModels.jl`
+## A collection of models
 
 The `ConstraintModels.jl` catalog offers a collection of predefined models and templates for constructing complex constraint satisfaction problems (CSPs) and optimization models. This resource provides reusable components to streamline the modeling process.
 

@@ -1,0 +1,9 @@
+build/
+node_modules/
+package-lock.json
+Manifest.toml
+
+.DS_Store
+.vscode/
+
+.gitignore
