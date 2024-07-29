@@ -23,7 +23,7 @@ features:
     title: JuMP.jl
     details: Model optimization problems via JuMP.jl!
     link: "https://jump.dev/"
-  - icon: <img width="64" height="64" src="/logo.png" alt="PerfChecker.jl"/>
+  - icon: <img width="64" height="64" src="logo.png" alt="PerfChecker.jl"/>
     title: PerfChecker.jl
     details: Cross-version performance checking tool
     link: "https://github.com/JuliaConstraints/PerfChecker.jl"
