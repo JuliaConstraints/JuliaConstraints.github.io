@@ -14,7 +14,7 @@ Note that the *intention* constraint is not directly available through the JC-AP
 
 We provide a straightforward example through the `:dist_different` constraint on how to define and add such a constraint in the `USUAL_CONSTRAINTS` collection.
 
-Higher level modeling language such as `JuMP` should provide a `Intention` interface.
+Higher level modeling languages such as `JuMP` should provide a `Intention` interface.
 
 ### Defining an intention constraint in JC-API
 
