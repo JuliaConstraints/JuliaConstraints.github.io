@@ -14,7 +14,7 @@ Note that the *intention* constraint is not directly available through the JC-AP
 
 We provide a straightforward example through the `:dist_different` constraint on how to define and add such a constraint in the `USUAL_CONSTRAINTS` collection.
 
-Higher level modeling language such as `JuMP` should provide a `Intention` interface.
+Higher level modeling languages such as `JuMP` should provide a `Intention` interface.
 
 ### Defining an intention constraint in JC-API
 
@@ -99,7 +99,7 @@ xcsp_intension
 
 ## Extension Constraints
 
-These are constraints that are defined by explicitly listing all the tuples of values that satisfy the constraint. They are called extensional because they are defined by the set of values they allow. For example, a binary constraint that specifies that a variable X must be either 1 or 2 and a variable Y must be either 3 or 4 could be defined extensionally by the set of tuples {(1,3), (1,4), (2,3), (2,4)}.
+These are constraints that are defined by explicitly listing all the tuples of values that satisfy the constraint. They are called extensional because they are defined by the set of values they allow. For example, a binary constraint that specifies that a variable X must be either 1 or 2 and a variable Y must be either 3 or 4 could be defined extensionally by the set of tuples `{(1,3), (1,4), (2,3), (2,4)}`.
 
 These two types of constraints provide a flexible way to define complex relationships between variables in constraint programming.
 
