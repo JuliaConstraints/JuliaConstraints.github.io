@@ -77,6 +77,7 @@ makedocs(;
             "Internals" => [
                 "ConstraintCommons.jl" => "constraints/constraint_commons.md",
                 "ConstraintDomains.jl" => "constraints/constraint_domains.md",
+                "Constraints.jl" => "constraints/constraints_jl.md",
             ],
         ],
         "Learning" => [

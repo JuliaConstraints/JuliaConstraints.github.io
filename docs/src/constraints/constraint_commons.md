@@ -21,8 +21,8 @@ extract_parameters
 
 ```@raw html
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/bench_evolution_parameters.png?raw=true" alt="Bench Evolution Parameters" style="width:48%;"/>
-  <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/chair_evolution_parameters.png?raw=true" alt="Chair Evolution Parameters" style="width:48%;"/>
+  <img src="https://github.com/JuliaConstraints/Benchmarks/blob/main/ConstraintCommons/visuals/bench_evolution_parameters.png?raw=true" alt="Bench Evolution Parameters" style="width:48%;"/>
+  <img src="https://github.com/JuliaConstraints/Benchmarks/blob/main/ConstraintCommons/visuals/chair_evolution_parameters.png?raw=true" alt="Chair Evolution Parameters" style="width:48%;"/>
 </div>
 ```
 
@@ -44,16 +44,16 @@ at_end
 ```@raw html
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
   <div style="flex: 1 1 48%; margin: 1%;">
-    <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/bench_evolution_automata.png?raw=true" alt="Bench Evolution Automata" style="width:100%;"/>
+    <img src="https://github.com/JuliaConstraints/Benchmarks/blob/main/ConstraintCommons/visuals/bench_evolution_automata.png?raw=true" alt="Bench Evolution Automata" style="width:100%;"/>
   </div>
   <div style="flex: 1 1 48%; margin: 1%;">
-    <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/chair_evolution_automata.png?raw=true" alt="Chair Evolution Automata" style="width:100%;"/>
+    <img src="https://github.com/JuliaConstraints/Benchmarks/blob/main/ConstraintCommons/visuals/chair_evolution_automata.png?raw=true" alt="Chair Evolution Automata" style="width:100%;"/>
   </div>
   <div style="flex: 1 1 48%; margin: 1%;">
-    <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/bench_evolution_diagrams.png?raw=true" alt="Bench Evolution Diagrams" style="width:100%;"/>
+    <img src="https://github.com/JuliaConstraints/Benchmarks/blob/main/ConstraintCommons/visuals/bench_evolution_diagrams.png?raw=true" alt="Bench Evolution Diagrams" style="width:100%;"/>
   </div>
   <div style="flex: 1 1 48%; margin: 1%;">
-    <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/chair_evolution_diagrams.png?raw=true" alt="Chair Evolution Diagrams" style="width:100%;"/>
+    <img src="https://github.com/JuliaConstraints/Benchmarks/blob/main/ConstraintCommons/visuals/chair_evolution_diagrams.png?raw=true" alt="Chair Evolution Diagrams" style="width:100%;"/>
   </div>
 </div>
 ```
@@ -73,16 +73,16 @@ consisempty
 ```@raw html
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
   <div style="flex: 1 1 48%; margin: 1%;">
-    <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/bench_evolution_nothing.png?raw=true" alt="Bench Evolution Nothing" style="width:100%;"/>
+    <img src="https://github.com/JuliaConstraints/Benchmarks/blob/main/ConstraintCommons/visuals/bench_evolution_nothing.png?raw=true" alt="Bench Evolution Nothing" style="width:100%;"/>
   </div>
   <div style="flex: 1 1 48%; margin: 1%;">
-    <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/chair_evolution_nothing.png?raw=true" alt="Chair Evolution Nothing" style="width:100%;"/>
+    <img src="https://github.com/JuliaConstraints/Benchmarks/blob/main/ConstraintCommons/visuals/chair_evolution_nothing.png?raw=true" alt="Chair Evolution Nothing" style="width:100%;"/>
   </div>
   <div style="flex: 1 1 48%; margin: 1%;">
-    <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/bench_evolution_symbols.png?raw=true" alt="Bench Evolution Symbols" style="width:100%;"/>
+    <img src="https://github.com/JuliaConstraints/Benchmarks/blob/main/ConstraintCommons/visuals/bench_evolution_symbols.png?raw=true" alt="Bench Evolution Symbols" style="width:100%;"/>
   </div>
   <div style="flex: 1 1 48%; margin: 1%;">
-    <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/chair_evolution_symbols.png?raw=true" alt="Chair Evolution Symbols" style="width:100%;"/>
+    <img src="https://github.com/JuliaConstraints/Benchmarks/blob/main/ConstraintCommons/visuals/chair_evolution_symbols.png?raw=true" alt="Chair Evolution Symbols" style="width:100%;"/>
   </div>
 </div>
 ```
@@ -99,8 +99,8 @@ oversample
 
 ```@raw html
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/bench_evolution_samplings.png?raw=true" alt="Bench Evolution" style="width:48%;"/>
-  <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/chair_evolution_samplings.png?raw=true" alt="Chair Evolution" style="width:48%;"/>
+  <img src="https://github.com/JuliaConstraints/Benchmarks/blob/main/ConstraintCommons/visuals/bench_evolution_samplings.png?raw=true" alt="Bench Evolution" style="width:48%;"/>
+  <img src="https://github.com/JuliaConstraints/Benchmarks/blob/main/ConstraintCommons/visuals/chair_evolution_samplings.png?raw=true" alt="Chair Evolution" style="width:48%;"/>
 </div>
 ```
 
@@ -114,8 +114,8 @@ We need to compute the difference between extrema of various kind of collections
 
 ```@raw html
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/bench_evolution_extrema.png?raw=true" alt="Bench Evolution" style="width:48%;"/>
-  <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/chair_evolution_extrema.png?raw=true" alt="Chair Evolution" style="width:48%;"/>
+  <img src="https://github.com/JuliaConstraints/Benchmarks/blob/main/ConstraintCommons/visuals/bench_evolution_extrema.png?raw=true" alt="Bench Evolution" style="width:48%;"/>
+  <img src="https://github.com/JuliaConstraints/Benchmarks/blob/main/ConstraintCommons/visuals/chair_evolution_extrema.png?raw=true" alt="Chair Evolution" style="width:48%;"/>
 </div>
 ```
 
@@ -133,7 +133,7 @@ incsert!
 
 ```@raw html
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/bench_evolution_dictionaries.png?raw=true" alt="Bench Evolution" style="width:48%;"/>
-  <img src="https://github.com/JuliaConstraints/ConstraintCommons.jl/blob/main/perf/visuals/chair_evolution_dictionaries.png?raw=true" alt="Chair Evolution" style="width:48%;"/>
+  <img src="https://github.com/JuliaConstraints/Benchmarks/blob/main/ConstraintCommons/visuals/bench_evolution_dictionaries.png?raw=true" alt="Bench Evolution" style="width:48%;"/>
+  <img src="https://github.com/JuliaConstraints/Benchmarks/blob/main/ConstraintCommons/visuals/chair_evolution_dictionaries.png?raw=true" alt="Chair Evolution" style="width:48%;"/>
 </div>
 ```
