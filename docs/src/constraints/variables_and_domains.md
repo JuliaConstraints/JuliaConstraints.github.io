@@ -69,7 +69,7 @@ MOI.add_constraint(optimizer, v4, CBLS.DiscreteSet([1, 42, 3.14]))
 
 ### `RangeDomain`
 
-A range domain allows for minimal storage and more efficient operation on discrete sets defined as `Range` in Julia. It is not recommended for dynamic domains (it will be replaced with `SetDomain` as soon non-extremal element is removed).
+A range domain allows for minimal storage and more efficient operation on discrete sets defined as `Range` in Julia. It is not recommended for dynamic domains (it will be replaced with `SetDomain` as soon as a non-extremal element is removed).
 
 ::: code-group
 

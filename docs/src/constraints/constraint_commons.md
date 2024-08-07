@@ -60,7 +60,7 @@ at_end
 
 ## Extensions
 
-We extended some operations for `Nothing` and `Symbol`.
+We extend some operations for `Nothing` and `Symbol`.
 
 ```@docs; canonical=false
 symcon
@@ -89,7 +89,7 @@ consisempty
 
 ## Sampling
 
-During our constraint learning processes, we use sampling to efficiently make partial exploration of search spaces. Follows some sampling utilities.
+During our constraint learning processes, we use sampling to efficiently make partial exploration of search spaces. The following are some examples of sampling utilities.
 
 ```@docs; canonical=false
 oversample
@@ -112,6 +112,8 @@ We need to compute the difference between extrema of various kind of collections
 δ_extrema
 ```
 
+### Performances
+
 ```@raw html
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/JuliaConstraints/Benchmarks/blob/main/ConstraintCommons/visuals/bench_evolution_extrema.png?raw=true" alt="Bench Evolution" style="width:48%;"/>
@@ -119,11 +121,9 @@ We need to compute the difference between extrema of various kind of collections
 </div>
 ```
 
-### Performances
-
 ## Dictionaries
 
-We provide the everuseful `incsert!` function for dictionaries.
+We provide the ever-useful `incsert!` function for dictionaries.
 
 ```@docs; canonical=false
 incsert!
