@@ -14,7 +14,7 @@ using ConstraintModels
 # Learning
 using CompositionalNetworks
 using QUBOConstraints
-# using ConstraintsTranslator
+using ConstraintsTranslator
 using ConstraintLearning
 
 # Constraint-Based Local Search
@@ -29,7 +29,7 @@ makedocs(;
         PerfChecker,
         ConstraintCommons, ConstraintDomains, Constraints, ConstraintModels,
         CompositionalNetworks, QUBOConstraints, ConstraintLearning,
-        # CompositionalNetworks, QUBOConstraints, ConstraintsTranslator, ConstraintLearning,
+        CompositionalNetworks, QUBOConstraints, ConstraintsTranslator, ConstraintLearning,
         LocalSearchSolvers, CBLS,
         MetaStrategist,
     ],
