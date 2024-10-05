@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: Model, Learn, and Solve!
-      link: /constraints/intro
+      link: /constraints/00_intro
     - theme: alt
       text: View on Github
       link: https://github.com/JuliaConstraints/JuliaConstraints.github.io
@@ -60,7 +60,7 @@ features:
     <ul>
         <li><a href="https://github.com/JuliaConstraints/Compositionalnetworks.jl"><strong>CompositionalNetworks.jl</strong></a> provides interpretable compositional networks (<em>ICN</em>), a combinatorial variant of neural networks that allows the user to obtain interpretable results, unlike regular artificial neural networks.</li>
         <li><a href="https://github.com/JuliaConstraints/QUBOConstraints.jl"><strong>QUBOConstraints.jl</strong></a> is a package that can (automatically) learn QUBO matrices from optimization constraints.</li>
-        <li><strong>ConstraintsTranslator.jl</strong> (tentative name, WIP) is a tool for converting problems expressed in natural language into optimization models.</li>
+        <li><a href="https://github.com/JuliaConstraints/ConstraintsTranslator.jl"><strong>ConstraintsTranslator.jl</strong> </a> is a tool for converting problems expressed in natural language into optimization models.</li>
         <li><a href="https://github.com/JuliaConstraints/ConstraintLearning.jl"><strong>ConstraintLearning.jl</strong></a> is a common interface that integrates the various components outlined above.</li>
     </ul>
     <h3>Solvers</h3>
@@ -71,6 +71,7 @@ features:
         <li><a href="https://github.com/JuliaConstraints/CPLEXCP.jl"><strong>CPLEXCP.jl</strong></a> a Julia interface for CPLEX CP Optimizer.</li>
         <li><a href="https://github.com/JuliaConstraints/Chuffed.jl"><strong>Chuffed.jl</strong></a> a wrapper for the constraint-programming solver Chuffed to Julia.</li>
         <li><a href="https://github.com/JuliaConstraints/JaCoP.jl"><strong>JaCoP.jl</strong></a> a Julia interface for the JaCoP constraint-programming solver.</li>
+        <li><a href="https://github.com/JuliaConstraints/ConstraintExplorer.jl"><strong>ConstraintExplorer.jl</strong></a> a MOI/JuMP interface to explore search spaces modeled as CP.</li>
     </ul>
     <h4>JuMP extras</h4>
     <p>Constraint Programming is slowly making steps into the main JuMP components. However, some extra resources are available as</p>

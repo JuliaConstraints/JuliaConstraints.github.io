@@ -7,6 +7,7 @@ using PerfChecker
 
 # Constraints
 using ConstraintCommons
+using PatternFolds
 using ConstraintDomains
 using Constraints
 using ConstraintModels
@@ -28,8 +29,7 @@ using MetaStrategist
 makedocs(;
     modules=[
         PerfChecker,
-        ConstraintCommons, ConstraintDomains, Constraints, ConstraintModels,
-        CompositionalNetworks, QUBOConstraints, ConstraintLearning,
+        ConstraintCommons, PatternFolds, ConstraintDomains, Constraints, ConstraintModels,
         CompositionalNetworks, QUBOConstraints, ConstraintsTranslator, ConstraintLearning,
         LocalSearchSolvers, CBLS, #ConstraintExplorer,
         MetaStrategist,
@@ -79,8 +79,9 @@ makedocs(;
             "Model Catalog" => "constraints/40_constraint_models.md",
             "Internals" => [
                 "ConstraintCommons.jl" => "constraints/60_constraint_commons.md",
-                "ConstraintDomains.jl" => "constraints/61_constraint_domains.md",
-                "Constraints.jl" => "constraints/62_constraints_jl.md",
+                "PatternFolds.jl" => "constraints/61_pattern_folds.md",
+                "ConstraintDomains.jl" => "constraints/62_constraint_domains.md",
+                "Constraints.jl" => "constraints/63_constraints_jl.md",
             ],
         ],
         "Learning" => [

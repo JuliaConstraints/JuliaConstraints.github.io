@@ -2,7 +2,7 @@
 
 julia_version = "1.10.5"
 manifest_format = "2.0"
-project_hash = "c9214e2dba2ff082d61a205904a0de33964d7dfb"
+project_hash = "f48021d04a612c69eaeb305defa0e1067166fe92"
 
 [[deps.ANSIColoredPrinters]]
 git-tree-sha1 = "574baf8110975760d391c710b6341da1afa48d8c"
@@ -253,8 +253,8 @@ version = "2.4.2"
 
 [[deps.ConstraintCommons]]
 deps = ["Dictionaries", "TestItems"]
-git-tree-sha1 = "d02bf23ecd60f1c9bf02b6e88e7aae185ece2d04"
-repo-rev = "doc"
+git-tree-sha1 = "6328878811c5574a5701eb3645b170572339ac28"
+repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/ConstraintCommons.jl.git"
 uuid = "e37357d9-0691-492f-a822-e5ea6a920954"
 version = "0.2.3"
@@ -1054,7 +1054,9 @@ version = "2.8.1"
 
 [[deps.PatternFolds]]
 deps = ["Intervals", "Lazy", "Random", "Reexport", "TestItemRunner", "TestItems"]
-git-tree-sha1 = "21fb4c221aca131474a886a015a3cd5b1a42b6d2"
+git-tree-sha1 = "0698e974b926f0e24019a42fc78fe8498f2f1f04"
+repo-rev = "main"
+repo-url = "https://github.com/JuliaConstraints/PatternFolds.jl.git"
 uuid = "c18a7f1d-76ad-4ce4-950d-5419b888513b"
 version = "0.2.5"
 
