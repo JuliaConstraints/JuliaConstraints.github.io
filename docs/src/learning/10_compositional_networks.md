@@ -15,7 +15,7 @@ lazy_param
 as_bitvector
 as_int
 reduce_symbols
-CompositionalNeworks.tr_in
+tr_in
 ```
 
 ## Metrics
@@ -24,5 +24,5 @@ CompositionalNeworks.tr_in
 hamming
 minkowski
 manhattan
-weigths_bias
+weights_bias
 ```

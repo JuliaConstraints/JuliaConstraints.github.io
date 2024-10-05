@@ -17,9 +17,10 @@ using QUBOConstraints
 using ConstraintsTranslator
 using ConstraintLearning
 
-# Constraint-Based Local Search
+# Solvers
 using LocalSearchSolvers
 using CBLS
+# using ConstraintExplorer
 
 # Meta-package
 using MetaStrategist
@@ -30,7 +31,7 @@ makedocs(;
         ConstraintCommons, ConstraintDomains, Constraints, ConstraintModels,
         CompositionalNetworks, QUBOConstraints, ConstraintLearning,
         CompositionalNetworks, QUBOConstraints, ConstraintsTranslator, ConstraintLearning,
-        LocalSearchSolvers, CBLS,
+        LocalSearchSolvers, CBLS, #ConstraintExplorer,
         MetaStrategist,
     ],
     authors="Julia Constraints et al.",
@@ -104,13 +105,14 @@ makedocs(;
             "Introduction" => "solvers/00_intro.md",
             "JuMPed" => [
                 "CBLS.jl" => "solvers/10_cbls.md",
+                "ConstraintExplorer.jl" => "solvers/40_constraint_explorer.md",
             ],
-            "Others" => [
-                "LocalSearchSolvers.jl" => "solvers/60_local_search_solvers.md",
+            "Other interfaces" => [
+                "LocalSearchSolvers.jl" => "solvers/50_local_search_solvers.md",
             ],
-        ],
-        "Meta Strategist" => [
-            "MetaStrategist.jl" => "meta/00_meta_strategist.md",
+            "Meta Solvers" => [
+                "MetaStrategist.jl" => "solvers/80_meta_strategist.md",
+            ],
         ],
         "Performance Checking" => [
             "PerfChecker.jl" => "perf/00_perf_checker.md",

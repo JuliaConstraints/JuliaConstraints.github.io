@@ -202,10 +202,10 @@ uuid = "944b1d66-785c-5afd-91f1-9de20f533193"
 version = "0.7.6"
 
 [[deps.CommonMark]]
-deps = ["Crayons", "JSON", "PrecompileTools", "URIs"]
-git-tree-sha1 = "532c4185d3c9037c0237546d817858b23cf9e071"
+deps = ["Crayons", "PrecompileTools"]
+git-tree-sha1 = "3faae67b8899797592335832fccf4b3c80bb04fa"
 uuid = "a80b9123-70ca-4bc0-993e-6e3bcb318db6"
-version = "0.8.12"
+version = "0.8.15"
 
 [[deps.CommonSubexpressions]]
 deps = ["MacroTools"]
@@ -230,8 +230,8 @@ version = "1.1.1+0"
 
 [[deps.CompositionalNetworks]]
 deps = ["ConstraintCommons", "ConstraintDomains", "Dictionaries", "Distances", "JuliaFormatter", "OrderedCollections", "Random", "TestItems", "Unrolled"]
-git-tree-sha1 = "42ea78627a970cc0f4d0707fb87c29a5892a65cc"
-repo-rev = "main"
+git-tree-sha1 = "216a9959e4c85bd91e5c340dafe788feb8977cd6"
+repo-rev = "doc"
 repo-url = "https://github.com/JuliaConstraints/CompositionalNetworks.jl.git"
 uuid = "4b67e4b5-442d-4ef5-b760-3f5df3a57537"
 version = "0.5.9"
@@ -253,19 +253,19 @@ version = "2.4.2"
 
 [[deps.ConstraintCommons]]
 deps = ["Dictionaries", "TestItems"]
-git-tree-sha1 = "779227189854f846de5f72b518e50dda14c7886b"
-repo-rev = "main"
+git-tree-sha1 = "d02bf23ecd60f1c9bf02b6e88e7aae185ece2d04"
+repo-rev = "doc"
 repo-url = "https://github.com/JuliaConstraints/ConstraintCommons.jl.git"
 uuid = "e37357d9-0691-492f-a822-e5ea6a920954"
 version = "0.2.3"
 
 [[deps.ConstraintDomains]]
 deps = ["ConstraintCommons", "Intervals", "PatternFolds", "StatsBase", "TestItems"]
-git-tree-sha1 = "02380c829c947c0579864c51affa1646a170d037"
-repo-rev = "main"
+git-tree-sha1 = "e7bd4dc7e3417a7d609638d3eb12291d573d6205"
+repo-rev = "doc"
 repo-url = "https://github.com/JuliaConstraints/ConstraintDomains.jl.git"
 uuid = "5800fd60-8556-4464-8d61-84ebf7a0bedb"
-version = "0.3.13"
+version = "0.3.14"
 
 [[deps.ConstraintLearning]]
 deps = ["CompositionalNetworks", "ConstraintDomains", "Constraints", "DataFrames", "Dictionaries", "Evolutionary", "Flux", "LocalSearchSolvers", "Memoization", "PrettyTables", "QUBOConstraints", "TestItems", "ThreadPools"]
@@ -285,16 +285,16 @@ version = "0.3.0"
 
 [[deps.Constraints]]
 deps = ["CompositionalNetworks", "ConstraintCommons", "ConstraintDomains", "DataFrames", "Dictionaries", "MacroTools", "PrettyTables", "TestItems"]
-git-tree-sha1 = "16ccf71ad523346b270e76c6096fdb4a6e65db00"
-repo-rev = "main"
+git-tree-sha1 = "af242993faf391fd6734d48c8222aef5a64b7ff4"
+repo-rev = "doc"
 repo-url = "https://github.com/JuliaConstraints/Constraints.jl.git"
 uuid = "30f324ab-b02d-43f0-b619-e131c61659f7"
-version = "0.5.8"
+version = "0.5.7"
 
 [[deps.ConstraintsTranslator]]
 deps = ["Constraints", "HTTP", "InteractiveUtils", "JSON3", "JSONSchema", "REPL", "TestItems"]
-git-tree-sha1 = "85a0896d7da05c8a5925fa7119793b02cd6ae8ab"
-repo-rev = "main"
+git-tree-sha1 = "78710bd500f9bd0ea7ae153fb1de6acd1c24c66a"
+repo-rev = "doc"
 repo-url = "https://github.com/JuliaConstraints/ConstraintsTranslator.jl.git"
 uuid = "314c63f5-3dda-4b35-95e7-4cc933f13053"
 version = "0.0.2"
@@ -518,9 +518,9 @@ version = "2.24.0"
 
 [[deps.Flux]]
 deps = ["Adapt", "ChainRulesCore", "Compat", "Functors", "LinearAlgebra", "MLUtils", "MacroTools", "NNlib", "OneHotArrays", "Optimisers", "Preferences", "ProgressLogging", "Random", "Reexport", "Setfield", "SparseArrays", "SpecialFunctions", "Statistics", "Zygote"]
-git-tree-sha1 = "d7d0a182089d9d3ff0cd0b761d21020fea2b1035"
+git-tree-sha1 = "f3b4e96288e8bee94cd1e230c1a9387d3e03f788"
 uuid = "587475ba-b771-5e3f-ad9e-33799f191a9c"
-version = "0.14.20"
+version = "0.14.21"
 
     [deps.Flux.extensions]
     FluxAMDGPUExt = "AMDGPU"
@@ -721,9 +721,9 @@ version = "0.2.4"
 
 [[deps.KernelAbstractions]]
 deps = ["Adapt", "Atomix", "InteractiveUtils", "MacroTools", "PrecompileTools", "Requires", "StaticArrays", "UUIDs", "UnsafeAtomics", "UnsafeAtomicsLLVM"]
-git-tree-sha1 = "5126765c5847f74758c411c994312052eb7117ef"
+git-tree-sha1 = "04e52f596d0871fa3890170fa79cb15e481e4cd8"
 uuid = "63c18a36-062a-441e-b654-da1e3ab1ce7c"
-version = "0.9.27"
+version = "0.9.28"
 
     [deps.KernelAbstractions.extensions]
     EnzymeExt = "EnzymeCore"

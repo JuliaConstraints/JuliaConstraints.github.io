@@ -20,5 +20,5 @@ selected_size
 is_viable
 generate_inclusive_operations
 generate_exclusive_operation
-generate_weigths
+generate_weights
 ```

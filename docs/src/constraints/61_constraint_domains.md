@@ -114,8 +114,9 @@ Base.convert
 ## Exploration
 
 ```@docs; canonical=false
+Explorer
 ExploreSettings
-_explore
+explore!
 explore
 ```
 

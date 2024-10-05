@@ -24,19 +24,19 @@ tr_count_lesser
 tr_count_g_left
 tr_count_g_right
 tr_count_l_right
-tr_contiguous_vals_minus
-tr_contiguous_vals_minus_rev
+tr_contiguous_vars_minus
+tr_contiguous_vars_minus_rev
 ```
 
 ### Param: `:val`
 
 ```@docs; canonical=false
-tr_count_eq_param
-tr_count_l_param
-tr_count_g_param
-tr_count_bounding_param
-tr_val_minus_param
-tr_param_minus_val
+tr_count_eq_val
+tr_count_l_val
+tr_count_g_val
+tr_count_bounding_val
+tr_var_minus_val
+tr_val_minus_var
 ```
 
 
