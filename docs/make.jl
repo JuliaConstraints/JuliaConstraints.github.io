@@ -21,7 +21,7 @@ using ConstraintLearning
 # Solvers
 using LocalSearchSolvers
 using CBLS
-# using ConstraintExplorer
+using ConstraintExplorer
 
 # Meta-package
 using MetaStrategist
@@ -31,7 +31,7 @@ makedocs(;
         PerfChecker,
         ConstraintCommons, PatternFolds, ConstraintDomains, Constraints, ConstraintModels,
         CompositionalNetworks, QUBOConstraints, ConstraintsTranslator, ConstraintLearning,
-        LocalSearchSolvers, CBLS, #ConstraintExplorer,
+        LocalSearchSolvers, CBLS, ConstraintExplorer,
         MetaStrategist,
     ],
     authors="Julia Constraints et al.",
