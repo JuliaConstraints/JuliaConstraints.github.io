@@ -230,7 +230,7 @@ version = "1.1.1+0"
 
 [[deps.CompositionalNetworks]]
 deps = ["ConstraintCommons", "ConstraintDomains", "Dictionaries", "Distances", "JuliaFormatter", "OrderedCollections", "Random", "TestItems", "Unrolled"]
-git-tree-sha1 = "42ea78627a970cc0f4d0707fb87c29a5892a65cc"
+git-tree-sha1 = "cba828a5a160aa058097f5479b6ca8b72da19701"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/CompositionalNetworks.jl.git"
 uuid = "4b67e4b5-442d-4ef5-b760-3f5df3a57537"
