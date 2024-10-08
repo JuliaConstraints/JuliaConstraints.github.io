@@ -230,8 +230,8 @@ version = "1.1.1+0"
 
 [[deps.CompositionalNetworks]]
 deps = ["ConstraintCommons", "ConstraintDomains", "Dictionaries", "Distances", "JuliaFormatter", "OrderedCollections", "Random", "TestItems", "Unrolled"]
-git-tree-sha1 = "216a9959e4c85bd91e5c340dafe788feb8977cd6"
-repo-rev = "doc"
+git-tree-sha1 = "42ea78627a970cc0f4d0707fb87c29a5892a65cc"
+repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/CompositionalNetworks.jl.git"
 uuid = "4b67e4b5-442d-4ef5-b760-3f5df3a57537"
 version = "0.5.9"
@@ -261,8 +261,8 @@ version = "0.2.3"
 
 [[deps.ConstraintDomains]]
 deps = ["ConstraintCommons", "Intervals", "PatternFolds", "StatsBase", "TestItems"]
-git-tree-sha1 = "e7bd4dc7e3417a7d609638d3eb12291d573d6205"
-repo-rev = "doc"
+git-tree-sha1 = "775665bdcf7bfcae01464116bae8a01ff9201786"
+repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/ConstraintDomains.jl.git"
 uuid = "5800fd60-8556-4464-8d61-84ebf7a0bedb"
 version = "0.3.14"
@@ -293,19 +293,19 @@ version = "0.3.0"
 
 [[deps.Constraints]]
 deps = ["CompositionalNetworks", "ConstraintCommons", "ConstraintDomains", "DataFrames", "Dictionaries", "MacroTools", "PrettyTables", "TestItems"]
-git-tree-sha1 = "af242993faf391fd6734d48c8222aef5a64b7ff4"
-repo-rev = "doc"
+git-tree-sha1 = "94b94c696e6fc56a6aee043c55142e9394969852"
+repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/Constraints.jl.git"
 uuid = "30f324ab-b02d-43f0-b619-e131c61659f7"
-version = "0.5.7"
+version = "0.5.8"
 
 [[deps.ConstraintsTranslator]]
 deps = ["Constraints", "HTTP", "InteractiveUtils", "JSON3", "JSONSchema", "REPL", "TestItems"]
-git-tree-sha1 = "78710bd500f9bd0ea7ae153fb1de6acd1c24c66a"
-repo-rev = "doc"
+git-tree-sha1 = "7ee5af349eb6d28c6f8344f96bc001daaaaa53aa"
+repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/ConstraintsTranslator.jl.git"
 uuid = "314c63f5-3dda-4b35-95e7-4cc933f13053"
-version = "0.0.2"
+version = "0.0.3"
 
 [[deps.ConstructionBase]]
 git-tree-sha1 = "76219f1ed5771adbb096743bff43fb5fdd4c1157"
@@ -510,9 +510,9 @@ version = "1.13.0"
 
 [[deps.FiniteDiff]]
 deps = ["ArrayInterface", "LinearAlgebra", "Setfield"]
-git-tree-sha1 = "890137ae2da0bfec798acc13d351f41e171af8e4"
+git-tree-sha1 = "b10bdafd1647f57ace3885143936749d61638c3b"
 uuid = "6a86dc24-6348-571c-b903-95158fe2bd41"
-version = "2.25.0"
+version = "2.26.0"
 
     [deps.FiniteDiff.extensions]
     FiniteDiffBandedMatricesExt = "BandedMatrices"

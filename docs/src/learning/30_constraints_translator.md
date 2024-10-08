@@ -2,4 +2,6 @@
 
 Documentation for `ConstraintsTranslator.jl`.
 
-
+```@autodocs
+Modules=[ConstraintsTranslator]
+```
