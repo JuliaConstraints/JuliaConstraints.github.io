@@ -1077,12 +1077,12 @@ uuid = "69de0a69-1ddd-5017-9359-2bf0b02dc9f0"
 version = "2.8.1"
 
 [[deps.PatternFolds]]
-deps = ["Intervals", "Lazy", "Random", "Reexport", "TestItemRunner", "TestItems"]
-git-tree-sha1 = "0698e974b926f0e24019a42fc78fe8498f2f1f04"
+deps = ["Intervals", "Lazy", "Random", "TestItems"]
+git-tree-sha1 = "0d961a0daa7c478741890c49388133440d625c2b"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/PatternFolds.jl.git"
 uuid = "c18a7f1d-76ad-4ce4-950d-5419b888513b"
-version = "0.2.5"
+version = "0.2.6"
 
 [[deps.PerfChecker]]
 deps = ["CSV", "CoverageTools", "CpuId", "JSON", "Malt", "Pkg", "Profile", "TOML", "TypedTables", "UUIDs"]
@@ -1407,12 +1407,6 @@ version = "1.10.0"
 deps = ["InteractiveUtils", "Logging", "Random", "Serialization"]
 uuid = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 version = "1.11.0"
-
-[[deps.TestItemRunner]]
-deps = ["Pkg", "TOML", "Test", "TestItems", "UUIDs"]
-git-tree-sha1 = "29647c5398be04a1d697265ba385bdf3f623c993"
-uuid = "f8b46487-2199-4994-9208-9a1283c18c0a"
-version = "1.0.5"
 
 [[deps.TestItems]]
 git-tree-sha1 = "42fd9023fef18b9b78c8343a4e2f3813ffbcefcb"
