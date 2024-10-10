@@ -46,6 +46,8 @@ jobs:
           cache-dependency-path: "docs/package-lock.json" # this should be a package-lock.json file
       - name: Setup Julia
         uses: julia-actions/setup-julia@v2
+        with:
+          version: "lts"
       - name: Pull Julia cache
         uses: julia-actions/cache@v2
       - name: Install documentation dependencies
