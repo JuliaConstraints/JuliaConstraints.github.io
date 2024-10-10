@@ -255,7 +255,7 @@ version = "2.4.2"
 
 [[deps.ConstraintCommons]]
 deps = ["Dictionaries", "TestItems"]
-git-tree-sha1 = "6328878811c5574a5701eb3645b170572339ac28"
+git-tree-sha1 = "ff95c0ada8c58751a1e31503324136b4893f02c2"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaConstraints/ConstraintCommons.jl.git"
 uuid = "e37357d9-0691-492f-a822-e5ea6a920954"
