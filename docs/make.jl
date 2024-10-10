@@ -15,7 +15,7 @@ using ConstraintModels
 # Learning
 using CompositionalNetworks
 using QUBOConstraints
-# using ConstraintsTranslator
+using ConstraintsTranslator
 using ConstraintLearning
 
 # Solvers
@@ -30,8 +30,7 @@ makedocs(;
     modules=[
         PerfChecker,
         ConstraintCommons, PatternFolds, ConstraintDomains, Constraints, ConstraintModels,
-        CompositionalNetworks, QUBOConstraints, ConstraintLearning,
-        # CompositionalNetworks, QUBOConstraints, ConstraintsTranslator, ConstraintLearning,
+        CompositionalNetworks, QUBOConstraints, ConstraintsTranslator, ConstraintLearning,
         LocalSearchSolvers, CBLS, ConstraintExplorer,
         MetaStrategist,
     ],
