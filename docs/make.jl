@@ -7,7 +7,7 @@ using PerfChecker
 
 # Constraints
 using ConstraintCommons
-# using PatternFolds
+using PatternFolds
 using ConstraintDomains
 using Constraints
 using ConstraintModels
@@ -15,13 +15,13 @@ using ConstraintModels
 # Learning
 using CompositionalNetworks
 using QUBOConstraints
-using ConstraintsTranslator
+# using ConstraintsTranslator
 using ConstraintLearning
 
 # Solvers
 using LocalSearchSolvers
 using CBLS
-# using ConstraintExplorer
+using ConstraintExplorer
 
 # Meta-package
 using MetaStrategist
@@ -29,10 +29,10 @@ using MetaStrategist
 makedocs(;
     modules=[
         PerfChecker,
-        ConstraintCommons, ConstraintDomains, Constraints, ConstraintModels,
-        # ConstraintCommons, PatternFolds, ConstraintDomains, Constraints, ConstraintModels,
-        CompositionalNetworks, QUBOConstraints, ConstraintsTranslator, ConstraintLearning,
-        LocalSearchSolvers, CBLS, #ConstraintExplorer,
+        ConstraintCommons, PatternFolds, ConstraintDomains, Constraints, ConstraintModels,
+        CompositionalNetworks, QUBOConstraints, ConstraintLearning,
+        # CompositionalNetworks, QUBOConstraints, ConstraintsTranslator, ConstraintLearning,
+        LocalSearchSolvers, CBLS, ConstraintExplorer,
         MetaStrategist,
     ],
     authors="Julia Constraints et al.",
