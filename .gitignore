@@ -1,7 +1,7 @@
 build/
 node_modules/
 package-lock.json
-Manifest.toml
+docs/Manifest.toml
 
 .DS_Store
 .vscode/

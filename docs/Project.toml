@@ -15,3 +15,19 @@ MetaStrategist = "989f9ba8-86ac-4138-b458-047055bae907"
 PatternFolds = "c18a7f1d-76ad-4ce4-950d-5419b888513b"
 PerfChecker = "6309bf6b-a531-4b08-891e-8ee981e5c424"
 QUBOConstraints = "110b7fcc-6942-4061-a625-86e03d1de7cf"
+
+[sources]
+CBLS = {url = "https://github.com/JuliaConstraints/CBLS.jl"}
+CompositionalNetworks = {url = "https://github.com/JuliaConstraints/CompositionalNetworks.jl"}
+ConstraintCommons = {url = "https://github.com/JuliaConstraints/ConstraintCommons.jl"}
+ConstraintDomains = {url = "https://github.com/JuliaConstraints/ConstraintDomains.jl"}
+ConstraintExplorer = {url = "https://github.com/JuliaConstraints/ConstraintExplorer.jl"}
+ConstraintLearning = {url = "https://github.com/JuliaConstraints/ConstraintLearning.jl"}
+ConstraintModels = {url = "https://github.com/JuliaConstraints/ConstraintModels.jl"}
+Constraints = {url = "https://github.com/JuliaConstraints/Constraints.jl"}
+ConstraintsTranslator = {url = "https://github.com/JuliaConstraints/ConstraintsTranslator.jl"}
+LocalSearchSolvers = {url = "https://github.com/JuliaConstraints/LocalSearchSolvers.jl"}
+MetaStrategist = {url = "https://github.com/JuliaConstraints/MetaStrategist.jl"}
+PatternFolds = {url = "https://github.com/JuliaConstraints/PatternFolds.jl"}
+PerfChecker = {url = "https://github.com/JuliaConstraints/PerfChecker.jl"}
+QUBOConstraints = {url = "https://github.com/JuliaConstraints/QUBOConstraints.jl"}
